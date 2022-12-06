@@ -1,4 +1,4 @@
-name = input().title
+name = input("enter name: ").title
 
 first, last = name.split(" ")
 
