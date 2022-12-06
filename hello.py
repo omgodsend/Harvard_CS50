@@ -1,3 +1,5 @@
-name = input("enter name: ").title
+name = input("enter name: ").title()
 
-print("hello, ", name)
+
+first, last = name.split(" ")
+print("hello, ", first)
