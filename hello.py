@@ -1,5 +1,5 @@
-name = input("enter name: ").title()
+word = (input("Enter Word: "))
 
+word = word.lower
 
-first, last = name.split(" ")
-print(f"hello, {first}")
+print(word)
