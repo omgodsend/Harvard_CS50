@@ -1,5 +1,4 @@
-word = (input("Enter Word: "))
+word = input("Enter Word: ").lower()
 
-word = word.lower
 
-print(word)
+print(f"{word}")
