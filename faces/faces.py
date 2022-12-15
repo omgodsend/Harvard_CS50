@@ -1,4 +1,5 @@
 def convert():
+    happy = input(":)")
     smile = print("\U0001F642")
     sad = print("\U0001F641")
 
