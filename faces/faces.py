@@ -1,6 +1,7 @@
 def convert():
     happy = input("enter phrase: ")
-    main(happy)
+    convert(happy)
+    print()
 
     smile = print("\U0001F642")
     sad = print("\U0001F641")
