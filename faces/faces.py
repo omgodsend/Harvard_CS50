@@ -1,13 +1,16 @@
-def convert():
-    happy = input("enter phrase: ")
+def main():
+    text = input("enter phrase: ")
+    result = convert(text)
+
+
+def convert(text):
     convert(happy)
     print()
 
     smile = print("\U0001F642")
     sad = print("\U0001F641")
 
-def main():
-    smile
+
 
 if happy == ":)":
     print
