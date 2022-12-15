@@ -1,3 +1,1 @@
-
-
-print("\n{smiling face}")
+print("\U0001F601")
