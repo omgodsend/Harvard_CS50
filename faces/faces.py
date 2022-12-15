@@ -4,8 +4,8 @@ def main():
     print(result)
 
 def convert(text):
-    smile = text.replace [":)","\U0001F642"]
-    sad = text.replace [":(","\U0001F641"]
+    smile = text.replace (":)","🙂")
+    sad = smile.replace (":(","🙁")
     return text
 
 main()
