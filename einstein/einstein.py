@@ -1,0 +1,2 @@
+mass = input("M: ")
+
