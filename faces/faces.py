@@ -1,11 +1,12 @@
 def main():
-    text = input("enter phrase: ")
-    result = convert(text)
-    print(result)
+    text = convert(input("Message: "))
+    print(text)
+
 
 def convert(text):
-    smile = text.replace (":)","🙂")
-    sad = smile.replace (":(","🙁")
-    return sad
+    text = text.replace(":)","🙂")
+    text = text.replace(":(","🙁")
+    return text
+
 
 main()
