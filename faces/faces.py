@@ -1,2 +1,2 @@
-def convert str:
+def convert:
     
