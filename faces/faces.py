@@ -1,2 +1,3 @@
-def convert:
-    
+
+
+print({smiling face})
