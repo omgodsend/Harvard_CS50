@@ -1,3 +1,3 @@
 
 
-print({smiling face})
+print("\n{smiling face}")
