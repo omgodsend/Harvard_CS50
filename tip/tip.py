@@ -6,7 +6,7 @@ def main():
 
 
 def dollars_to_float(d):
-    dollars = dollars.float()
+    dollars.float()
     return dollars
 
 
