@@ -6,14 +6,14 @@ def main():
 
 
 def dollars_to_float(d):
-    d_rmv_sign = d.replace("$","")
+    d_rmv_sign = d.replace("$", "")
     return float(d_rmv_sign)
 
 
 def percent_to_float(p):
     p_rmv_sign = p.replace("%", "")
     p_convert = float(p_rmv_sign) / 100
-    return p_rmv_sign
+    return p_convert
 
 
 main()
