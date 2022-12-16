@@ -6,8 +6,8 @@ def main():
 
 
 def dollars_to_float(dollars):
-    dollars.float()
-    return dollars
+    
+    return dollars.float
 
 
 def percent_to_float(percent):
