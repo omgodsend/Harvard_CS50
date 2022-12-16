@@ -12,7 +12,7 @@ def dollars_to_float(d):
 
 def percent_to_float(p):
     p_rmv_sign = p.replace("%", "")
-    p_convert = float(p_rmv_sign / 100)
+    p_convert = print(float(p_rmv_sign / int(100)))
     return p_rmv_sign
 
 
