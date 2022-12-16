@@ -5,14 +5,14 @@ def main():
     print(f"Leave ${tip:.2f}")
 
 
-def dollars_to_float(dollars):
-    
-    return dollars.float
+def dollars_to_float(d):
+    d_rmv_sign = d.replace("$","")
+    return float(d_rmv_sign)
 
 
-def percent_to_float(percent):
-    percent = percent.float()
-    return percent
+def percent_to_float(p):
+    p_rmv_sign = p.replace("%", "")
+    return float(p_rmv_sign)
 
 
 main()
