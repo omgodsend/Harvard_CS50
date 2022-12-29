@@ -1,4 +1,4 @@
 phrase = input("Greeting: ").lower()
 
-if phrase == Hello:
-    print ()
+if phrase == "Hello":
+    print ("$0")
