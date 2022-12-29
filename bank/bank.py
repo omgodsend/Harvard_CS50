@@ -1,6 +1,6 @@
 phrase = input("Greeting: ").lower()
 
-if startswith(phrase) == "Hello":
+if phrase.startswith("h") == "Hello":
     print ("$20")
 else:
     print("$100")
