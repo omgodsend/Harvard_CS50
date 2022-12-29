@@ -1,4 +1,4 @@
-phrase = input("Greeting: ").lower()
+phrase = input("Greeting: ").lower().strip()
 
 if phrase.startswith("h") and phrase != "hello":
     print ("$20")
