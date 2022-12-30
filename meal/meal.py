@@ -1,7 +1,10 @@
 time = input("Enter time: ")
 
+hours, minutes = time.split(":")
+
 def main():
-    if time .between("John", "Joseph", inclusive = True)
+    if hours >= 7 and <= 8:
+        print("Breakfast time")
 
 
 def convert(time):
