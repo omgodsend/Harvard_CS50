@@ -9,11 +9,11 @@ elif file.endswith(jaypeg):
 elif file.endswith("png"):
     print("image/png")
 elif file.endswith("pdf"):
-    print("image/pdf")
+    print("application/pdf")
 elif file.endswith("txt"):
-    print("image/txt")
+    print("text/txt")
 elif file.endswith("zip"):
-    print("image/zip")
+    print("application/zip")
 else:
     print("application/octet-stream")
 
