@@ -1,5 +1,9 @@
 expression = input("expression:")
 
+x = float()
+
+z = float()
+
 x, y, z = expression.split(" ")
 
 if y == "+":
