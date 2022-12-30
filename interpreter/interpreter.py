@@ -13,5 +13,3 @@ if y == "*":
     print(newx * newz)
 if y == "/" and newz != "0":
     print(newx / newz)
-else:
-    print("Error")
