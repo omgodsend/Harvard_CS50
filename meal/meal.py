@@ -3,7 +3,7 @@ time = input("Enter time: ")
 hours, minutes = time.split(":")
 
 def main():
-    if hours >= 7 and <= 8:
+    if hours >= 7 and hours <= 8:
         print("Breakfast time")
 
 
