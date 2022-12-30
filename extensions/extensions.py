@@ -2,10 +2,8 @@ file = input("File name: ").lower().strip()
 
 if file.endswith("gif"):
     print("image/gif")
-elif file.endswith("jpg"):
+elif file.endswith("jpg", "jpeg"):
     print("image/jpg")
-elif file.endswith("jpeg"):
-    print("image/jpeg")
 elif file.endswith("png"):
     print("image/png")
 elif file.endswith("pdf"):
