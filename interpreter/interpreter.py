@@ -1,6 +1,6 @@
-expression = input("expression:")
+expression = float(input("expression:"))
 
-x, y, z = expression.split(" ")
+x, y, z = str.expression.split(" ")
 
 if y == "+":
     print(float(x+z))
