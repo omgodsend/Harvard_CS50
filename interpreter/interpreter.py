@@ -6,10 +6,11 @@ newx = float(x)
 newz = float(z)
 
 if y == "+":
-    print(newx + newz)
+    result = (newx + newz)
 elif y == "-":
-    print(newx - newz)
+    result = (newx - newz)
 if y == "*":
-    print(newx * newz)
+    result = (newx * newz)
 if y == "/" and newz != "0":
-    print(newx / newz)
+    result = (newx / newz)
+print(round(result,1))
