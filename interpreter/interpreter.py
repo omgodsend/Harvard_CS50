@@ -1,9 +1,9 @@
-expression = float(input("expression:"))
+expression = input("expression:")
 
-x, y, z = str.expression.split(" ")
+x, y, z = expression.split(" ")
 
 if y == "+":
-    print(float(x+z))
+    print(str(float(x+z)))
 elif y == "-":
     print(float(x-z))
 if y == "*":
