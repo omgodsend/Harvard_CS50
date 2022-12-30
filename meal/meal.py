@@ -1,5 +1,7 @@
+time = input("Enter time: ")
+
 def main():
-    time = 
+    if time .between("John", "Joseph", inclusive = True)
 
 
 def convert(time):
