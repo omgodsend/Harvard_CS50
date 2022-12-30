@@ -5,7 +5,7 @@ jaypeg = ("jpg", "jpeg")
 if file.endswith("gif"):
     print("image/gif")
 elif file.endswith(jaypeg):
-    print("image/jpg")
+    print("image/jpeg")
 elif file.endswith("png"):
     print("image/png")
 elif file.endswith("pdf"):
