@@ -12,8 +12,8 @@ def main():
 def convert(time):
     hours, minutes = time.split(":")
 
-    nhours = float(hours)/30
-    nminutes = x(minutes)
+    nhours = float(hours)
+    nminutes = int(minutes)/30
     return n
 
 
