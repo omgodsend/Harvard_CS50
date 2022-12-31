@@ -15,7 +15,7 @@ def convert(time):
 
     nhours = float(hours)
     nminutes = int(minutes)/60
-    return float(hours) + nminutes
+    return nhours + nminutes
 
 
 if __name__ == "__main__":
