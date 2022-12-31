@@ -13,8 +13,8 @@ def convert(time):
     hours, minutes = time.split(":")
 
     nhours = float(hours)
-    nminutes = int(minutes)/30
-    return n
+    nminutes = int(minutes)/60
+    return float(hours) + nminutes
 
 
 if __name__ == "__main__":
