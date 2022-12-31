@@ -1,5 +1,4 @@
 
-
 def main():
     asnwer = input("Enter time: ")
     time = convert(answer)
@@ -13,8 +12,8 @@ def main():
 def convert(time):
     hours, minutes = time.split(":")
 
-    nhours = int(hours)
-    nminutes = int(minutes)
+    nhours = float(hours)/30
+    nminutes = x(minutes)
     return n
 
 
