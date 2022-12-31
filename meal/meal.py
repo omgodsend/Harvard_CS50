@@ -1,8 +1,8 @@
 
 
 def main():
-    time = input("Enter time: ")
-    convert()
+    asnwer = input("Enter time: ")
+    time = convert(answer)
 
 
     if nhours >= 7 and nhours <= 8:
