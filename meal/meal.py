@@ -1,13 +1,14 @@
 
 def main():
-    asnwer = input("Enter time: ")
+    answer = input("Enter time: ")
     time = convert(answer)
-
 
     if nhours >= 7 and nhours <= 8:
         print("Breakfast time")
-    elif
-
+    elif nhours >= 12 and nhours <= 13:
+        print("Lunch time")
+    elif nhours >= 1 and nhours <= 13:
+        print("Lunch time")
 
 def convert(time):
     hours, minutes = time.split(":")
