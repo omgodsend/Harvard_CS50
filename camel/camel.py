@@ -1,14 +1,13 @@
 phrase = input("camelCase: ")
 
-if phrase contains 
-for _ in phrase:
-    print(phrase, sep="_")
+for i.upper() in phrase:
+    print(c, end="")
+
+i = phrase.upper()
+
+if i in phrase.upper():
+    print(i, phrase.lower, sep="_")
 
 
-
-s = ["hello"]
-
-for i in s:
-    print([1])
 
 
