@@ -1,6 +1,6 @@
 phrase = input("camelCase: ")
 
-if 
+if phrase contains 
 for _ in phrase:
     print(phrase, sep="_")
 
