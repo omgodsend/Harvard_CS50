@@ -1,12 +1,8 @@
 phrase = input("camelCase: ")
 
-for i.upper() in phrase:
-    print(c, end="")
+for str().upper() in phrase:
+    print(phrase, sep="_", end="")
 
-i = phrase.upper()
-
-if i in phrase.upper():
-    print(i, phrase.lower, sep="_")
 
 
 
