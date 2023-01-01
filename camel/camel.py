@@ -1,5 +1,6 @@
 phrase = input("camelCase: ")
 
+if 
 for _ in phrase:
     print(phrase, sep="_")
 
