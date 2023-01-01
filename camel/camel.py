@@ -1,7 +1,8 @@
 phrase = input("camelCase: ")
 
 for _ in phrase:
-    
+    print(phrase, sep="_")
+
 
 
 s = ["hello"]
