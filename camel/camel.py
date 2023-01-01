@@ -1,4 +1,6 @@
-for i in "hello":
-    print(i, end="")
+s = ["hello"]
+
+for i in s:
+    print([1])
 
 
