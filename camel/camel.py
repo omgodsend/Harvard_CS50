@@ -4,6 +4,6 @@ print("snake_case: ")
 
 for letter in phrase:
     if (letter.isupper()):
-        print(phrase.lower(), sep="_")
+        print(letter.lower(),"_")
 
 
