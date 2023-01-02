@@ -3,10 +3,7 @@ phrase = input("camelCase: ")
 print("snake_case: ")
 
 for letter in phrase:
-    if letter.isupper()):
-
-while letter in phrase.isupper():
-    print(letter, sep="_")
-
+    if (letter.isupper()):
+        print(phrase.lower(), sep="_")
 
 
