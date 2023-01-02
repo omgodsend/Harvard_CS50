@@ -1,11 +1,14 @@
 phrase = input("camelCase: ")
 
-for word in phrase.upper():
-    print(word, sep="_".upper())
+print("snake_case: " + "a" )
 
-def word(upper):
-    if phrase == phrase.upper():
-        print(upper)
+
+for word in phrase.upper():
+    print(word, sep="_", end="")
+
+#def word(upper):
+ #   if phrase == phrase.upper():
+  #      print(upper)
 
 
 
