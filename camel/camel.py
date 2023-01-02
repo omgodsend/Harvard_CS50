@@ -1,10 +1,10 @@
 phrase = input("camelCase: ")
 
-print("snake_case: " + "a" )
+print("snake_case: ")
 
 
-for word in phrase.upper():
-    print(word, sep="_", end="")
+for letter in phrase.upper():
+    print(letter, sep="_", end="")
 
 #def word(upper):
  #   if phrase == phrase.upper():
