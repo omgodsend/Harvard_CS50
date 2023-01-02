@@ -1,4 +1,7 @@
-cost = int(input"Amount Due: ")
+amount_due = 50
+print("Amount Due: " + amount_due)
 
-while cost < 50:
-    cost -= 
+cost = int(input("Insert Coin : "))
+
+while amount_due < 50:
+    newcost -= cost
