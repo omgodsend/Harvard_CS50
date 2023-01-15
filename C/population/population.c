@@ -29,11 +29,11 @@ int net_pop = n + born - die;
 // y= years passed
 ////e < net_pop
     // TODO: Print number of years
-    int i;
-    for (i = 0; i < net_pop; i++)
+    int y;
+    for (y = 0; y < net_pop; y++)
     ;
     {
-     printf("%i\n", i, "years");
+     printf("%i Years\n", y);
     }
 }
 
