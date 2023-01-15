@@ -33,11 +33,11 @@ do
 for (int y = 0; e < net_pop; y++)
 
 }
-while net_pop < e;
+while (net_pop < e);
 
 
     // TODO: Print number of years
-     printf("Years %i\n", n);
+     printf("Years %i\n", y);
 }
 
 //create a variable to keep track of how many years have passed.
