@@ -28,6 +28,6 @@ y++;
 }
 while (n < e);
 
-printf("%i Years\n", y);
+printf("Years: %i\n", y);
 
 }
