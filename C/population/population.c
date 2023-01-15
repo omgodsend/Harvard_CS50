@@ -37,11 +37,7 @@ while net_pop <= e;
 ////e < net_pop
     // TODO: Print number of years
 
-for
-
-    {
      printf("%i Years\n", y);
-    }
 }
 
 //create a variable to keep track of how many years have passed.
