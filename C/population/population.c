@@ -27,9 +27,9 @@ int die = n/4;
 
 int net_pop = n + born - die;
 // y= years passed
-
+////e < net_pop
     // TODO: Print number of years
-    for (int y = 0; e < net_pop; y++)
+    for (int y = 0; y++);
     {
 
      printf("%i\n", y);
