@@ -26,7 +26,7 @@ n = n + ((n/3) - (n/4));
 y++;
 
 }
-while (n <= e);
+while (n < e);
 
 printf("%i Years\n", y);
 
