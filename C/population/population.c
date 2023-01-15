@@ -17,19 +17,21 @@ int e;
   {
       e = get_int("End size: ");
   }
-  while (e <= n);
+  while (e < n);
 
 int y = 0;
 do
 {
-if e==n;
-{
-
-    
-}
-n = n + ((n/3) - (n/4));
+    if (e==n)
+    {
+        printf("Years = 0\n");
+    }
+    else
+    {
+        n = n + ((n/3) - (n/4));
 y++;
 
+    }
 }
 while (n < e);
 
