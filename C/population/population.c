@@ -26,7 +26,7 @@ int born = n/3;
 int die = n/4;
 
 int net_pop = n + born - die;
-
+// y= years passed
 int y;
 do
 {
