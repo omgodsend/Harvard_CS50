@@ -25,6 +25,7 @@ int e;
 int born = n/3;
 int die = n/4;
 
+while 
 int net_pop = n + (born - die);
 // y= years passed
 ////e < net_pop
