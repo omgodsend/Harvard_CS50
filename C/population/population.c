@@ -27,16 +27,10 @@ int die = n/4;
 
 int net_pop = n + born - die;
 // y= years passed
-int y;
-do
-{
-for (int y = 0; e < net_pop; y++)
-
-}
-while (net_pop < e);
-
 
     // TODO: Print number of years
+    for (int y = 0; e < net_pop; y++)
+    
      printf("Years %i\n", y);
 }
 
