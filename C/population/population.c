@@ -30,7 +30,7 @@ do
 
 int net_pop = n + (born - die);
 
-(int y = 0; y++);
+int y = 0; y++;
 }
 while net_pop <= e;
 // y= years passed
