@@ -19,25 +19,15 @@ int e;
   }
   while (e <= n);
 
-    // TODO: Calculate number of years until we reach threshold
-//Inside the loop, you’ll likely want to update the population size according to the formula in the Background, and update the number of years that have passed
-//formula
-int born = n/3;
-int die = n/4;
-
-
+int y = 0;
 do
 {
+n = n + ((n/3) - (n/4));
+y++;
 
-n = n + (born - die);
-int y = 0; y++;
 }
 while (n <= e);
 
-//for (int y = 0; y++;)
-int y =
 printf("%i Years\n", y);
-
-
 
 }
