@@ -30,8 +30,7 @@ do
 {
 
 n = n + (born - die);
-
-
+int y = 0; y++;
 }
 while (n <= e);
 
