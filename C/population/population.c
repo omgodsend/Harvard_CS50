@@ -25,13 +25,11 @@ int e;
 int born = n/3;
 int die = n/4;
 
-int net_pop = n + born - die;
+int net_pop = n + (born - die);
 // y= years passed
 ////e < net_pop
     // TODO: Print number of years
-    int y;
-    for (y = 0; y < net_pop; y++)
-    ;
+    for (int y = 0; y < net_pop; y++)
     {
      printf("%i Years\n", y);
     }
