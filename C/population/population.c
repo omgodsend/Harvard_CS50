@@ -30,8 +30,11 @@ int net_pop = n + born - die;
 
     // TODO: Print number of years
     for (int y = 0; e < net_pop; y++)
-    
+    {
+
      printf("Years %i\n", y);
+
+    }
 }
 
 //create a variable to keep track of how many years have passed.
