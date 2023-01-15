@@ -34,10 +34,11 @@ n = n + (born - die);
 int y = 0; y++;
 }
 while (n <= e);
+printf("%i Years\n", y);
 // y= years passed
 ////e < net_pop
     // TODO: Print number of years
-printf("%i Years\n", y);
+
 }
 
 //create a variable to keep track of how many years have passed.
