@@ -29,16 +29,15 @@ int die = n/4;
 do
 {
 
-int net_pop = n + (born - die);
+n = n + (born - die);
 
 int y = 0; y++;
 }
-while (net_pop <= e);
+while (n <= e);
 // y= years passed
 ////e < net_pop
     // TODO: Print number of years
-
-     printf("%i Years\n", y);
+printf("%i Years\n", y);
 }
 
 //create a variable to keep track of how many years have passed.
