@@ -34,11 +34,10 @@ int y = 0; y++;
 }
 while (n <= e);
 
-for (int y = 0; y++;)
+//for (int y = 0; y++;)
+int y =
+printf("%i Years\n", y);
 
-    {
-    printf("%i Years\n", y);
-    }
 
 
 }
