@@ -30,7 +30,8 @@ int net_pop = n + born - die;
 ////e < net_pop
     // TODO: Print number of years
     int i;
-    for (int i = 0; i++;);
+    for (i = 0; i < net_pop; i++)
+    ;
     {
      printf("%i\n", i);
     }
