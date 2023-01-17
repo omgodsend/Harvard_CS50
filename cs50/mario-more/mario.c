@@ -21,9 +21,10 @@ int main(void)
             printf("#");
         {
             for (int k = 0; k < n; k++)
+
                 printf("#\n");
         }
-        printf("  ");
+        printf("\n");
     }
 
 }
