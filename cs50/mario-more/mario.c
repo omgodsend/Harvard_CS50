@@ -5,11 +5,12 @@ int main(void)
 
 {
 
+int n;
 do
 {
-    int n = get_int("size: ");
+    n = get_int("size: ");
 }
-while (int n > 0 )
+while (n > 0);
 
 //&& int n < 9
 
