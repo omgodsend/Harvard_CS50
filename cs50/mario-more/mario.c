@@ -12,15 +12,11 @@ do
 }
 while (n < 0 || n > 8);
 
-//&& int n < 9
+for 
 
-while (n > 0)
-{
-     printf("#");
 
-    {n--;
 
-    }
+
 }
 printf("\n");
 
