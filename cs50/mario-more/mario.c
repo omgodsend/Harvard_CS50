@@ -14,11 +14,14 @@ while (n < 0 || n > 8);
 
 //&& int n < 9
 
-n--;
-    {
-        printf("#");
-    }
+while (n > 0)
+{
+     printf("#");
 
+    {n--;
+
+    }
+}
 printf("\n");
 
 }
