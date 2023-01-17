@@ -5,14 +5,19 @@ int main(void)
 
 {
 
-int n;
-do
-{
-    n = get_int("size: ");
-}
-while (n < 0 || n > 8);
+    int n;
 
-for (int i = 0; i < n; i++)
+    do
+    {
+        n = get_int("size: ");
+    }
+    while (n < 0 || n > 8);
+
+    for (int i = 0; i < n; i++)
+    {
+        printf(")
+
+    }
 
 
 
