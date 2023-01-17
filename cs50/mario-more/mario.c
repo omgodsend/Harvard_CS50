@@ -9,7 +9,9 @@ do
 {
     int n = get_int("size: ");
 }
-while (int n > 0  && int n < 9)
+while (int n > 0 )
+
+//&& int n < 9
 
 n--;
     {
