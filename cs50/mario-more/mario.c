@@ -12,7 +12,7 @@ do
 }
 while (n < 0 || n > 8);
 
-for 
+for (int i = 0; i < n; i++)
 
 
 
