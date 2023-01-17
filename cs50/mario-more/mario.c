@@ -10,7 +10,7 @@ do
 {
     n = get_int("size: ");
 }
-while (n > 0);
+while (n < 0 || n > 8);
 
 //&& int n < 9
 
