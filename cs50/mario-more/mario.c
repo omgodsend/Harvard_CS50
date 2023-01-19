@@ -13,17 +13,13 @@ int main(void)
     }
     while (n < 0 || n > 8);
 
-
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i <= n; i++)
     {
-        for (int j = 0; j < n; j++)
-
+        for (int j = 0; j < n-i; j++)
+            printf(" ");
+        for (int k = 0; k < (i*2)-1; k++)
             printf("#");
-        {
-            for (int k = 0; k < n; k++)
 
-                printf("#\n");
-        }
         printf("\n");
     }
 
