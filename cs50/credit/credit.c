@@ -13,12 +13,13 @@ int main(void)
 
     while(card > 0)
     {
-        long lastnum = card % 10;
-um = card % 10;
-        long alternate = lastNumber % 10;
-        visa = visa / 100;
-        printf("%li\n", lastnum);
+
+    long lastNumber = card/10;
+    long everyOther = lastNumber % 10;
+    card = card / 100;
+    printf("%li\n", everyOther);
 }
+
     //if
 
 
@@ -27,17 +28,4 @@ um = card % 10;
    //     printf("INVALID");
    // }
 
-
-}
-
-
-
-
-
-12345
-
-    long lastNumber = visa/10;    1234.5
-    long everyOther = lastNumber % 10;  45
-    visa = visa / 100; 123.45
-    printf("%li\n", everyOther); 45
 }
