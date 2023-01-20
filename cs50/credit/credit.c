@@ -7,9 +7,11 @@ int main(void)
 
     do
     {
-        card = get_long("Enter card number: ")
+        card = get_long("Enter card number: ");
     }
-    while (card > 0)
+    while (card < 0);
+
+    
 
 
 }
