@@ -11,7 +11,7 @@ int main(void)
     }
     while (card < 0);
 
-    if
+    if 
 
 
     else
