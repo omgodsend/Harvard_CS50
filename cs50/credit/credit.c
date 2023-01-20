@@ -12,7 +12,7 @@ int main(void)
     while (card < 0);
 
     while(card > 0)
-    {
+    {12345
     long lastnum = card/10;
     long alternate = lastnum % 10;
     card = card / 100;
