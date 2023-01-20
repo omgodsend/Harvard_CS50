@@ -12,12 +12,14 @@ int main(void)
     while (card < 0);
 
     while(card > 0)
+
+    alternate = 0
     {
-    long lastnum = card/10;
-    long alternate = lastnum % 10;
-    alternate += alternate;
-    card = card / 100;
-    altsum = alternate+= alternate;
+    long lastNumber = visa/10;
+    visa = visa / 100;
+    long alternate = lastNumber % 10;
+    printf("%li\n", everyOther);
+}
     }
 
     //if
