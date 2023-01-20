@@ -14,7 +14,7 @@ int main(void)
     while(card > 0)
     {
     long lastnum = card/10;
-    long alternate = lastNumber % 10;
+    long alternate = lastnum % 10;
     card = card / 100;
     printf("%li\n", alternate);
 }
