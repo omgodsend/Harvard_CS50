@@ -26,9 +26,9 @@ if (i%2 !=0);
 card= 513247
 
 for (i, i=0, i--)
-a= card/10
-num1= card%10
-card= a/100
+a= card/10 = 51324
+num1= card%10 = 4
+card= a/100 = 513
 num2= b%10
 
 
