@@ -23,7 +23,7 @@ int main(void)
 3
 5
 if (i%2 !=0);
-card= 513247
+card= 5
 
 for (i, i=0, i--)
 a= card/10 = 51324
