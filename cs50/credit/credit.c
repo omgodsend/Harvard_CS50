@@ -20,7 +20,8 @@ int main(void)
             i++;
         }
 
-        printf("%i", i);
+do
+
 
 
 }
