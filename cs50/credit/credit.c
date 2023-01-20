@@ -38,6 +38,6 @@ um = card % 10;
 
     long lastNumber = visa/10;    1234.5
     long everyOther = lastNumber % 10;  45
-    visa = visa / 100;
-    printf("%li\n", everyOther);
+    visa = visa / 100; 123.45
+    printf("%li\n", everyOther); 45
 }
