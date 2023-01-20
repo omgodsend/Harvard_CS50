@@ -17,7 +17,7 @@ int main(void)
     long alternate = lastnum % 10;
     card = card / 100;
     printf("%li\n", alternate);
-}
+    }
 
     //if
 
