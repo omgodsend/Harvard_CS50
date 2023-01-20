@@ -13,12 +13,12 @@ int main(void)
 
 
     int i = 0;
- //       long cc = n;
-        while (card > 0)
+        long num = card;
+        while (num > 0)
         {
-            card = card / 10;
+            num = num / 10;
             i++;
         }
-printf(%li, card);
+
 
 }
