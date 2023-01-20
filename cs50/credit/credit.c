@@ -11,21 +11,20 @@ int main(void)
     }
     while (card < 0);
 
-while(visa > 0)
-{
-    long lastNumber = visa/10;
-    long everyOther = lastNumber % 10;
-    visa = visa / 100;
-    printf("%li\n", everyOther);
-    
-}
-    if
-
-
-    else
+    while(card > 0)
     {
-        printf("INVALID");
-    }
+        long lastNumber = visa/10;
+        long everyOther = lastNumber % 10;
+        visa = visa / 100;
+        printf("%li\n", everyOther);
+}
+    //if
+
+
+   // else
+  //  {
+   //     printf("INVALID");
+   // }
 
 
 }
