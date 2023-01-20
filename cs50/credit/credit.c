@@ -15,12 +15,12 @@ int main(void)
 
     alt1 = 0
     {
+    alternate + alternate
     long lastNumber = visa/10;
     visa = visa / 100;
     long alternate = lastNumber % 10;
     alternate + alt1
-    printf("%li\n", alternate);
-    alternate
+    return alternate
 }
     }
 
