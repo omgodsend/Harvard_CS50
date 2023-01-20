@@ -25,6 +25,9 @@ int main(void)
 if (i%2 !=0);
 card= 5
 
+13,15,16
+
+
 for (i, i=0, i--)
 a= card/10 = 51324
 num1= card%10 = 4
