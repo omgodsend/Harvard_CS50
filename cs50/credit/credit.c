@@ -28,14 +28,14 @@ card= 513247
 for (i, i=0, i--)
 a= card/10
 num1= card%10
-b= a/100
+card= a/100
 num2= b%10
 
 
 
 a=    513247/10 = 51324
 num1  a%10 = 4
-b=    a/100= 513
+card=    a/100= 513
 num2= b%10 = 3
 c =.  b/10 = 51
 num 3 = c/10 = 5
@@ -45,7 +45,13 @@ b=      a%10 =
 b= a/10 =       51
 num2= b%10 =    1
 
-
+while(visa > 0)
+{
+    long lastNumber = visa/10;
+    long everyOther = lastNumber % 10;
+    visa = visa / 100;
+    printf("%li\n", everyOther);
+}
 
 
 
