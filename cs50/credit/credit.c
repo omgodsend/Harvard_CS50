@@ -11,25 +11,14 @@ int main(void)
     }
     while (card < 0);
 
-    while(card > 0)
 
-    alt1 = 0
-    {
-    alternate + alternate
-    long lastNumber = visa/10;
-    visa = visa / 100;
-    long alternate = lastNumber % 10;
-    alternate + alt1
-    return alternate
-}
-    }
-
-    //if
-
-
-   // else
-  //  {
-   //     printf("INVALID");
-   // }
+    int i = 0;
+ //       long cc = n;
+        while (card > 0)
+        {
+            card = card / 10;
+            i++;
+        }
+printf(%li, card);
 
 }
