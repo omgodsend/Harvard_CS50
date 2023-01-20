@@ -11,7 +11,7 @@ int main(void)
     {
         n = get_int("size: ");
     }
-    while (n < 1 || n > 8);
+    while (n < 0 || n > 8);
 
     for (int i = 1; i <= n; i++)
     {
