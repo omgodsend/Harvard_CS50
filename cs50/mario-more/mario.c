@@ -34,7 +34,7 @@ int main(void)
 
 
 
-//The outer for loop starts at 1 and goes up to n, the size of the pyramid.
+//The outer for loop starts at 1 and goes up to n, the size of the pyramids
 The first inner for loop is for printing the spaces before the first set of hashtags. It starts at 1 and goes up to (n - i), where i is the current iteration of the outer for loop. This ensures that the spaces decrease as the number of hashtags increase.
 The second inner for loop is for printing the first set of hashtags. It starts at 1 and goes up to i, the current iteration of the outer for loop.
 The third inner for loop is for printing the second set of hashtags, which are the same number of the first set.
