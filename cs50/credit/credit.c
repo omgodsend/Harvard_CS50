@@ -29,7 +29,8 @@ for (i, i=0, i--)
 a= card/10 = 51324
 num1= card%10 = 4
 card= a/100 = 513
-num2= b%10
+num2= card%10= 3
+(num1+num2) *2 =14
 
 
 
