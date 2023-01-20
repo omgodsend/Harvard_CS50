@@ -25,6 +25,14 @@ int main(void)
 if (i%2 !=0);
 card= 513247
 
+for (i, i=0, i--)
+a= card/10
+num1= card%10
+b= a/100
+num2= b%10
+
+
+
 a=    513247/10 = 51324
 num1  a%10 = 4
 b=    a/100= 513
