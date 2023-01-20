@@ -7,5 +7,8 @@
     "workbench.colorTheme": "GitHub Dark",
     "editor.semanticTokenColorCustomizations": {
     "[GitHub Dark]": {}
+    },
+    "workbench.colorCustomizations": {
+    "[GitHub Dark]": {}
     }
 }
