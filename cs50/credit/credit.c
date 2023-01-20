@@ -20,7 +20,8 @@ int main(void)
             i++;
         }
 
-do
+if (i%2 !=0);
+
 
 
 
