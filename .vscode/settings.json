@@ -2,5 +2,7 @@
     "gitdoc.enabled": true,
     "files.associations": {
         "cs50.h": "c"
-    }
+    },
+    "workbench.preferredDarkColorTheme": "GitHub Dark Default",
+    "workbench.colorTheme": "GitHub Dark"
 }
