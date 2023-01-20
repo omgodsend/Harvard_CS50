@@ -13,8 +13,8 @@ int main(void)
 
     while(card > 0)
     {
-        long lastNumber = visa/10;
-        long everyOther = lastNumber % 10;
+        long lastNum = card/10;
+        long alternate = lastNumber % 10;
         visa = visa / 100;
         printf("%li\n", everyOther);
 }
