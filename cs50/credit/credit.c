@@ -29,3 +29,8 @@ int main(void)
    // }
 
 }
+12345
+    long lastNumber = visa/10; 
+    long everyOther = lastNumber % 10;
+    visa = visa / 100;
+    printf("%li\n", everyOther);
