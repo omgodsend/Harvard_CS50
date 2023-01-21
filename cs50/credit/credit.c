@@ -90,17 +90,17 @@ while(visa > 0)
 // Calculate checksum
     int sum1 = 0;
     int sum2 = 0;
-    long x = n;
+    long cc = n;
     int total = 0;
     int mod1;
     int mod2;
     int d1;
     int d2;
     do
-    {
+    {72635472837453
         // Remove last digit and add to sum1
-        mod1 = x % 10;
-        x = x / 10;
+        mod1 = x % 10; == 3
+        cc = cc / 10; 7263547283745
         sum1 = sum1 + mod1;
         // Remove second last digit
         mod2 = x % 10;
