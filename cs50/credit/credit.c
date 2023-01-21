@@ -25,10 +25,48 @@ int main(void)
 if (i%2 !=0);
 card= 5
 
-13=6,15,16
-72635472837454
+13=6,15=7,16=7
+7263547283745 38
 
-for (i, i=0, i--)
+3,4,3,2,4,3,2
+
+if i = 13
+k=6
+
+card= card/10 = 726354728374
+num1= a%10 = 4
+card= card/100 = 7263547283
+num2= card%10= 3
+card = card/100 = 72635472
+num3= card%10 = 2
+card = card/100 = 726354
+num4= card%10 = 4
+card = card/100 = 7263
+num5 = card%10 = 3
+card= card/100 = 72
+num6= card%10 = 7
+
+
+else
+k=7
+card= card/10 = 72635472837453
+num1= a%10 = 3
+card= card/100 = 726354728374
+num2= card%10= 4
+card = card/100 = 7263547283
+num3= card%10 = 3
+card = card/100 = 72635472
+num4= card%10 = 2
+card = card/100 = 726354
+num5 = card%10 = 4
+card= card/100 = 7263
+num6= card/10 = 3
+card= card/100 = 72
+num7= card/10=7
+
+
+
+for (k, k=0, i--)
 a= card/10 = 51324
 num1= card%10 = 4
 card= a/100 = 513
@@ -54,10 +92,12 @@ while(visa > 0)
     long lastNumber = visa/10;
     long everyOther = lastNumber % 10;
     visa = visa / 100;
-    printf("%li\n", everyOther);
+    return every0ther
+
 }
 
 
+4
 
 
 }
