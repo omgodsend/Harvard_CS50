@@ -38,7 +38,7 @@ card = card/100 = 7263
 n5 = card%10 = 3
 card= card/100 = 72
 n6= card%10 = 2
-(n1+n2 +n3 +n4+n5+n6)*2
+n1+n2 +n3 +n4+n5+n6)*2
 
 else
 card= card/10 = 72635472837453
