@@ -19,77 +19,15 @@ int main(void)
             num = num / 10;
             i++;
         }
-4
-3
-5
-if (i%2 !=0);
-card= 5
 
-if i = 13
-card= card/10 = 726354728374
-n1= a%10 = 4
-card= card/100 = 7263547283
-n2= card%10= 3
-card = card/100 = 72635472
-n3= card%10 = 2
-card = card/100 = 726354
-n4= card%10 = 4
-card = card/100 = 7263
-n5 = card%10 = 3
-card= card/100 = 72
-n6= card%10 = 2
-n1+n2 +n3 +n4+n5+n6)*2
+        if (i != 13 && i != 15 && i != 16)
+    {
+        printf("INVALID\n");
+        return 0;
+    }
 
-else
-card= card/10 = 72635472837453
-num1= a%10 = 3
-card= card/100 = 726354728374
-num2= card%10= 4
-card = card/100 = 7263547283
-num3= card%10 = 3
-card = card/100 = 72635472
-num4= card%10 = 2
-card = card/100 = 726354
-num5 = card%10 = 4
-card= card/100 = 7263
-num6= card/10 = 3
-card= card/100 = 72
-num7= card%10=2
-n1+n2 +n3 +n4+n5+n6+n7
-
-
-for (k, k=0, i--)
-a= card/10 = 51324
-num1= card%10 = 4
-card= a/100 = 513
-num2= card%10= 3
-(num1+num2) *2 =14
-
-
-
-a=    513247/10 = 51324
-num1  a%10 = 4
-card=    a/100= 513
-num2= b%10 = 3
-c =.  b/10 = 51
-num 3 = c/10 = 5
-
-
-b=      a%10 =
-b= a/10 =       51
-num2= b%10 =    1
-
-while(visa > 0)
-{
-    long lastNumber = visa/10;
-    long everyOther = lastNumber % 10;
-    visa = visa / 100;
-    return every0ther
-
-}
-// Calculate checksum
-    int sum1 = 0;
-    int sum2 = 0;
+    int add1 = 0;
+    int add2 = 0;
     long cc = n;
     int total = 0;
     int mod1;
@@ -97,23 +35,44 @@ while(visa > 0)
     int d1;
     int d2;
     do
-    {72635472837453
-        // Remove last digit and add to sum1
-        mod1 = x % 10; == 3
-        cc = cc / 10; 7263547283745
-        sum1 = sum1 + mod1; 3+0
-        // Remove second last digit
-        mod2 = x % 10; 5
-        x = x / 10; 726354728374
-        // Double second last digit and add digits to sum2
-        mod2 = mod2 * 2; 5x2 = 10
-        d1 = mod2 % 10; 0
-        d2 = mod2 / 10; 1
+    {
+        mod1 = x % 10;
+        cc = cc / 10;
+        sum1 = sum1 + mod1;
+        mod2 = x % 10;
+        x = x / 10;
+
+        mod2 = mod2 * 2;
+        d1 = mod2 % 10;
+        d2 = mod2 / 10;
         sum2 = sum2 + d1 + d2;
-        0 + 0 + 1
+
     }
     while (x > 0);
     total = sum1 + sum2;
 
+long start = n;
+    do
+    {
+        start = start / 10;
+    }
+    while (start > 100);
+
+    if ((start / 10 == 5) && (0 < start % 10 && start % 10 < 6))
+    {
+        printf("MASTERCARD\n");
+    }
+        else if ((start / 10 == 3) && (start % 10 == 4 || start % 10 == 7))
+    {
+        printf("AMEX\n");
+    }
+        else if (start / 10 == 4)
+    {
+        printf("VISA\n");
+    }
+        else
+    {
+        printf("INVALID\n");
+    }
 
 }
