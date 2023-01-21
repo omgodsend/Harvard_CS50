@@ -101,15 +101,16 @@ while(visa > 0)
         // Remove last digit and add to sum1
         mod1 = x % 10; == 3
         cc = cc / 10; 7263547283745
-        sum1 = sum1 + mod1;
+        sum1 = sum1 + mod1; 3+0
         // Remove second last digit
-        mod2 = x % 10;
-        x = x / 10;
+        mod2 = x % 10; 5
+        x = x / 10; 726354728374
         // Double second last digit and add digits to sum2
-        mod2 = mod2 * 2;
-        d1 = mod2 % 10;
-        d2 = mod2 / 10;
+        mod2 = mod2 * 2; 5x2 = 10
+        d1 = mod2 % 10; 0
+        d2 = mod2 / 10; 1
         sum2 = sum2 + d1 + d2;
+        0 + 0 + 1
     }
     while (x > 0);
     total = sum1 + sum2;
