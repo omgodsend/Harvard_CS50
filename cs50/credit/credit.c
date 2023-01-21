@@ -32,24 +32,21 @@ card= 5
 8,5,7,8,7,5,6,7
 
 if i = 13
-k=6
-
 card= card/10 = 726354728374
-num1= a%10 = 4
+n1= a%10 = 4
 card= card/100 = 7263547283
-num2= card%10= 3
+n2= card%10= 3
 card = card/100 = 72635472
-num3= card%10 = 2
+n3= card%10 = 2
 card = card/100 = 726354
-num4= card%10 = 4
+n4= card%10 = 4
 card = card/100 = 7263
-num5 = card%10 = 3
+n5 = card%10 = 3
 card= card/100 = 72
-num6= card%10 = 2
-
+n6= card%10 = 2
+n1+n2 +n3 +n4+n5+n6
 
 else
-k=7
 card= card/10 = 72635472837453
 num1= a%10 = 3
 card= card/100 = 726354728374
@@ -64,7 +61,7 @@ card= card/100 = 7263
 num6= card/10 = 3
 card= card/100 = 72
 num7= card%10=2
-
+n1+n2 +n3 +n4+n5+n6+n7
 
 
 for (k, k=0, i--)
