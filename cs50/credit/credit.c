@@ -52,11 +52,11 @@ int main(void)
     while (k > 0);
     total = sum1 + sum2;
 
-if (total % 10 != 0)
-    {
-        printf("INVALID\n");
-        return 0;
-    }
+        if (total % 10 != 0)
+            {
+                printf("INVALID\n");
+                return 0;
+            }
 
 long first = card;
     do
