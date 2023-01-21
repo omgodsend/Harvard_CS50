@@ -26,7 +26,7 @@ if (i%2 !=0);
 card= 5
 
 13=6,15=7,16=7
-7263547283745 38
+7263547283745 385
 
 3,4,3,2,4,3,2
 
@@ -44,7 +44,7 @@ num4= card%10 = 4
 card = card/100 = 7263
 num5 = card%10 = 3
 card= card/100 = 72
-num6= card%10 = 7
+num6= card%10 = 2
 
 
 else
@@ -62,7 +62,7 @@ num5 = card%10 = 4
 card= card/100 = 7263
 num6= card/10 = 3
 card= card/100 = 72
-num7= card/10=7
+num7= card%10=2
 
 
 
