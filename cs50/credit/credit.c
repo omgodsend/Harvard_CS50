@@ -27,37 +27,35 @@ int main(void)
     }
 
     int sum1 = 0;
-    int sum2 = 0;
-    long k = card;
-    int total = 0;
-    int end1;
-    int end2;
-    int d1;
-    int d2;
-    do
-    {
-        end1 = k % 10;
-        k = k / 10;
-        end1 = sum1 + end1;
+int sum2 = 0;
+long k = card;
+int total = 0;
+int end1;
+int end2;
+int d;
+do
+{
+    end1 = k % 10;
+    k = k / 10;
+    sum1 = sum1 + end1;
 
-        end2 = k % 10;
-        k = k / 10;
+    end2 = k % 10;
+    k = k / 10;
 
-        end2 = end2 * 2;
-        d1 = end2 % 10;
-        d2 = end2 / 10;
-        sum2 = sum2 + d1 + d2;
+    end2 = end2 * 2;
+    d = (end2 % 10) + (end2 / 10);
+    sum2 = sum2 + d;
 
-    }
-    while (k > 0);
+}
+while (k > 0);
 
-    total = sum1 + sum2;
+total = sum1 + sum2;
 
-    if (total % 10 != 0)
-        {
-            printf("INVALID\n");
-            return 0;
-        }
+if (total % 10 != 0)
+{
+    printf("INVALID\n");
+    return 0;
+}
 
 long first = card;
     do
