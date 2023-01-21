@@ -30,7 +30,7 @@ int main(void)
     int add2 = 0;
     long cc = n;
     int total = 0;
-    int mod1;
+    int mo1;
     int mod2;
     int d1;
     int d2;
@@ -38,7 +38,8 @@ int main(void)
     {
         mod1 = x % 10;
         cc = cc / 10;
-        sum1 = sum1 + mod1;
+        add1 = add1 + mod1;
+        
         mod2 = x % 10;
         x = x / 10;
 
