@@ -26,48 +26,48 @@ int main(void)
         return 0;
     }
 
-    int add1 = 0;
-    int add2 = 0;
-    long cc = n;
+    int sum1 = 0;
+    int sum2 = 0;
+    long k = card;
     int total = 0;
-    int mo1;
-    int mod2;
+    int end1;
+    int end2;
     int d1;
     int d2;
     do
     {
-        mod1 = x % 10;
-        cc = cc / 10;
-        add1 = add1 + mod1;
-        
-        mod2 = x % 10;
-        x = x / 10;
+        end1 = k % 10;
+        k = k / 10;
+        end1 = sum1 + end1;
 
-        mod2 = mod2 * 2;
-        d1 = mod2 % 10;
-        d2 = mod2 / 10;
+        end2 = k % 10;
+        k = k / 10;
+
+        end2 = end2 * 2;
+        d1 = end2 % 10;
+        d2 = end2 / 10;
         sum2 = sum2 + d1 + d2;
 
     }
-    while (x > 0);
+    while (k > 0);
     total = sum1 + sum2;
 
-long start = n;
+long first = card;
     do
     {
-        start = start / 10;
+        first = first / 10;
     }
-    while (start > 100);
+    while (first > 100);
 
-    if ((start / 10 == 5) && (0 < start % 10 && start % 10 < 6))
+    if ((first / 10 == 5) && (0 < first % 10 && first % 10 < 6))
     {
         printf("MASTERCARD\n");
     }
-        else if ((start / 10 == 3) && (start % 10 == 4 || start % 10 == 7))
+        else if ((first / 10 == 3) && (first % 10 == 4 || first % 10 == 7))
     {
         printf("AMEX\n");
     }
-        else if (start / 10 == 4)
+        else if (first / 10 == 4)
     {
         printf("VISA\n");
     }
