@@ -17,7 +17,7 @@ int main(void)
     int sent = count_sentences(all);
 
     float L = ((letters/(float)words) * 100);
-    float S = ((sent/(float)words) * (int) 100);
+    float S = ((sent/(float)words) * 100);
 
 
 
