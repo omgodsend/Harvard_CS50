@@ -37,7 +37,7 @@ return len;
 
 int count_words(string word)
 {
-    int len = 0;
+    int len = 1;
     int num = strlen(word);
 
     for (int i = 0; i < num; i++)
