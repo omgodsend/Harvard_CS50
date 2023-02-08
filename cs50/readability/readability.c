@@ -15,7 +15,7 @@ int main(void)
     int words = count_words(all);
 
 
-    printf("%i Letters\n%i Words\n", letters, words);
+    printf("\n%i Letters\n%i Words\n", letters, words);
 
 }
 
