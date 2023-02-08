@@ -19,9 +19,9 @@ int main(void)
     float L = ((letters/(float)words) * 100);
     float S = ((sent/(float)words) * 100);
 
-    int index = 0.0588 * L - 0.296 * S - 15.8
+    int index = (0.0588 * L - 0.296 * S - 15.8);
 
-    printf("%i", index);
+    printf("%i\n", index);
 
 }
 
