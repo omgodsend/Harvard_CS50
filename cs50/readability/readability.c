@@ -16,6 +16,10 @@ int main(void)
     int words = count_words(all);
     int sent = count_sentences(all);
 
+    int L = ()
+
+
+
 
     printf("\n%i Letters\n%i Words\n%i Sentences\n", letters, words, sent);
 
