@@ -19,6 +19,8 @@ int main(void)
     float L = ((letters/words) * 100);
     float S = ((sent/words) * (int) 100);
 
+    
+
 
 
 
