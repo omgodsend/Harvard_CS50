@@ -16,14 +16,11 @@ int main(void)
     int words = count_words(all);
     int sent = count_sentences(all);
 
-    double L = ((letters/(float)words) * 100);
+    float L = ((letters/(float)words) * 100);
     float S = ((sent/(float)words) * 100);
 
 
-
-
-
-    printf("%f %f\n", (round)L, S);
+    printf("%f %f\n", L, S);
 
 }
 
