@@ -16,13 +16,13 @@ int main(void)
     int words = count_words(all);
     int sent = count_sentences(all);
 
-    float L = ((letters/words) * (int) 100);
-    float S = ((sent/words))
+    float L = ((letters/words) * 100);
+    float S = ((sent/words) * (int) 100);
 
 
 
 
-    printf("%i\n", L);
+    printf("%f %f\n", L, S);
 
 }
 
