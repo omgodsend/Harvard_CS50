@@ -5,6 +5,7 @@
 
 int count_letters(string text);
 int count_words(string words);
+int count_sentences(string sent);
 
 int main(void)
 {
@@ -13,9 +14,10 @@ int main(void)
 
     int letters = count_letters(all);
     int words = count_words(all);
+    int sent = count_sentences(all)
 
 
-    printf("\n%i Letters\n%i Words\n", letters, words);
+    printf("\n%i Letters\n%i Words\n%i Sentences\n", letters, words, sent);
 
 }
 
@@ -48,4 +50,15 @@ int count_words(string word)
         }
     }
 return len;
+}
+
+int count_sentences(string sent)
+{
+    int len = 0
+    int num = strlen(sent)
+
+    for
+
+
+
 }
