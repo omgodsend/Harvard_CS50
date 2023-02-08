@@ -11,8 +11,10 @@ int main(void)
     string all = get_string("Text: ");
 
     int letters = count_letters(all);
+    int words = count_words(all);
 
-    printf("%i letters\n", letters);
+
+    printf("%i Letters\n %i Words", letters, words);
 
 }
 
@@ -30,4 +32,11 @@ int count_letters(string text)
     }
 
 return len;
+}
+
+int count_words(string word)
+{
+    int len 
+
+
 }
