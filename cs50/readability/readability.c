@@ -59,8 +59,8 @@ int count_sentences(string sent)
 
     for (i = 0; i < num; i++)
         {
-            if (sent[i]) == "." or "!" or "?"
-            
+            if ((sent[i]) == "." or "!" or "?")
+
 
         }
 
