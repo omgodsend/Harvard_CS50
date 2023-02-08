@@ -37,7 +37,14 @@ return len;
 int count_words(string word)
 {
     int len = 0
-    int num = 
+    int num = strlen(word)
 
+    for (int i = 0; i < num; i++)
+    {
+        if (isspace(word[i]))
+        {
+            len ++;
+        }
+    }
 
 }
