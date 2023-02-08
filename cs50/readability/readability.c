@@ -22,9 +22,14 @@ int main(void)
 
     int index = round(0.0588 * L - 0.296 * S - 15.8);
 
-    printf("Grade %i\n", index);
-
-}
+    if (index > 16)
+        {
+            printf("Grade: 16+");
+        }
+    else
+        {
+            printf("Grade %i\n", index);
+        }
 
 int count_letters(string text)
 {
