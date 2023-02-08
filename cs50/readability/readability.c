@@ -59,10 +59,10 @@ int count_sentences(string sent)
 
     for (int i = 0; i < num; i++)
         {
-            if ((sent[i]) == "." || (sent[i]) == "!" || (sent[i]) == "?")
+            if ((sent[i]) == '.' || (sent[i]) == '!' || (sent[i]) == '?')
             {
                 len ++;
             }
         }
-return len
+return len;
 }
