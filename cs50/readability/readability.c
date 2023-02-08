@@ -5,7 +5,7 @@
 
 int count_letters(string text);
 int count_words(string words);
-int count_sentences(char sent);
+int count_sentences(char *sent);
 
 int main(void)
 {
@@ -52,7 +52,7 @@ int count_words(string word)
 return len;
 }
 
-int count_sentences(char sent)
+int count_sentences(char *sent)
 {
     int len = 0;
     int num = strlen(sent);
