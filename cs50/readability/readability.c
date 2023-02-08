@@ -14,7 +14,7 @@ int main(void)
 
     int letters = count_letters(all);
     int words = count_words(all);
-    int sent = count_sentences(all)
+    int sent = count_sentences(all);
 
 
     printf("\n%i Letters\n%i Words\n%i Sentences\n", letters, words, sent);
@@ -54,17 +54,15 @@ return len;
 
 int count_sentences(string sent)
 {
-    int len = 0
-    int num = strlen(sent)
+    int len = 0;
+    int num = strlen(sent);
 
-    for (i = 0; i < num; i++)
+    for (int i = 0; i < num; i++)
         {
-            if ((sent[i]) == "." || "!" || "?")
-
-
+            if ((sent[i]) == "." || (sent[i]) == "!" || (sent[i]) == "?")
+            {
+                len ++;
+            }
         }
-
-
-
-
+return len
 }
