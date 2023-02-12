@@ -35,6 +35,6 @@ int main(int argc, string argv[])
 
 int bool only_digits(string s)
 {
-    if (a)
+    if (argv[1])
 
 }
