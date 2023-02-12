@@ -10,7 +10,7 @@ int main(int argc, string argv[])
 // Make sure program was run with just one command-line argument
     if (argc != 2)
     {
-        printf("Usage: %s key", argv[0]);
+        printf("Usage: %s key\n", argv[0]);
         return 1;
     }
     else
