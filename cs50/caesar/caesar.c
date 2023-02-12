@@ -11,6 +11,11 @@ int main(int argc, string argv[])
     if (argc != 2)
     {
         printf("Usage: %s key", argv[0]);
+        return 1;
+    }
+    else
+    {
+        return 0;
     }
 
     // Make sure every character in argv[1] is a digit
