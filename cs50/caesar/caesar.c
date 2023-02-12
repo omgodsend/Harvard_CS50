@@ -21,7 +21,12 @@ int main(int argc, string argv[])
     }
 
     // Make sure every character in argv[1] is a digit
-    check = ()
+    int check = only_digits(argv[1])
+
+    if (check == 0)
+    
+
+
     // Convert argv[1] from a `string` to an `int`
 
     // Prompt user for plaintext
