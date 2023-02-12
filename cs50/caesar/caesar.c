@@ -4,7 +4,7 @@
 #include <string.h>
 #include <math.h>
 
-int bool only_digits(string s);
+bool only_digits(string s);
 
 int main(int argc, string argv[])
 {
@@ -21,7 +21,7 @@ int main(int argc, string argv[])
     }
 
     // Make sure every character in argv[1] is a digit
-
+    check = ()
     // Convert argv[1] from a `string` to an `int`
 
     // Prompt user for plaintext
@@ -33,7 +33,7 @@ int main(int argc, string argv[])
 
 }
 
-int bool only_digits(string s)
+bool only_digits(string s)
 {
     if (isdigit(argv[1]))
     {
