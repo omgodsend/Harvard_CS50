@@ -4,6 +4,8 @@
 #include <string.h>
 #include <math.h>
 
+int bool only_digits(string s);
+
 int main(int argc, string argv[])
 {
 
