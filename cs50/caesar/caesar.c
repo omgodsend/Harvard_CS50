@@ -8,9 +8,9 @@ int main(int argc, string argv[])
 {
 
 // Make sure program was run with just one command-line argument
-    if (argc == 2)
+    if (argc != 2)
     {
-        printf(")
+        printf("Usage: %s key", argv[0]);
     }
 
     // Make sure every character in argv[1] is a digit
