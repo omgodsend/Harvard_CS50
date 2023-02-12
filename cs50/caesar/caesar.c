@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
+#include <stdbool.h>
 
 bool only_digits(string s);
 
@@ -24,7 +25,7 @@ int main(int argc, string argv[])
     int check = only_digits(argv[1])
 
     if (check == 0)
-    
+
 
 
     // Convert argv[1] from a `string` to an `int`
