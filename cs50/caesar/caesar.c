@@ -22,7 +22,7 @@ int main(int argc, string argv[])
     }
 
     // Make sure every character in argv[1] is a digit
-    int check = strlen()
+    int check = strlen(s)
 
     if (only_digits(argv[1]))
     {
