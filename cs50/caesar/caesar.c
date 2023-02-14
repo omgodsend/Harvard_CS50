@@ -34,7 +34,7 @@ int main(int argc, string argv[])
     {
         rotate((char)prompt[i], arg);
     }
-    printf("cyphertext: )
+    printf("cyphertext: ")
 }
 
 bool only_digits(string text)
