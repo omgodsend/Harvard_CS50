@@ -47,5 +47,12 @@ int main(int argc, string argv[])
 
 bool only_digits(string text)
 {
-    for (i )
+    int len = strlen(text)
+
+    for (i = 0; i < len; i++);
+    {
+        if (!isdigit(text))
+        return false
+    }
+    return true
 }
