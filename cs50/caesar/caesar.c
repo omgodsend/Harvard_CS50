@@ -7,6 +7,7 @@
 #include <stdlib.h>
 
 bool only_digits(string s);
+char rotate(char c, int n);
 
 int main(int argc, string argv[])
 {
@@ -29,10 +30,9 @@ int main(int argc, string argv[])
     string prompt = getstring("Plaintext: \n")
 
     // For each character in the plaintext:
-    
+
 
         // Rotate the character if it's a letter
-
 
 }
 
@@ -48,4 +48,10 @@ bool only_digits(string text)
         }
     }
     return true;
+}
+
+char rotate(char c, int n)
+{
+
+
 }
