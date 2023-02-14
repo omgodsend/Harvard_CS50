@@ -4,6 +4,7 @@
 #include <string.h>
 #include <math.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 bool only_digits(string s);
 
