@@ -51,7 +51,7 @@ bool only_digits(string text)
 
     for (i = 0; i < len; i++);
     {
-        if (!isdigit(text))
+        if (!isdigit(text[i]))
         return false
     }
     return true
