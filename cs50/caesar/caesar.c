@@ -32,11 +32,8 @@ int main(int argc, string argv[])
     // For each character in the plaintext:
     for (int i = 0; i < strlen(prompt); i++)
     {
-        rotate()
+        rotate(prompt[i], )
     }
-
-        // Rotate the character if it's a letter
-
 }
 
 bool only_digits(string text)
