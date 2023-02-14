@@ -28,11 +28,13 @@ int main(int argc, string argv[])
 
     // Prompt user for plaintext
     string prompt = get_string("Plaintext: \n");
+    string plaintext = get_string("plaintext: ");
+    int plaintext_length = strlen(plaintext);
 
     string cyphertext = "";
 
     // For each character in the plaintext:
-    for (int i = 0; i < strlen(prompt); i++)
+    for (int i = 0; i < strlen(plaintext_length); i++)
     {
         cyphertext += rotate((char)prompt[i], key);
     }
