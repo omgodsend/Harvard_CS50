@@ -36,10 +36,12 @@ bool only_digits(string text)
 {
     int len = strlen(text);
 
-    for (int i = 0; i < len; i++);
+    for (int i = 0; i < len; i++)
     {
-        if (!isdigit(text[i]));
-        return false;
+        if (!isdigit(text[i]))
+        {
+            return false;
+        }
     }
     return true;
 }
