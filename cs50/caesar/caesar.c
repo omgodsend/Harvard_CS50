@@ -24,15 +24,15 @@ int main(int argc, string argv[])
     }
 
     // Convert argv[1] from a `string` to an `int`
-    int arg = atoi(argv[1])
+    int arg = atoi(argv[1]);
 
     // Prompt user for plaintext
-    int prompt = getstring("Plaintext: \n")
+    int prompt = getstring("Plaintext: \n");
 
     // For each character in the plaintext:
     for (int i = 0; i < strlen(prompt); i++)
     {
-        rotate((char)prompt[i], arg)
+        rotate((char)prompt[i], arg);
     }
 }
 
