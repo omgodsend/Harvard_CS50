@@ -29,12 +29,15 @@ int main(int argc, string argv[])
     // Prompt user for plaintext
     string prompt = get_string("Plaintext: \n");
 
+    string cyphertext = ""
+
     // For each character in the plaintext:
     for (int i = 0; i < strlen(prompt); i++)
     {
-        rotate((char)prompt[i], arg);
+        cyphertext += rotate((char)prompt[i], arg);
     }
-    printf("cyphertext: ")
+
+    printf("cyphertext: %s\n", cyphertext);
 }
 
 bool only_digits(string text)
