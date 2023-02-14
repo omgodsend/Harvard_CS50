@@ -33,7 +33,7 @@ int main(int argc, string argv[])
     string cyphertext = "";
 
     // For each character in the plaintext:
-    for (int i = 0; i < strlen(plaintext_length); i++)
+    for (int i = 0; i < plaintext_length; i++)
     {
         cyphertext += rotate((char)prompt[i], key);
     }
