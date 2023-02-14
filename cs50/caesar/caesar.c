@@ -23,10 +23,13 @@ int main(int argc, string argv[])
     }
 
     // Convert argv[1] from a `string` to an `int`
+    string arg = atoi(argv[1])
 
     // Prompt user for plaintext
+    string prompt = getstring("Plaintext: \n")
 
     // For each character in the plaintext:
+    
 
         // Rotate the character if it's a letter
 
