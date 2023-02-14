@@ -24,7 +24,7 @@ int main(int argc, string argv[])
     }
 
     // Convert argv[1] from a `string` to an `int`
-    int arg = atoi(argv[1]);
+    int key = atoi(argv[1]);
 
     // Prompt user for plaintext
     string prompt = get_string("Plaintext: \n");
