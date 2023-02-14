@@ -18,10 +18,6 @@ int main(int argc, string argv[])
         printf("Usage: %s key\n", argv[0]);
         return 1;
     }
-    else
-    {
-        return 0;
-    }
 
     // Convert argv[1] from a `string` to an `int`
     int key = atoi(argv[1]);
@@ -39,6 +35,8 @@ int main(int argc, string argv[])
     }
 
     printf("cyphertext: %s\n", cyphertext);
+
+    return 0;
 }
 
 bool only_digits(string text)
