@@ -55,11 +55,14 @@ char rotate(char c, int n)
     if ((char)c > 'A' && (char)c < 'Z')
     {
         (letter - 'A')
-        
     }
     else if ((char)c > 'a' && (char)c < 'z')
     {
         (letter - 'a')
+    }
+    else
+    {
+        return (char) c
     }
 
 }
