@@ -22,7 +22,9 @@ int main(int argc, string argv[])
     }
 
     // Make sure every character in argv[1] is a digit
-    int check = only_digits(argv[1])
+    int check =
+
+    only_digits(argv[1])
 
     if (check == 0)
 
@@ -41,5 +43,5 @@ int main(int argc, string argv[])
 
 bool only_digits(string s)
 {
-    return(isdigit(argv[1]))
+    return(isdigit(s))
 }
