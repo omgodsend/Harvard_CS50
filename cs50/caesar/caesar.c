@@ -52,14 +52,15 @@ bool only_digits(string text)
 
 char rotate(char c, int n)
 {
+    int arg;
 
     if ((char)c >= 'A' && (char)c <= 'Z')
     {
-        return((char)c + 'A');
+        return((char)c + arg);
     }
     else if ((char)c >= 'a' && (char)c <= 'z')
     {
-        ((char)c - 'a');
+        ((char)c + arg);
     }
     else
     {
