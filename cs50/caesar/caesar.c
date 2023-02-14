@@ -27,7 +27,7 @@ int main(int argc, string argv[])
     int arg = atoi(argv[1]);
 
     // Prompt user for plaintext
-    int prompt = getstring("Plaintext: \n");
+    string prompt = get_string("Plaintext: \n");
 
     // For each character in the plaintext:
     for (int i = 0; i < strlen(prompt); i++)
@@ -60,7 +60,7 @@ char rotate(char c, int n)
     }
     else if ((char)c >= 'a' && (char)c <= 'z')
     {
-        ((char)c + arg);
+        return((char)c + arg);
     }
     else
     {
