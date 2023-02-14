@@ -41,14 +41,5 @@ int main(int argc, string argv[])
 
 bool only_digits(string s)
 {
-    if (isdigit(argv[1]))
-    {
-        printf("true");
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-
+    return(isdigit(argv[1]))
 }
