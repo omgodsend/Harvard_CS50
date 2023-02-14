@@ -34,6 +34,7 @@ int main(int argc, string argv[])
     {
         rotate((char)prompt[i], arg);
     }
+    printf("cyphertext: )
 }
 
 bool only_digits(string text)
@@ -52,15 +53,14 @@ bool only_digits(string text)
 
 char rotate(char c, int n)
 {
-    int arg =
 
     if ((char)c >= 'A' && (char)c <= 'Z')
     {
-        return((char)c + arg);
+        return((char)c + (int)n);
     }
     else if ((char)c >= 'a' && (char)c <= 'z')
     {
-        return((char)c + arg);
+        return((char)c + (int)n);
     }
     else
     {
