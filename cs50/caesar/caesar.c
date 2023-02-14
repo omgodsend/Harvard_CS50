@@ -11,7 +11,7 @@ int main(int argc, string argv[])
 {
 
 // Make sure program was run with just one command-line argument
-    if (argc != 2)
+    if (argc != 2 && only_digits)
     {
         printf("Usage: %s key\n", argv[0]);
         return 1;
@@ -20,19 +20,6 @@ int main(int argc, string argv[])
     {
         return 0;
     }
-
-    // Make sure every character in argv[1] is a digit
-    int check = strlen(s)
-
-    if (only_digits(argv[1]))
-    {
-        return 0
-    }
-    else
-    {
-        return 1
-    }
-
 
     // Convert argv[1] from a `string` to an `int`
 
