@@ -34,12 +34,12 @@ int main(int argc, string argv[])
 
 bool only_digits(string text)
 {
-    int len = strlen(text)
+    int len = strlen(text);
 
-    for (i = 0; i < len; i++);
+    for (int i = 0; i < len; i++);
     {
-        if (!isdigit(text[i]))
-        return false
+        if (!isdigit(text[i]));
+        return false;
     }
-    return true
+    return true;
 }
