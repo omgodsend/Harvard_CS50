@@ -30,7 +30,10 @@ int main(int argc, string argv[])
     int prompt = getstring("Plaintext: \n")
 
     // For each character in the plaintext:
-
+    for (int i = 0; i < strlen(prompt); i++)
+    {
+        rotate()
+    }
 
         // Rotate the character if it's a letter
 
