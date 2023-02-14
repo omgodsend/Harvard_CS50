@@ -27,7 +27,6 @@ int main(int argc, string argv[])
     int key = atoi(argv[1]);
 
     // Prompt user for plaintext
-    string prompt = get_string("Plaintext: \n");
     string plaintext = get_string("plaintext: ");
     int plaintext_length = strlen(plaintext);
 
