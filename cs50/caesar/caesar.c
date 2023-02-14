@@ -34,7 +34,7 @@ int main(int argc, string argv[])
     // For each character in the plaintext:
     for (int i = 0; i < strlen(prompt); i++)
     {
-        cyphertext += rotate((char)prompt[i], arg);
+        cyphertext += rotate((char)prompt[i], key);
     }
 
     printf("cyphertext: %s\n", cyphertext);
@@ -56,19 +56,18 @@ bool only_digits(string text)
 
 char rotate(char c, int n)
 {
-
-    if ((char)c >= 'A' && (char)c <= 'Z')
+    // If the character is uppercase
+    if (c >= 'A' && c <= 'Z')
     {
-        ((char)c - 'A')
-        return((char)c + (int)n);
+        // Shift the character n times and wrap around if necessary
+        c = (c - 'A' + n) % 26 + 'A';
     }
-    else if ((char)c >= 'a' && (char)c <= 'z')
+    // If the character is lowercase
+    else if (c >= 'a' && c <= 'z')
     {
-        return((char)c + (int)n);
-    }
-    else
-    {
-        return (char) c;
+        // Shift the character n times and wrap around if necessary
+        c = (c - 'a' + n) % 26 + 'a';
     }
 
+    return c;
 }
