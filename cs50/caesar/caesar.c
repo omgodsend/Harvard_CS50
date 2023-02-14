@@ -27,7 +27,7 @@ int main(int argc, string argv[])
     string arg = atoi(argv[1])
 
     // Prompt user for plaintext
-    string prompt = getstring("Plaintext: \n")
+    int prompt = getstring("Plaintext: \n")
 
     // For each character in the plaintext:
 
@@ -52,6 +52,6 @@ bool only_digits(string text)
 
 char rotate(char c, int n)
 {
-
+    if
 
 }
