@@ -22,12 +22,16 @@ int main(int argc, string argv[])
     }
 
     // Make sure every character in argv[1] is a digit
-    int check =
+    int check = strlen()
 
-    only_digits(argv[1])
-
-    if (check == 0)
-
+    if (only_digits(argv[1]))
+    {
+        return 0
+    }
+    else
+    {
+        return 1
+    }
 
 
     // Convert argv[1] from a `string` to an `int`
