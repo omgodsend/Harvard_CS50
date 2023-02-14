@@ -45,7 +45,7 @@ int main(int argc, string argv[])
 
 }
 
-bool only_digits(string s)
+bool only_digits(string text)
 {
-    return(isdigit(s))
+    for (i )
 }
