@@ -69,5 +69,9 @@ char rotate(char c, int n)
         // Shift the character n times and wrap around
         printf("%c", ((c - 'a' + n) % 26 + 'a'));
     }
+    else
+    {
+        printf("%c", c);
+    }
     return c;
 }
