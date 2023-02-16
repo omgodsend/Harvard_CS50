@@ -36,7 +36,8 @@ int main(int argc, string argv[])
         cyphertext += rotate(plaintext[i], key);
     }
 
-
+    printf("\n");
+    
     return 0;
 }
 
@@ -68,6 +69,5 @@ char rotate(char c, int n)
         // Shift the character n times and wrap around
         printf("%c", ((c - 'a' + n) % 26 + 'a'));
     }
-    printf("\n");
     return c;
 }
