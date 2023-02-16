@@ -31,7 +31,7 @@ int main(int argc, string argv[])
     // For each character in the plaintext:
     for (int i = 0; i < plaintext_length; i++)
     {
-        cyphertext += rotate((char)plaintext[i], key);
+        cyphertext += rotate(plaintext[i], key);
     }
 
     printf("cyphertext: %s\n", cyphertext);
