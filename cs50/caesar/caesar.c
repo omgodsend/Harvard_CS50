@@ -26,7 +26,7 @@ int main(int argc, string argv[])
     string plaintext = get_string("plaintext: ");
     int plaintext_length = strlen(plaintext);
 
-    char cyphertext(length + 1)
+    string cyphertext = "";
 
     // For each character in the plaintext:
     for (int i = 0; i < plaintext_length; i++)
