@@ -28,13 +28,14 @@ int main(int argc, string argv[])
 
     string cyphertext = "";
 
+    printf("cyphertext: %s", cyphertext);
+
     // For each character in the plaintext:
     for (int i = 0; i < plaintext_length; i++)
     {
         cyphertext += rotate(plaintext[i], key);
     }
 
-    printf("cyphertext: %s\n", cyphertext);
 
     return 0;
 }
@@ -67,6 +68,6 @@ char rotate(char c, int n)
         // Shift the character n times and wrap around
         printf("%c", ((c - 'a' + n) % 26 + 'a'));
     }
-
+    printf("\n");
     return c;
 }
