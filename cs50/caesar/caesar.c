@@ -58,13 +58,13 @@ char rotate(char c, int n)
     // If the character is uppercase
     if (c >= 'A' && c <= 'Z')
     {
-        // Shift the character n times and wrap around if necessary
+        // Shift the character n times and wrap around
         c = (c - 'A' + n) % 26 + 'A';
     }
     // If the character is lowercase
     else if (c >= 'a' && c <= 'z')
     {
-        // Shift the character n times and wrap around if necessary
+        // Shift the character n times and wrap around
         c = (c - 'a' + n) % 26 + 'a';
     }
 
