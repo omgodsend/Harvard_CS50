@@ -59,13 +59,13 @@ char rotate(char c, int n)
     if (c >= 'A' && c <= 'Z')
     {
         // Shift the character n times and wrap around
-        c = (c - 'A' + n) % 26 + 'A';
+        printf("%c", ((c - 'A' + n) % 26 + 'A'));
     }
     // If the character is lowercase
     else if (c >= 'a' && c <= 'z')
     {
         // Shift the character n times and wrap around
-        c = (c - 'a' + n) % 26 + 'a';
+        printf("%c", ((c - 'a' + n) % 26 + 'a'));
     }
 
     return c;
