@@ -26,18 +26,18 @@ int main(int argc, string argv[])
     string plaintext = get_string("plaintext: ");
     int plaintext_length = strlen(plaintext);
 
-    string cyphertext = "";
+    string ciphertext = "";
 
-    printf("cyphertext: %s", cyphertext);
+    printf("ciphertext: %s", ciphertext);
 
     // For each character in the plaintext:
     for (int i = 0; i < plaintext_length; i++)
     {
-        cyphertext += rotate(plaintext[i], key);
+        ciphertext += rotate(plaintext[i], key);
     }
 
     printf("\n");
-    
+
     return 0;
 }
 
