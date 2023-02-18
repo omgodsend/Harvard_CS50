@@ -2,12 +2,10 @@ sort1 uses: Linear sort
 
 How do you know?: Takes the longest time to complete
 
-sort2 uses: Merge sort
-
-How do you know?: The fastest time to complete
-
-sort3 uses: Bubble sort
+sort2 uses: Bubble sort
 
 How do you know?: Takes in between Linear and Merge
 
-2= .044
+sort3 uses: Merge sort
+
+How do you know?: The fastest time to complete
