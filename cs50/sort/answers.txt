@@ -1,17 +1,11 @@
-sort1 uses: TODO
+sort1 uses: Linear sort
 
-How do you know?: TODO
+How do you know?: Takes the longest time to complete
 
-sort2 uses: TODO
+sort2 uses: Merge sort
 
-How do you know?: TODO
+How do you know?: The fastest time to complete
 
-sort3 uses: TODO
+sort3 uses: Bubble sort
 
-How do you know?: TODO
-
-time ./sort1 reversed50000.txt
-
-1= 5.787- linear
-2= 0.687 - merge
-3= 3.29 - bubble
+How do you know?: Takes in between Linear and Merge
