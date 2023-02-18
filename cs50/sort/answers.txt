@@ -1,18 +1,19 @@
-sort1 uses: Linear
-
-How do you know?: The reversed is the quickest
-
-sort2 uses: Bubble
+sort1 uses: Bubble
 
 How do you know?: Takes in between Linear and Merge
+
+sort2 uses: Linear
+
+How do you know?: The reversed is the quickest
 
 sort3 uses: Merge
 
 How do you know?: The fastest time to complete
 
 
-time ./sort reversed50000.txt
+time ./sort random50000.txt
 
+reversed
 1=
 real    0m5.764s
 user    0m4.991s
@@ -27,3 +28,19 @@ sys     0m0.153s
 real    0m3.261s
 user    0m2.670s
 sys     0m0.165s
+
+random
+1=
+real    0m7.551s
+user    0m6.940s
+sys     0m0.179s
+
+2 =
+real    0m0.381s
+user    0m0.042s
+sys     0m0.180s
+
+3=
+real    0m2.999s
+user    0m2.607s
+sys     0m0.147s
