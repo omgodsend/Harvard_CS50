@@ -1,8 +1,8 @@
-sort1 uses: linear
+sort1 uses: merge
 
 How do you know?: Takes in between Linear and Merge
 
-sort2 uses: merge
+sort2 uses: linear
 
 How do you know?: The sorted values is the quickest
 
