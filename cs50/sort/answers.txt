@@ -9,3 +9,6 @@ How do you know?: Takes in between Linear and Merge
 sort3 uses: Merge
 
 How do you know?: The fastest time to complete
+
+
+time ./sort  random
