@@ -9,3 +9,5 @@ How do you know?: The fastest time to complete
 sort3 uses: Bubble sort
 
 How do you know?: Takes in between Linear and Merge
+
+2= .044
