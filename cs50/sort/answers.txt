@@ -11,3 +11,7 @@ sort3 uses: TODO
 How do you know?: TODO
 
 time ./sort1 reversed50000.txt
+
+1= 5.787- linear
+2= 0.687 - merge
+3= 3.29 - bubble
