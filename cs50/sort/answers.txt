@@ -9,19 +9,3 @@ How do you know?: The sorted values is the quickest
 sort3 uses: Linear
 
 How do you know?: The fastest time to complete
-
-time ./sort1 sorted50000.txt
-real    0m0.520s
-user    0m0.052s
-sys     0m0.177s
-time ./sort2 sorted50000.txt
-real    0m0.434s
-user    0m0.040s
-sys     0m0.172s
-
-time ./sort3 sorted50000.txt
-real    0m3.245s
-user    0m2.614s
-sys     0m0.168s
-
-time ./sort1 random50000.txt
