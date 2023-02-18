@@ -10,4 +10,4 @@ sort3 uses: TODO
 
 How do you know?: TODO
 
-time ./ sort1 reversed50000.txt
+time ./sort1 reversed50000.txt
