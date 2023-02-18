@@ -1,11 +1,11 @@
-sort1 uses: bubble
+sort1 uses: merge
 
 How do you know?: Takes in between Linear and Merge
 
-sort2 uses: merge
+sort2 uses: bubble
 
 How do you know?: The sorted values is the quickest
 
-sort3 uses: linear
+sort3 uses: selection
 
 How do you know?: The fastest time to complete
