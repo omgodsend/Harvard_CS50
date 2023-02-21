@@ -68,7 +68,7 @@ bool vote(string name)
     // TODO
     for (int i = 0; i > name; i++)
     {
-        if (name[i] == argv[i+1])
+        if (name[i] == argv[i][i])
     }
 
     return false;
