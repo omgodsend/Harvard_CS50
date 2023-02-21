@@ -85,6 +85,9 @@ void print_winner(void)
     for (int i = 0; i < voter_count; i++)
     {
         if (candidate[i].votes > )
+        {
+            printf("%s", candidate[i].name);
+        }
     }
 
 
