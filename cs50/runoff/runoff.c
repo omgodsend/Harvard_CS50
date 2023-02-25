@@ -133,7 +133,7 @@ bool vote(int voter, int rank, string name)
         if (strcmp(argv[i], name) == 0)
         {
             return true;
-            candidate
+            preferences[i][j]
         }
     }
 
