@@ -132,10 +132,13 @@ bool vote(int voter, int rank, string name)
 
     for (int i = 0; i < voter_count; i++)
     {
-        if (strcmp(argv[candidate_count], name) == 0)
+        for (int j = 0; j < candidate_count; j++)
         {
-            return true;
-            candidate[i].vote
+            if (strcmp(argv[j], name) == 0)
+            {
+                return true;
+                candidate[i].vote
+            }
         }
     }
 
