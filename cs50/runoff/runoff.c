@@ -129,14 +129,12 @@ bool vote(int voter, int rank, string name)
 {
     // TODO
 
-    for (int i = 0; i < voter_count; i++)
-    {
-        for (int j = 0; j < candidate_count; j++)
+    for (int i = 0; i < candidate_count; i++)
         {
-            if (strcmp(argv[j], name) == 0)
+            if (strcmp(candidates[i].name, name) == 0)
             {
+                preferences[i][j] = i;
                 return true;
-                preferences[i][j] = j
             }
         }
     }
