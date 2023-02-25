@@ -136,7 +136,7 @@ bool vote(int voter, int rank, string name)
             if (strcmp(argv[j], name) == 0)
             {
                 return true;
-                preferences[i][j]
+                preferences[i][j] = j
             }
         }
     }
