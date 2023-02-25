@@ -128,7 +128,6 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
-    ca
 
     for (int i = 0; i < voter_count; i++)
     {
