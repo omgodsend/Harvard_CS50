@@ -148,7 +148,7 @@ void tabulate(void)
     // TODO
     int ballot = voter_count;
 
-    for (int i = 0; i < voter_count; i++)
+    for (int i = 0; i < ballot; i++)
         {
             if (preferences[i][0] == candidates[i].name)
             {
