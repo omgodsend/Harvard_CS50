@@ -70,7 +70,7 @@ bool vote(string name)
     {
         if (strcmp(candidates[i].name, name) == 0)
         {
-            candidate[i].votes++;
+         a   candidate[i].votes++;
             return true;
         }
     }
@@ -98,6 +98,6 @@ void print_winner(void)
         printf("%s", candidate[i].name);
         }
     }
-    
+
     return;
 }
