@@ -148,9 +148,9 @@ void tabulate(void)
     // TODO
     int ballot = voter_count;
 
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < voter_count; i++)
         {
-            
+            if
 
 
         }
