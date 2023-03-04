@@ -150,9 +150,10 @@ void tabulate(void)
 
     for (int i = 0; i < voter_count; i++)
         {
-            preferences[i][0]
+            if (preferences[i][0] == candidates[i].name)
+            {
             candidates[i].votes++
-
+            }
 
         }
 
