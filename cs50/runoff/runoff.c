@@ -155,13 +155,11 @@ void tabulate(void)
                             if (preferences[i][j] == candidates[i].name)
                                 {
                                     candidates[i].votes++
+                                    break
                                 }
                         }
                 }
         }
-}
-
-
 
     return;
 }
