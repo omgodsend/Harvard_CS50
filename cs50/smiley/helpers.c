@@ -8,9 +8,10 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
     for (int i = 0; i < hight; i++)
     {
         for (int j = 0; j < width; i++)
-        
+        {
 
-
+            
+        }
         pixel.rgbtBlue[i]
         pixel.rgbtGreen[i]
         pixel.rgbtRed[i]
