@@ -9,11 +9,11 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            if (image[i][j].rgbtBlue == pixel.rgbtBlue[0] && image[i][j].rgbtGreen == pixel.rgbtGreen[0] && image[i][j].rgbtRed == pixel.rgbtRed[0])
-            {
-                pixel.rgbtBlue[10];
-                pixel.rgbtGreen[10];
-                pixel.rgbtRed[10];
+            if (RGBTRIPLE == [0])
+             {
+                image[i][j].rgbtBlue[10];
+                image[i][j].rgbtGreen[10];
+                image[i][j].rgbtRed[10];
             }
         }
     }
