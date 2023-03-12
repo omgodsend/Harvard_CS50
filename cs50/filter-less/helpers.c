@@ -46,8 +46,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             }
         }
     }
-
-void swap(int color)
+return;
+}
+void check_white(int color)
 {
     
 
@@ -55,8 +56,7 @@ void swap(int color)
 }
 
 
-return;
-}
+
 
 // Reflect image horizontally
 void swap(int *a, int *b);
