@@ -72,7 +72,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 
 void swap(int *a, int *b);
 {
-    
+    int w
 
 
 }
