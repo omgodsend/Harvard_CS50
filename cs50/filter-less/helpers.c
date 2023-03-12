@@ -32,25 +32,23 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             int sepiaGreen = .349 * image[i][j].rgbtRed + .686 * image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue;
             int sepiaBlue = .272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue;
 
-            if (sepiaRed > 0xFF || sepiaGreen > 0xFF || sepiaBlue > 0xFF)
-            {
-                sepiaRed = 0xFF;
-                sepiaGreen = 0xFF;
-                sepiaBlue = 0xFF;
-            }
-            else
-            {
+                check_white(sepiaRed);
+                check_white(sepiaGreen);
+                check_white(sepiaBlue);
+
             image[i][j].rgbtBlue = sepiaBlue;
             image[i][j].rgbtGreen = sepiaGreen;
             image[i][j].rgbtRed = sepiaRed;
-            }
         }
     }
 return;
 }
 void check_white(int color)
 {
-    
+    if (color > 0xFF)
+    {
+        color = 0xFF;
+    }
 
 
 }
