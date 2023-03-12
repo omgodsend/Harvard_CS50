@@ -41,7 +41,8 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtRed = sepiaRed;
         }
     }
-
+return;
+}
 //./filter -s images/yard.bmp out.bmp
 void check_white(int color)
 {
@@ -50,8 +51,7 @@ void check_white(int color)
         color = 0xFF;
     }
 }
-return;
-}
+
 
 
 
