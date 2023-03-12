@@ -3,7 +3,8 @@
     "files.associations": {
         "cs50.h": "c",
         "ctype.h": "c",
-        "helpers.h": "c"
+        "helpers.h": "c",
+        "math.h": "c"
     },
     "workbench.preferredDarkColorTheme": "GitHub Dark Default",
     "workbench.colorTheme": "GitHub Dark Default",

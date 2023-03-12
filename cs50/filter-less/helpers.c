@@ -21,6 +21,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 }
 
 // Convert image to sepia
+void check_white(int color);
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
     for (int i = 0; i < height; i++)
@@ -45,7 +46,16 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             }
         }
     }
-    return;
+
+void check_white(int color)
+{
+    
+
+
+}
+
+
+return;
 }
 
 // Reflect image horizontally
