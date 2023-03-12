@@ -70,6 +70,15 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
+void swap(int *a, int *b);
+{
+    
+
+
+}
+
+
+
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
