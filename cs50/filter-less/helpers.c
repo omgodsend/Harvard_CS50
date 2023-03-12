@@ -61,17 +61,16 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width / 2; j++)
         {
-            for (int k = width; k > 0; k++)
-            {
-                int k = width - 1 - j;
-                swap(&image[i][j].rgbtBlue, &image[i][k].rgbtBlue);
-                swap(&image[i][j].rgbtGreen, &image[i][k].rgbtGreen);
-                swap(&image[i][j].rgbtRed, &image[i][k].rgbtRed);
-            }
+            int k = width - 1 - j;
+            swap(&image[i][j].rgbtBlue, &image[i][k].rgbtBlue);
+            swap(&image[i][j].rgbtGreen, &image[i][k].rgbtGreen);
+            swap(&image[i][j].rgbtRed, &image[i][k].rgbtRed);
         }
     }
     return;
 }
+
+
 
 void swap(int *a, int *b)
 {
