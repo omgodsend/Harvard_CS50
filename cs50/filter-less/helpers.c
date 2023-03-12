@@ -79,10 +79,9 @@ void swap(BYTE *a, BYTE *b)
     *b = tmp;
 }
 
-
-
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    
     return;
 }
