@@ -43,7 +43,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     }
 return;
 }
-//./filter -s images/yard.bmp out.bmp
+//./filter -r images/yard.bmp out.bmp
 void check_white(int *color)
 {
     if (*color > 0xFF)
@@ -54,7 +54,7 @@ void check_white(int *color)
 
 
 // Reflect image horizontally
-void swap(int *a, int *b);
+void swap(BYTE *a, BYTE *b);
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     for (int i = 0; i < height; i++)
@@ -72,7 +72,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 
 
 
-void swap(int *a, int *b)
+void swap(BYTE *a, BYTE *b)
 {
     int tmp = *a;
     *a = *b;
