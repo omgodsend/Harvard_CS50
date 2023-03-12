@@ -50,10 +50,7 @@ void check_white(int *color)
     {
         *color = 0xFF;
     }
-return color;
 }
-
-
 
 
 // Reflect image horizontally
