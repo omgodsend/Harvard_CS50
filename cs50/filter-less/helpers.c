@@ -32,18 +32,17 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             int sepiaGreen = .349 * image[i][j].rgbtRed + .686 * image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue;
             int sepiaBlue = .272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue;
 
-                check_white(sepiaRed);
-                check_white(sepiaGreen);
-                check_white(sepiaBlue);
+            check_white(sepiaRed);
+            check_white(sepiaGreen);
+            check_white(sepiaBlue);
 
             image[i][j].rgbtBlue = sepiaBlue;
             image[i][j].rgbtGreen = sepiaGreen;
             image[i][j].rgbtRed = sepiaRed;
         }
     }
-return;
-}
 
+//./filter -s images/yard.bmp out.bmp
 void check_white(int color)
 {
     if (color > 0xFF)
@@ -51,7 +50,8 @@ void check_white(int color)
         color = 0xFF;
     }
 }
-
+return;
+}
 
 
 
