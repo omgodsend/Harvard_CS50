@@ -43,14 +43,13 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     }
 return;
 }
+
 void check_white(int color)
 {
     if (color > 0xFF)
     {
         color = 0xFF;
     }
-
-
 }
 
 
