@@ -83,9 +83,9 @@ void swap(BYTE *a, BYTE *b)
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-     RGBTRIPLE copy[height][width];
+    RGBTRIPLE copy[height][width];
 
-     // Copy pixels from image to copy
+    // Copy the pixels from the original image to the copy
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -94,35 +94,34 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-    // Loop over every pixel in the image
+    // Calculate the blur values for each pixel in the original image
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
+            int red_sum = 0, green_sum = 0, blue_sum = 0;
             int count = 0;
-            int red = 0, green = 0, blue = 0;
 
-            // Loop over every pixel in a 3x3 box centered on the current pixel
-            for (int k = -1; k <= 1; k++)
+            // Loop over the pixels in the box around the current pixel
+            for (int k = i - 1; k <= i + 1; k++)
             {
-                for (int l = -1; l <= 1; l++)
+                for (int l = j - 1; l <= j + 1; l++)
                 {
-                    // Check if the current pixel is within the bounds of the image
-                    if (i + k >= 0 && i + k < height && j + l >= 0 && j + l < width)
+                    // Only process pixels that are within the bounds of the image
+                    if (k >= 0 && k < height && l >= 0 && l < width)
                     {
-                        // Add the color values to the running totals and increment the count
-                        red += copy[i + k][j + l].rgbtRed;
-                        green += copy[i + k][j + l].rgbtGreen;
-                        blue += copy[i + k][j + l].rgbtBlue;
+                        red_sum += copy[k][l].rgbtRed;
+                        green_sum += copy[k][l].rgbtGreen;
+                        blue_sum += copy[k][l].rgbtBlue;
                         count++;
                     }
                 }
             }
 
-            // Set the color of the current pixel to the average of the surrounding pixels
-            image[i][j].rgbtRed = round((float) red / count);
-            image[i][j].rgbtGreen = round((float) green / count);
-            image[i][j].rgbtBlue = round((float) blue / count);
+            // Calculate the average color for the box and update the pixel in the original image
+            image[i][j].rgbtRed = round((float) red_sum / count);
+            image[i][j].rgbtGreen = round((float) green_sum / count);
+            image[i][j].rgbtBlue = round((float) blue_sum / count);
         }
     }
 }
