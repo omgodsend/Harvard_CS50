@@ -7,7 +7,7 @@
         "math.h": "c"
     },
     "workbench.preferredDarkColorTheme": "GitHub Dark Default",
-    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.colorTheme": "Default Dark+",
     "editor.semanticTokenColorCustomizations": {
     "[GitHub Dark]": {}
     },
