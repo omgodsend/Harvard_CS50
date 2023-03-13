@@ -37,9 +37,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             check_white(&sepiaGreen);
             check_white(&sepiaBlue);
 
-            image[i][j].rgbtBlue = sepiaBlue;
-            image[i][j].rgbtGreen = sepiaGreen;
-            image[i][j].rgbtRed = sepiaRed;
+            image[i][j].rgbtBlue = sepiaBlue - 1;
+            image[i][j].rgbtGreen = sepiaGreen - 1;
+            image[i][j].rgbtRed = sepiaRed - 1;
         }
     }
 return;
