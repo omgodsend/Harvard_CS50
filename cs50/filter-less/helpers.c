@@ -82,6 +82,14 @@ void swap(BYTE *a, BYTE *b)
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    
-    return;
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            RGBTRIPLE copy = RGBTRIPLE image[i][j]
+
+            [i+1][j]+[i-1][j]+[i-1][j-1]+[i+1][j+1]+[i-1][j+1]+[i+1][j-1]+[i][j-1]+[i][j+1]+[i][j]
+
+        }
+    }
 }
