@@ -43,7 +43,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     }
 return;
 }
-//./filter -r images/yard.bmp out.bmp
+//./filter -b images/yard.bmp out.bmp
 void check_white(int *color)
 {
     if (*color > 0xFF)
@@ -82,14 +82,45 @@ void swap(BYTE *a, BYTE *b)
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    RGBTRIPLE copy[height][width];
+
+    // Copy the pixels from the original image to the copy
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            RGBTRIPLE copy = RGBTRIPLE image[i][j]
+            copy[i][j] = image[i][j];
+        }
+    }
 
-            [i+1][j]+[i-1][j]+[i-1][j-1]+[i+1][j+1]+[i-1][j+1]+[i+1][j-1]+[i][j-1]+[i][j+1]+[i][j]
+    // Calculate the blur values for each pixel in the original image
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            int red_sum = 0, green_sum = 0, blue_sum = 0;
+            int count = 0;
 
+            // Loop over the pixels in the box around the current pixel
+            for (int k = i - 1; k <= i + 1; k++)
+            {
+                for (int l = j - 1; l <= j + 1; l++)
+                {
+                    // Only process pixels that are within the bounds of the image
+                    if (k >= 0 && k < height && l >= 0 && l < width)
+                    {
+                        red_sum += copy[k][l].rgbtRed;
+                        green_sum += copy[k][l].rgbtGreen;
+                        blue_sum += copy[k][l].rgbtBlue;
+                        count++;
+                    }
+                }
+            }
+
+            // Calculate the average color for the box and update the pixel in the original image
+            image[i][j].rgbtRed = round((float) red_sum / count);
+            image[i][j].rgbtGreen = round((float) green_sum / count);
+            image[i][j].rgbtBlue = round((float) blue_sum / count);
         }
     }
 }
