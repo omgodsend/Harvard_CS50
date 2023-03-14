@@ -31,8 +31,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    char *new = malloc(sizeof(char) * 12);
-    if (new == NULL) {
+    char *newfile = malloc(sizeof(char) * 12);
+    if (newfile == NULL) {
         printf("Error: Could not allocate memory.\n");
         free(buffer);
         fclose(file);
@@ -45,10 +45,10 @@ int main(int argc, char *argv[])
     {
         if (buffer[0].BYTE == 0xff && buffer[1].BYTE == 0xd8 && buffer[2].BYTE == 0xff && ((buffer[3].BYTE & 0xf0) == 0xe0))
         {
-            sprintf(new, "%03i.jpg", file_count);
+            sprintf(newfile, "%03i.jpg", file_count);
             file_count++;
 
-            FILE *img = fopen(new, "a");
+            FILE *img = fopen(newfile, "a");
             if (img == NULL) {
                 printf("Error: Could not open output file %s.\n", filename);
                 free(buffer);
