@@ -34,6 +34,8 @@ int main(int argc, char *argv[])
         if (buffer[0].BYTE == 0xff && buffer[1].BYTE == 0xd8 && buffer[2].BYTE == 0xff && ((buffer[3].BYTE & 0xf0) == 0xe0))
         {
             sprintf(filename, "%03i.jpg", file_count);
+            file_count++;
+
             FILE *img = fopen(filename, "a");
             fwrite(data, size, number, outputr);
         }
