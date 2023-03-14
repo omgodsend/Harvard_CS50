@@ -60,10 +60,15 @@ int main(int argc, char *argv[])
                     return 1;
                 }
 
-                if (buffer[i] != 0)
+                if (img != NULL)
                 {
                     fwrite(buffer, 1, sizeof(img), img);
-                    fclose(img);
+
+                    if (buffer[0].BYTE == 0xff && buffer[1].BYTE == 0xd8 && buffer[2].BYTE == 0xff && ((buffer[3].BYTE & 0xf0) == 0xe0))
+                    {
+                        fclose(img);
+                        img = NULL;
+                    }
                 }
             }
         }
