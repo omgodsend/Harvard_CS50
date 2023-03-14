@@ -12,6 +12,8 @@ int main(int argc, char *argv[])
         return 1
     }
 
+    malloc(sizeof(*file));
+
     typedef struct
     {
     uint8_t BYTE;
