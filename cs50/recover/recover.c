@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 
     int file_count = 0;
 
-    while (fread(buffer, sizeof(byte), 64, file) == 64)
+    while (fread(buffer, 1, sizeof(byte) * 64, file) == sizeof(byte) * 64)
     {
         if (buffer[0].BYTE == 0xff && buffer[1].BYTE == 0xd8 && buffer[2].BYTE == 0xff && ((buffer[3].BYTE & 0xf0) == 0xe0))
         {
