@@ -50,9 +50,9 @@ int main(int argc, char *argv[])
 
             FILE *img = fopen(newfile, "a");
             if (img == NULL) {
-                printf("Error: Could not open output file %s.\n", filename);
+                printf("Error: Could not open output file %s.\n", newfile);
                 free(buffer);
-                free(filename);
+                free(newfile);
                 fclose(file);
                 return 1;
             }
@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
     }
 
     free(buffer);
-    free(filename);
+    free(newfile);
     fclose(file);
 
     return 0;
