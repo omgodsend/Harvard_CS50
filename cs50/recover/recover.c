@@ -24,11 +24,10 @@ int main(int argc, char *argv[])
     }
     byte;
 
-    while (fread(buffer, 1, byte(64), file) == BLOCK_SIZE)
+    while (fread(buffer, 1, byte(64), file) == byte(64))
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && ((buffer[3] & 0xf0) == 0xe0))
         {
-            for (int i = 0; i < x; i++)
             sprint(filename, "%03i.jpg", 2)
             FILE *img = fopen(filename, "w")
             fwrite(data, size, number, outputr)
