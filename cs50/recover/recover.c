@@ -31,8 +31,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    char *filename = malloc(sizeof(char) * 12);
-    if (filename == NULL) {
+    char *new = malloc(sizeof(char) * 12);
+    if (new == NULL) {
         printf("Error: Could not allocate memory.\n");
         free(buffer);
         fclose(file);
