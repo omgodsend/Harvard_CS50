@@ -36,32 +36,19 @@ int main(int argc, char *argv[])
                 fclose(newfile)
             }
 
+            sprintf(filename, "%03i.jpg", jph_count++);
 
+            FILE *newfile = fopen(filename, "w");
 
-                sprintf(newfile, "%03i.jpg", file_count);
-                file_count++;
-
-                FILE *img = fopen(newfile, "a");
-                if (img == NULL)
-                {
-                    printf("Error: Could not open output file %s.\n", newfile);
-                    free(buffer);
-                    free(newfile);
-                    fclose(file);
-                    return 1;
-                }
-
-                if (img != NULL)
-                {
-                    fwrite(buffer, 1, sizeof(img), img);
-
-                    if (buffer[0].BYTE == 0xff && buffer[1].BYTE == 0xd8 && buffer[2].BYTE == 0xff && ((buffer[3].BYTE & 0xf0) == 0xe0))
-                    {
-                        fclose(img);
-                        img = NULL;
-                    }
-                }
+            if (newfile != NULL)
+            {
+                fwrite(buffer, 1, sizeof(img), img);
             }
+        }
+        
+        if(outptr != NULL)
+        {
+            fwrite(buffer, sizeof(BYTE)*512, 1, outptr);
         }
     }
 
