@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
 {
     FILE *file = fopen(argv[1], "r");
 
-    if (argc != 1)
+    if (argc != 1 || *file == NULL)
     {
         printf("ERR. Enter valid file\n")
         return 1
