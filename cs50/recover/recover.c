@@ -51,19 +51,21 @@ int main(int argc, char *argv[])
                 {
                     sprintf(newfile, "%03i.jpg", file_count);
                     file_count++;
+
+                    FILE *img = fopen(newfile, "a");
+                    if (img == NULL)
+                    {
+                        printf("Error: Could not open output file %s.\n", newfile);
+                        free(buffer);
+                        free(newfile);
+                        fclose(file);
+                        return 1;
+                    }
                 }
             {
 
 
-            FILE *img = fopen(newfile, "a");
-            if (img == NULL)
-            {
-                printf("Error: Could not open output file %s.\n", newfile);
-                free(buffer);
-                free(newfile);
-                fclose(file);
-                return 1;
-            }
+
 
             fwrite(buffer, 1, 512, img);
             fclose(img);
