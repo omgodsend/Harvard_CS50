@@ -20,9 +20,10 @@ int main(int argc, char *argv[])
 
     char filename
 
-    char *size = malloc(sizeof(byte) * 64);
-    if (size == NULL)
+    byte *buffer = malloc(sizeof(byte) * 64);
+    if (buffer == NULL)
     {
+        printf("Error: Could not allocate memory")
         return 1;
     }
 
