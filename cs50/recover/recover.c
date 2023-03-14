@@ -47,28 +47,30 @@ int main(int argc, char *argv[])
         {
             for (i = 0; i < sizeof(buffer); i++)
             {
+                sprintf(newfile, "%03i.jpg", file_count);
+                file_count++;
+
+                FILE *img = fopen(newfile, "a");
+                if (img == NULL)
+                {
+                    printf("Error: Could not open output file %s.\n", newfile);
+                    free(buffer);
+                    free(newfile);
+                    fclose(file);
+                    return 1;
+                }
+
                 if (buffer[i] != 0)
                 {
-                    sprintf(newfile, "%03i.jpg", file_count);
-                    file_count++;
-
-                    FILE *img = fopen(newfile, "a");
-                    if (img == NULL)
-                    {
-                        printf("Error: Could not open output file %s.\n", newfile);
-                        free(buffer);
-                        free(newfile);
-                        fclose(file);
-                        return 1;
-                    }
+                    fwrite(buffer, 1, sizeof(img), img);
+                    fclose(img);
                 }
             }
 
 
 
 
-            fwrite(buffer, 1, 512, img);
-            fclose(img);
+
         }
     }
 
