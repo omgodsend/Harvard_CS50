@@ -2,11 +2,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-typedef struct
-{
-    uint8_t BYTE;
-}
-byte;
+typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
