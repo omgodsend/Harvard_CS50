@@ -4,7 +4,10 @@
         "cs50.h": "c",
         "ctype.h": "c",
         "helpers.h": "c",
-        "math.h": "c"
+        "math.h": "c",
+        "array": "c",
+        "string": "c",
+        "string_view": "c"
     },
     "workbench.preferredDarkColorTheme": "GitHub Dark Default",
     "workbench.colorTheme": "GitHub Dark Default",
