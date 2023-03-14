@@ -49,7 +49,8 @@ int main(int argc, char *argv[])
             file_count++;
 
             FILE *img = fopen(newfile, "a");
-            if (img == NULL) {
+            if (img == NULL)
+            {
                 printf("Error: Could not open output file %s.\n", newfile);
                 free(buffer);
                 free(newfile);
@@ -58,9 +59,7 @@ int main(int argc, char *argv[])
             }
 
             fwrite(buffer, sizeof(byte), 64, img);
-
             fclose(img);
-
         }
     }
 
