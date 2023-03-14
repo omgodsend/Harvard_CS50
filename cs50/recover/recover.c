@@ -19,34 +19,25 @@ int main(int argc, char *argv[])
         return 2;
     }
 
-    FILE* outptr = NULL;
+    FILE* newfile = NULL;
+
+    int jpg_count = 0;
 
     BYTE buffer[512];
 
-    byte *buffer = malloc(sizeof(byte) * 64);
-    if (buffer == NULL)
-    {
-        printf("Error: Could not allocate memory");
-        fclose(file);
-        return 1;
-    }
+    char filename[8]={0};
 
-    char *newfile = malloc(sizeof(char) * 12);
-    if (newfile == NULL) {
-        printf("Error: Could not allocate memory.\n");
-        free(buffer);
-        fclose(file);
-        return 1;
-    }
-
-    int file_count = 0;
-
-    while (fread(buffer, 1, 512, file) == 512)
+    while (fread(buffer, sizeof(BYTE)* 512, 1, file) == 1)
     {
         if (buffer[0].BYTE == 0xff && buffer[1].BYTE == 0xd8 && buffer[2].BYTE == 0xff && ((buffer[3].BYTE & 0xf0) == 0xe0))
         {
-            for (i = 0; i < sizeof(buffer); i++)
+            if (newfile != NULL)
             {
+                fclose(newfile)
+            }
+
+
+
                 sprintf(newfile, "%03i.jpg", file_count);
                 file_count++;
 
