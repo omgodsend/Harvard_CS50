@@ -42,13 +42,13 @@ int main(int argc, char *argv[])
 
             if (newfile != NULL)
             {
-                fwrite(buffer, 1, sizeof(img), img);
+                fwrite(buffer, sizeof(BYTE)*512, 1, newfile);
             }
         }
-        
-        if(outptr != NULL)
+
+        if (outptr != NULL)
         {
-            fwrite(buffer, sizeof(BYTE)*512, 1, outptr);
+            fclose(outptr);
         }
     }
 
