@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
                 return 1;
             }
 
-            fwrite(buffer, sizeof(byte), 64, img);
+            fwrite(buffer, sizeof(byte) * 64, 64, img);
             fclose(img);
         }
     }
