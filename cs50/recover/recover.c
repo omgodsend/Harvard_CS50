@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     FILE *file = fopen(argv[1], "r");
     if (file == NULL)
     {
-        fprintf("Error: Could not open %s.\n", argv[1]);
+        printf("Error: Could not open %s.\n", argv[1]);
         return 2;
     }
 
@@ -36,9 +36,9 @@ int main(int argc, char *argv[])
                 fclose(newfile)
             }
 
-            sprintf(filename, "%03i.jpg", jph_count++);
+            sprintf(filename, "%03i.jpg", jpg_count++);
 
-            FILE *newfile = fopen(filename, "w");
+            newfile = fopen(filename, "w");
 
             if (newfile != NULL)
             {
@@ -46,14 +46,17 @@ int main(int argc, char *argv[])
             }
         }
 
-        if (outptr != NULL)
+        else if (newfile != NULL)
         {
-            fclose(outptr);
+            fwrite(buffer, sizeof(BYTE)*512, 1, newfile);
         }
     }
 
-    free(buffer);
-    free(newfile);
+    if (newfile != NULL)
+    {
+        fclose(newfile);
+    }
+
     fclose(file);
 
     return 0;
