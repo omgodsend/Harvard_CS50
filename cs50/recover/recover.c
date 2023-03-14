@@ -29,11 +29,11 @@ int main(int argc, char *argv[])
 
     while (fread(buffer, sizeof(BYTE)* 512, 1, file) == 1)
     {
-        if (buffer[0].BYTE == 0xff && buffer[1].BYTE == 0xd8 && buffer[2].BYTE == 0xff && ((buffer[3].BYTE & 0xf0) == 0xe0))
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && ((buffer[3] & 0xf0) == 0xe0))
         {
             if (newfile != NULL)
             {
-                fclose(newfile)
+                fclose(newfile);
             }
 
             sprintf(filename, "%03i.jpg", jpg_count++);
