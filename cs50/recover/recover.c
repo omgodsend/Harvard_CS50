@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 
     if (argc != 1)
     {
-        printf("Enter only one file\n")
+        printf("ERR. Enter valid file\n")
         return 1
     }
 
@@ -20,7 +20,9 @@ int main(int argc, char *argv[])
     while (fread(buffer, 1, byte(64), file) == BLOCK_SIZE)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && ((buffer[3] & 0xf0) == 0xe0))
-
+        {
+            FILE *file = fopen()
+        }
 
 
         fclose(file)
