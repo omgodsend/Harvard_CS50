@@ -45,8 +45,15 @@ int main(int argc, char *argv[])
     {
         if (buffer[0].BYTE == 0xff && buffer[1].BYTE == 0xd8 && buffer[2].BYTE == 0xff && ((buffer[3].BYTE & 0xf0) == 0xe0))
         {
-            sprintf(newfile, "%03i.jpg", file_count);
-            file_count++;
+            for (i = 0; i < sizeof(buffer); i++)
+            {
+                if (buffer[i] != 0)
+                {
+                    sprintf(newfile, "%03i.jpg", file_count);
+                    file_count++;
+                }
+            {
+
 
             FILE *img = fopen(newfile, "a");
             if (img == NULL)
@@ -57,7 +64,7 @@ int main(int argc, char *argv[])
                 fclose(file);
                 return 1;
             }
-            if
+
             fwrite(buffer, 1, 512, img);
             fclose(img);
         }
