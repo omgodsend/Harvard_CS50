@@ -10,9 +10,7 @@ byte;
 
 int main(int argc, char *argv[])
 {
-    FILE *file = fopen(argv[1], "r");
-
-    if (argc != 2 || *file == NULL)
+    if (argc != 2)
     {
         printf("ERR. Enter valid file\n")
         return 1
@@ -37,18 +35,29 @@ int main(int argc, char *argv[])
             file_count++;
 
             FILE *img = fopen(filename, "a");
-            fwrite(data, size, number, outputr);
-        }
-        else
-        {
-            fclose(file)
+            if (img == NULL) {
+                printf("Error: Could not open output file %s.\n", filename);
+                free(buffer);
+                free(filename);
+                fclose(file);
+                return 1;
+            }
+
+            fwrite(buffer, sizeof(byte), 64, img);
+
+            fclose(img);
 
         }
 
 
     }
 
+    free(buffer);
+    free(filename);
+    fclose(file);
 
+    return 0;
+}
 
 
 }
