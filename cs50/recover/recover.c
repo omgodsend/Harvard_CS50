@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    byte *buffer = malloc(sizeof(byte) * 64);
+    byte *buffer = malloc(64);
     if (buffer == NULL)
     {
         printf("Error: Could not allocate memory");
