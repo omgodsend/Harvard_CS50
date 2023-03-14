@@ -32,9 +32,13 @@ int main(int argc, char *argv[])
             FILE *img = fopen(filename, "w")
             fwrite(data, size, number, outputr)
         }
+        else
+        {
+            fclose(file)
+
+        }
 
 
-        fclose(file)
     }
 
 
