@@ -48,8 +48,6 @@ int main(int argc, char *argv[])
             sprintf(newfile, "%03i.jpg", file_count);
             file_count++;
 
-        }
-        else{
             FILE *img = fopen(newfile, "a");
             if (img == NULL)
             {
