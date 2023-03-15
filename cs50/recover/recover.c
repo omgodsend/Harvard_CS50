@@ -45,6 +45,11 @@ int main(int argc, char *argv[])
                 fwrite(buffer, sizeof(BYTE)*512, 1, newfile);
             }
         }
+
+        else if (newfile != NULL)
+        {
+            fwrite(buffer, sizeof(BYTE)*512, 1, newfile);
+        }
     }
 
     if (newfile != NULL)
