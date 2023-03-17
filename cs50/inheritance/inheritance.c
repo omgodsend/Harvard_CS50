@@ -45,7 +45,6 @@ person *create_family(int generations)
     {
         return 1;
     }
-
     // If there are still generations left to create
     if (generations > 1)
     {
