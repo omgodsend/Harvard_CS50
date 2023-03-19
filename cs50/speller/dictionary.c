@@ -61,11 +61,15 @@ bool load(const char *dictionary)
     }
 
     strcpy(new_node->word, word);
+
+    new_node->next = head;
+    head = new_node;
+
     words++;
     }
-    return EOF;
 
-    return false;
+    fclose(file);
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
