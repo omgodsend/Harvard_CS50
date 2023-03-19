@@ -54,11 +54,12 @@ bool load(const char *dictionary)
     char word[LENGTH + 1];
     while (fscanf(file, "%s", word) != EOF)
     {
-    struct node *new_node = malloc(sizeof(struct node));
-    if (new_node == NULL) {
-        printf("Error: unable to allocate memory\n");
-        return false;
-    }
+        node *new_node = malloc(sizeof(node));
+        if (new_node == NULL)
+        {
+            printf("Error: unable to allocate memory\n");
+            return false;
+        }
 
     strcpy(new_node->word, word);
 
