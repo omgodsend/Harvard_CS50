@@ -31,6 +31,8 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     node *n = malloc(sizeof(node));
+    strcpy(n->word, "Hello");
+    
     return toupper(word[0]) - 'A';
 }
 
