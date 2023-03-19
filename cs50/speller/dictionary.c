@@ -32,14 +32,15 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function
     node *n = malloc(sizeof(node));
     strcpy(n->word, "Hello");
-    
+    n->next = NULL;
+
     return toupper(word[0]) - 'A';
 }
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-
+    fopen()
 
     return false;
 }
