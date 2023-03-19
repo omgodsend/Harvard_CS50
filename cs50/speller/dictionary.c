@@ -61,8 +61,8 @@ bool load(const char *dictionary)
 
     fscanf(file, "%s", word);
 
-    node *m = malloc(sizeof(subnode));
-    strcpy(new_node->word, word);
+    node *m = malloc(sizeof(node));
+    strcpy(word->new_node, word);
     words++;
     }
     return EOF;
