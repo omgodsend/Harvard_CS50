@@ -53,13 +53,14 @@ bool load(const char *dictionary)
 
     for (int i = 0; i < file, i++)
     {
+    fscanf(file, "%s", word);
     new_node = (struct node *)malloc(sizeof(struct node));
     if (new_node == NULL) {
         printf("Error: unable to allocate memory\n");
         return false;
     }
 
-    fscanf(file, "%s", word);
+
 
     node *m = malloc(sizeof(node));
     strcpy(word->new_node, word);
