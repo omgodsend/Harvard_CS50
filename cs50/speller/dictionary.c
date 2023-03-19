@@ -48,9 +48,9 @@ bool load(const char *dictionary)
         printf("Error: Could not open %s.\n", argv[1]);
         return false;
     }
-    while (fread(&n, sizeof(char), 1, file))
+    fscanf(file, "%s", word)
     {
-
+        return, E0F;
     }
 
     return false;
