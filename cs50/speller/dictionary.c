@@ -42,16 +42,31 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
+    int words = 0;
+
     FILE *file = fopen(argv[1], "r");
     if (file == NULL)
     {
         printf("Error: Could not open %s.\n", argv[1]);
         return false;
     }
-    fscanf(file, "%s", word)
+
+    for (int i = 0; i < file, i++)
     {
-        return, E0F;
+    typedef struct subnode
+    {
+    char word[LENGTH + 1];
+    struct subnode *next;
     }
+    subnode;
+
+    fscanf(file, "%s", word);
+
+    node *m = malloc(sizeof(subnode));
+    strcpy
+    words++;
+    }
+    return EOF;
 
     return false;
 }
