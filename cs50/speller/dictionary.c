@@ -30,6 +30,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
+    node *n = malloc(sizeof(node));
     return toupper(word[0]) - 'A';
 }
 
@@ -37,7 +38,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
 
-    
+
     return false;
 }
 
