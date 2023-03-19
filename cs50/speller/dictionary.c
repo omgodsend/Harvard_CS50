@@ -48,8 +48,11 @@ bool load(const char *dictionary)
         printf("Error: Could not open %s.\n", argv[1]);
         return 2;
     }
+    while (fread(&n, sizeof(char), 1, file))
+    {
 
-    
+    }
+
     return false;
 }
 
