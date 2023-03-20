@@ -29,7 +29,7 @@ bool check(const char *word)
 
     table[index];
 
-    node *cnode = malloc(sizeof(node));
+    node *c_node = malloc(sizeof(node));
 
     while (cursor == NULL)
     {
