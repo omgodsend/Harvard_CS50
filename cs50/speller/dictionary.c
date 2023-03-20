@@ -33,11 +33,11 @@ bool check(const char *word)
 
     c_node = table[index];
 
-    while (cursor == NULL)
+    while (c_node == NULL)
     {
-        if
+        if  (strcasecmp(table[index][word],word))
         {
-            strcasecmp
+            return true;
         }
         else
         {
