@@ -37,10 +37,10 @@ unsigned int hash(const char *word)
 
     for (int i = 0; i < key; i++;)
     {
-        value +=
+        value += 26 * (toupper(word[i]) - 'A'
     }
 
-    return toupper(word[i]) - 'A';
+    return ;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
