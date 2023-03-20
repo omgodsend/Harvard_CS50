@@ -97,7 +97,7 @@ bool load(const char *dictionary)
     dict_size++;
     }
 
-    fclose(file);
+    fclose(open_dictionary);
     return true;
 }
 
