@@ -25,6 +25,10 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    int index = hash(word);
+
+    table[index]
+
     while (cursor == NULL)
     {
         if
