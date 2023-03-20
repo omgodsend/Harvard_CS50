@@ -4,6 +4,7 @@
 #include <stdint.h>
 #include <ctype.h>
 #include <stdbool.h>
+#include <string.h>
 
 #include "dictionary.h"
 
@@ -31,7 +32,7 @@ bool check(const char *word)
 
     while (prevnode != NULL)
     {
-        if  (strcasecmp(prevnode->word,word) == 0)
+        if (strcasecmp(prevnode->word,word) == 0)
         {
             return true;
         }
@@ -49,7 +50,7 @@ unsigned int hash(const char *word)
     unsigned int value = 0;
     unsigned int key = strlen(word);
 
-    for (int i = 0; i < key; i++;)
+    for (int i = 0; i < key; i++)
     {
         value += 26 * (toupper(word[i]) - 'A');
     }
@@ -66,7 +67,7 @@ bool load(const char *dictionary)
     FILE *open_dictionary = fopen(dictionary, "r");
     if (open_dictionary == NULL)
     {
-        printf("Error: Could not open %s.\n", argv[1]);
+        printf("Error: Could not open %s.\n", dictionary);
         return false;
     }
 
