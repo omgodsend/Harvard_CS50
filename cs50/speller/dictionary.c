@@ -32,9 +32,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    node *n = malloc(sizeof(node));
-    strcpy(n->word, "Hello");
-    n->next = NULL;
+
 
     return toupper(word[0]) - 'A';
 }
@@ -78,7 +76,7 @@ unsigned int size(void)
 {
     // TODO
     return 0;
-} 
+}
 
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
