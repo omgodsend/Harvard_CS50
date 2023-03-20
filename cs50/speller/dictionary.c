@@ -63,6 +63,16 @@ bool load(const char *dictionary)
     new_node->next = NULL;
     int index = hash(Dword);
 
+    if (table[index] == NULL)
+        {
+            table[index] = newNode;
+        }
+        else
+        {
+            newNode -> next = table[index];
+            table[index] = newNode;
+        }
+
     dict_size++;
     }
 
