@@ -93,12 +93,14 @@ unsigned int size(void)
     // TODO
     int dict_size;
 
-    return dict_size;
-
-    if (dict_size == NULL)
+    if (load == false)
     {
-        printf("Error in dictionary size");
+        printf("Error in loading dictionary to memory");
         return 0;
+    }
+    else
+    {
+        return dict_size;
     }
 }
 
