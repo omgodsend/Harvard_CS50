@@ -78,7 +78,7 @@ unsigned int size(void)
 {
     // TODO
     return 0;
-}
+} 
 
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
