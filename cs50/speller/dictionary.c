@@ -40,7 +40,7 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    int Dword = 0;
+    int dict_size = 0;
 
     FILE *open_dictionary = fopen(dictionary, "r");
     if (open_dictionary == NULL)
@@ -60,11 +60,10 @@ bool load(const char *dictionary)
         }
 
     strcpy(new_node->word, Dword);
+    new_node->next = NULL;
+    int index = hash(Dword);
 
-    new_node->next = head;
-    head = new_node;
-
-    words++;
+    dict_size++;
     }
 
     fclose(file);
