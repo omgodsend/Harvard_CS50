@@ -65,11 +65,11 @@ bool load(const char *dictionary)
 
     if (table[index] == NULL)
         {
-            table[index] = newNode;
+            table[index] = new_node;
         }
         else
         {
-            newNode -> next = table[index];
+            new_node -> next = table[index];
             table[index] = newNode;
         }
 
