@@ -27,13 +27,15 @@ bool check(const char *word)
     // TODO
     int index = hash(word);
 
-    table[index]
+    table[index];
+
+    node *cnode = malloc(sizeof(node));
 
     while (cursor == NULL)
     {
         if
         {
-            strcmp
+            strcasecmp
         }
         else
         {
