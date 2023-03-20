@@ -27,22 +27,19 @@ bool check(const char *word)
     // TODO
     int index = hash(word);
 
-    node *c_node = table[index];
+    node *prevnode = table[index];
 
-    c_node = table[index];
-
-    while (c_node == NULL)
+    while (prevnode != NULL)
     {
-        if  (strcasecmp(table[index][word],word))
+        if  (strcasecmp(prevnode->word,word) == 0)
         {
             return true;
         }
-        else
-        {
-            return false;
-        }
+
+        prevnode = prevnode->next;
     }
 
+    return false;
 }
 
 // Hashes word to a number
