@@ -25,8 +25,18 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    
-    return false;
+    while (cursor == NULL)
+    {
+        if
+        {
+            strcmp
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 }
 
 // Hashes word to a number
