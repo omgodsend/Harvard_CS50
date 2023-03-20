@@ -49,11 +49,10 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    const int A = 33;
     unsigned int sum = 0;
     for (int i = 0; word[i] != '\0'; i++)
     {
-        sum += A * word[i];
+        sum += word[i];
     }
     return sum;
 }
