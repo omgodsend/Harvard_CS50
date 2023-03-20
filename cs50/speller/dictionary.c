@@ -37,10 +37,11 @@ unsigned int hash(const char *word)
 
     for (int i = 0; i < key; i++;)
     {
-        value += 26 * (toupper(word[i]) - 'A'
+        value += 26 * (toupper(word[i]) - 'A');
     }
 
-    return ;
+    value = value % N;
+    return value;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -90,7 +91,15 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    return 0;
+    int dict_size;
+
+    return dict_size;
+
+    if (dict_size == NULL)
+    {
+        printf("Error in dictionary size");
+        return 0;
+    }
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
