@@ -27,7 +27,7 @@ bool check(const char *word)
     // TODO
     int index = hash(word);
 
-    table[index];
+    table[index] = strcasecmp()
 
     node *c_node = malloc(sizeof(node));
 
