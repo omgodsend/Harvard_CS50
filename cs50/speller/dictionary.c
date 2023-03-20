@@ -49,17 +49,12 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // TODO: Improve this hash function
-    unsigned int value = 0;
-    unsigned int key = strlen(word);
-
-    for (int i = 0; i < key; i++)
+    unsigned int sum = 0;
+    for (int i = 0; word[i] != '\0'; i++)
     {
-        value += 26 * (toupper(word[i]) - 'A');
+        sum += word[i];
     }
-
-    value = value % N;
-    return value;
+    return sum;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
