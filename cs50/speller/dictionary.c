@@ -27,9 +27,11 @@ bool check(const char *word)
     // TODO
     int index = hash(word);
 
-    table[index] = strcasecmp()
+    str compare = strcasecmp(table[index],word);
 
     node *c_node = malloc(sizeof(node));
+
+    c_node = table[index];
 
     while (cursor == NULL)
     {
