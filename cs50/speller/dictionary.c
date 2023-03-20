@@ -70,7 +70,7 @@ bool load(const char *dictionary)
         else
         {
             new_node -> next = table[index];
-            table[index] = newNode;
+            table[index] = new_node;
         }
 
     dict_size++;
