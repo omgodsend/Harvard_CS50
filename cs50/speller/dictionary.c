@@ -30,13 +30,20 @@ int dict_size = 0;
 bool check(const char *word)
 {
     // TODO
-    int index = hash(word);
+    char lowercase[LENGTH + 1];
+    for (int i = 0; word[i] != '\0'; i++) {
+        lowercase[i] = tolower(word[i]);
+    }
+    lowercase[strlen(word)] = '\0';
+
+    // Calculate the hash value of the lowercase word
+    int index = hash(lowercase);
 
     node *prevnode = table[index];
 
     while (prevnode != NULL)
     {
-        if (strcasecmp(prevnode->word,word) == 0)
+        if (strcasecmp(prevnode->word, word) == 0)
         {
             return true;
         }
@@ -53,7 +60,7 @@ unsigned int hash(const char *word)
     unsigned int sum = 0;
     for (int i = 0; word[i] != '\0'; i++)
     {
-        sum += word[i];
+        sum += tolower(word[i]);
     }
     return sum;
 }
