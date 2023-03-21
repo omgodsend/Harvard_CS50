@@ -30,7 +30,7 @@ int dict_size = 0;
 bool check(const char *word)
 {
     // TODO
-    int index = hash(word);
+    int index = hash(tolower(word));
 
     node *prevnode = table[index];
 
