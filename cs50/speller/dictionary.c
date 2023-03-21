@@ -42,7 +42,7 @@ bool check(const char *word)
 
     while (prevnode != NULL)
     {
-        if (strcasecmp(prevnode->word, lowercase_word) == 0)
+        if (strcmp(prevnode->word, lowercase_word) == 0)
         {
             return true;
         }
