@@ -29,30 +29,22 @@ int dict_size = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    char lowercase_word[LENGTH + 1];
-    for (int i = 0; word[i] != '\0'; i++)
+    int index = hash(word);
+
+    node *cursor = table[index];
+
+    while (cursor != NULL)
     {
-        lowercase_word[i] = tolower(word[i]);
-    }
-    lowercase_word[strlen(word)] = '\0';
-
-    int index = hash(lowercase_word);
-
-    node *prevnode = table[index];
-
-    while (prevnode != NULL)
-    {
-        if (strcmp(prevnode->word, lowercase_word) == 0)
+        if (strcasecmp(cursor->word, word) == 0)
         {
             return true;
         }
 
-        prevnode = prevnode->next;
+        cursor = cursor->next;
     }
 
     return false;
 }
-
 
 // Hashes word to a number
 unsigned int hash(const char *word)
