@@ -29,6 +29,14 @@ int dict_size = 0;
 bool check(const char *word)
 {
     // TODO
+    // Convert word to lowercase
+    char lowercase_word[LENGTH + 1];
+    for (int i = 0; word[i] != '\0'; i++)
+    {
+        lowercase_word[i] = tolower(word[i]);
+    }
+    lowercase_word[strlen(word)] = '\0';
+
     int index = hash(word);
 
     node *prevnode = table[index];
