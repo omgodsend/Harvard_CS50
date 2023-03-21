@@ -36,7 +36,7 @@ bool check(const char *word)
 
     while (prevnode != NULL)
     {
-        if (strcasecmp(prevnode->Dword,word) == 0)
+        if (strcasecmp(prevnode->word,Dword) == 0)
         {
             return true;
         }
