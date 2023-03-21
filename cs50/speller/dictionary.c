@@ -30,17 +30,7 @@ int dict_size = 0;
 bool check(const char *word)
 {
     // TODO
-    char lowercase[LENGTH + 1];
-    int i = 0;
-    while (word[i] != '\0' && i < LENGTH)
-    {
-        lowercase[i] = tolower(word[i]);
-        i++;
-    }
-    lowercase_word[i] = '\0';
-
-    int index = hash(lowercase_word);
-    int index = hash(tolower(word));
+    int index = hash(word);
 
     node *prevnode = table[index];
 
