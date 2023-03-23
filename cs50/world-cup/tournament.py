@@ -19,6 +19,8 @@ def main():
     with open(sys.argv[1]) as f:
 
         reader = csv.DictReader(f)
+        int(reader([rating]))
+        teams.append(x)
 
 
     counts = {}
