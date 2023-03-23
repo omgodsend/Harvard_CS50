@@ -19,7 +19,7 @@ def main():
     with open(sys.argv[1]) as f:
 
         reader = csv.DictReader(f)
-        int(reader([rating]))
+        reader(int(["rating"]))
         teams.append(x)
 
 
