@@ -25,6 +25,8 @@ def main():
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
+    simulate_tournament()
+    counts[team_name] = x
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
@@ -57,7 +59,7 @@ def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
     simulate_round([teams])
-    
+    len(x)
 
 
 if __name__ == "__main__":
