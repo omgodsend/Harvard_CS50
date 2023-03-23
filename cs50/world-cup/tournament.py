@@ -23,7 +23,7 @@ def main():
         teams.append({})
 
 
-    counts = {}
+    counts = {"team_name":"score"}
     # TODO: Simulate N tournaments and keep track of win counts
     simulate_tournament()
     counts[team_name] = x
