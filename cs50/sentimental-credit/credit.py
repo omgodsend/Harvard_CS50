@@ -20,7 +20,9 @@ def main():
          card_type = "MASTERCARD"
     elif (len(card) == 13 or len(card) == 16) and card[0] == "4":
          card_type = "VISA"
-    
+    else:
+         print("INVALID")
+
 
 def algorithm(number):
      return
