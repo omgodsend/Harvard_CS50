@@ -7,7 +7,7 @@ def main():
     except ValueError:
             print("Not and integer")
 
-    if card < 0:
+    if card <= 0:
         print("Enter a valid card")
 
     if len(card) not in [13, 15, 16]:
