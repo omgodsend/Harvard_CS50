@@ -1,9 +1,9 @@
 def main():
     height = get_height()
     for i in range(height):
-        print("#", end="")
+        print("#\n", end="")
         for i in range(height):
-            print()
+            print("#", end="")
 
 def get_height():
     while True:
