@@ -1,10 +1,14 @@
 from cs50 import get_int
 
+#   python credit.py
 def main():
 
-    card = get_int("Number: ")
-    
-    while card <= 0:
+    card_num = []
+
+    card_num = get_int("Number: ")
+
+
+    while card_num <= 0:
          card = get_int("Number: ")
 
     if len(card) not in [13, 15, 16]:
