@@ -1,9 +1,9 @@
+from cs50 import get_int
 
 def main()
-    while true
-        try:
-            card = int(input("Number: "))
-            if n > 0:
+    try:
+        card = get_int("Number: ")
+        if n > 0:
                 return card
         except ValueError:
             print("Not and integer")
@@ -11,7 +11,7 @@ def main()
 
 
 def algorithm(number)
-    
+
 
 
 
