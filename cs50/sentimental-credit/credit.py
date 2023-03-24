@@ -12,9 +12,15 @@ def main():
     if len(card) not in [13, 15, 16]:
          print("INVALID")
 
-    if (len(card) == 15) and (card[0] == "3" and (card[1] == "4" or card[1] == "7")):
+    card_type = ""
+
+    if len(card) == 15 and card[0] == "3" and card[1] in ["4", "7"]:
          card_type = "AMEX"
-    else if (len(card) == 16) and (card[0] == "3" and 
+    elif len(card) == 16 and card[0] == "5" and card[1] in ["1", "2", "3", "4", "5"]:
+         card_type = "MASTERCARD"
+    elif (len(card) == 13 or len(card) == 16) and card[0] == "4":
+         card_type = "VISA"
+    
 
 def algorithm(number):
      return
