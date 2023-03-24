@@ -3,10 +3,12 @@ from cs50 import get_int
 def main():
     try:
         card = get_int("Number: ")
-        if card > 0:
-            return card
+        return card
     except ValueError:
             print("Not and integer")
+
+    if card < 0:
+        print("Enter a valid card")
 
     if len(card) not in [13, 15, 16]:
          print("INVALID")
