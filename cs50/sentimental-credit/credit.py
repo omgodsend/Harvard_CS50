@@ -2,6 +2,8 @@ from cs50 import get_int
 
 def main():
 
+    card = get_int("Number: ")
+    
     while card <= 0:
          card = get_int("Number: ")
 
