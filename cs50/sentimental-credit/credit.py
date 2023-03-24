@@ -8,9 +8,10 @@ def main()
         except ValueError:
             print("Not and integer")
 
+
+
+def algorithm(number)
     
-
-
 
 
 
