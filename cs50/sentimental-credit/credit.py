@@ -8,7 +8,7 @@ def main():
     except ValueError:
             print("Not and integer")
 
-    if len(card) != 13 or len(card) != 15 or len(card) != 16:
+    if len(card) not in [13, 15, 16]:
          print("INVALID")
 
     card_str = str(card)
