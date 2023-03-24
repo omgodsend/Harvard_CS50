@@ -1,4 +1,5 @@
 from cs50 import get_int
+import sys
 
 # python credit.py
 def main():
@@ -11,7 +12,7 @@ def main():
 
     if len(card) not in [13, 15, 16]:
          print("INVALID")
-         break
+         sys.exit(1)
 
     card_type = ""
 
@@ -28,10 +29,6 @@ def main():
 
 def validate(number):
      return
-
-
-
-
 
 
 
