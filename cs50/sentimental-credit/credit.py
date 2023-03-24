@@ -18,6 +18,7 @@ def main():
 
 
 def algorithm(number):
+     return
 
 
 
