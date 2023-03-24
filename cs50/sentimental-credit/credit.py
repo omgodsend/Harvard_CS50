@@ -11,6 +11,7 @@ def main():
 
     if len(card) not in [13, 15, 16]:
          print("INVALID")
+         break
 
     card_type = ""
 
@@ -21,8 +22,9 @@ def main():
     elif (len(card) == 13 or len(card) == 16) and card[0] == "4":
          card_type = "VISA"
     else:
-         print("INVALID")
+        card_type = "INVALID"
 
+    print(card_type)
 
 def validate(number):
      return
