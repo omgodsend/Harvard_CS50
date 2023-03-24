@@ -24,7 +24,7 @@ def main():
          print("INVALID")
 
 
-def algorithm(number):
+def validate(number):
      return
 
 
