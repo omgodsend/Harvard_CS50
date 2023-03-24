@@ -8,7 +8,7 @@ def main():
         except ValueError:
             print("Not and integer")
 
-    if len(card) != 13 & != 15 & != 16
+    if len(card) != 13 & != 15 & != 16:
 
 
 def algorithm(number)
