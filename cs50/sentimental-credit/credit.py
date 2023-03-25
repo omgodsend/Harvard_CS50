@@ -7,16 +7,16 @@ def main():
 
     while not card.isdigit():
         card = input("Number: ")
-        
+
+     if validate(card) == "INVALID":
+          print("INVALID")
+          sys.exit(2)
+
     card = str(card)
 
     if len(card) not in [13, 15, 16]:
          print("INVALID")
          sys.exit(1)
-
-    if validate(card) == "INVALID":
-          print("INVALID")
-          sys.exit(2)
 
     card_type = ""
 
