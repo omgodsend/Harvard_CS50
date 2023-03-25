@@ -16,8 +16,6 @@ def main():
           print("INVALID")
           sys.exit(2)
 
-
-
     if len(card) not in [13, 15, 16]:
          print("INVALID")
          sys.exit(1)
