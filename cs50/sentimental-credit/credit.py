@@ -10,7 +10,7 @@ def main():
     while int(card) <= 0:
          card = input("Number: ")
 
-    if validate(int(card)) == "INVALID":
+    if validate(card) == "INVALID":
           print("INVALID")
           sys.exit(2)
 
