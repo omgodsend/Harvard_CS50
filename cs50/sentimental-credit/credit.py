@@ -38,8 +38,8 @@ def validate(number):
      luhn_sum = 0
      times_two = 0
 
-     for i in enumerate(number):
-          
+     for i in number:
+
           if i % 2 == 0:
                times_two = digit_int * 2
           else:
