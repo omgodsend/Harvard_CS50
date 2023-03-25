@@ -41,7 +41,7 @@ def validate(number):
      for i in number:
 
           if i % 2 == 0:
-               times_two = digit_int * 2
+               times_two = i * 2
           else:
                digit_odd = digit_int
 
