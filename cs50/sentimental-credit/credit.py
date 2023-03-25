@@ -14,7 +14,7 @@ def main():
           print("INVALID")
           sys.exit(2)
 
-     card = str(card)
+    card = str(card)
 
     if len(card) not in [13, 15, 16]:
          print("INVALID")
@@ -43,9 +43,9 @@ def validate(number):
      for i in reversed_number:
 
           if counter % 2 == 0:
-               luhn_sum += int(i) * 2
+               luhn_sum += i * 2
           else:
-               digit_odd += int(i)
+               digit_odd += i
      counter += 1
 
      final = digit_odd + luhn_sum
