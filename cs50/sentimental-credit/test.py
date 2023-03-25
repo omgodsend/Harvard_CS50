@@ -1,11 +1,12 @@
+from cs50 import get_int
+import sys
+
 def main():
-
-    card = input("Number: ")
-
-    while not card.isdigit() or int(card) <= 0:
+    
+    while int(card) <= 0:
          card = input("Number: ")
 
-    if validate(int(card)) == "INVALID":
+    if validate(card) == "INVALID":
           print("INVALID")
           sys.exit(2)
 
@@ -29,16 +30,20 @@ def main():
     print(card_type)
 
 def validate(number):
+     reversed_number = int(str(number)[::-1])
 
+     counter = 1
      digit_odd = 0
      luhn_sum = 0
 
-     for i in number:
+     for i in str(reversed_number):
+          digit_int = int(i)
 
-          if i % 2 == 0:
-               luhn_sum += i * 2
+          if counter % 2 == 0:
+               luhn_sum += digit_int * 2
           else:
-               digit_odd += i
+               digit_odd += digit_int
+     counter += 1
 
      final = digit_odd + luhn_sum
 
@@ -46,6 +51,3 @@ def validate(number):
           return "VALID"
      else:
           return "INVALID"
-
-
-main()
