@@ -4,8 +4,12 @@ import sys
 # python credit.py
 def main():
 
-    while not card.isdigit():
-        card = input("Number: ")
+    card = int(input("Number: "))
+
+    while not card.isdigit() and card <= 0:
+        try:
+             card = int(input("Number: "))
+          
 
     if validate(card) == "INVALID":
           print("INVALID")
