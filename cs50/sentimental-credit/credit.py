@@ -34,7 +34,6 @@ def main():
 def validate(number):
 
      digit_odd = 0
-     odd_sum = 0
      luhn_sum = 0
 
      for i in number:
@@ -44,9 +43,7 @@ def validate(number):
           else:
                digit_odd += i
 
-          odd_sum += digit_odd
-
-     final = odd_sum + luhn_sum
+     final = digit_odd + luhn_sum
 
      if final % 10 == 0:
           return "VALID"
