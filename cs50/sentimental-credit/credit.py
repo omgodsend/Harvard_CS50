@@ -36,16 +36,14 @@ def validate(number):
      digit_odd = 0
      odd_sum = 0
      luhn_sum = 0
-     times_two = 0
 
      for i in number:
 
           if i % 2 == 0:
-               times_two = i * 2
+               luhn_sum += i * 2
           else:
-               digit_odd = digit_int
+               digit_odd += i
 
-          luhn_sum += times_two
           odd_sum += digit_odd
 
      final = odd_sum + luhn_sum
