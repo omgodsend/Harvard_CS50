@@ -39,7 +39,7 @@ def validate(number):
      luhn_sum = 0
 
      for i in number:
-
+          
           if i % 2 == 0:
                luhn_sum += i * 2
           else:
