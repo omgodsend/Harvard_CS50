@@ -4,12 +4,11 @@ import sys
 # python credit.py
 def main():
 
-    card = int(input("Number: "))
+    card = input("Number: ")
 
-    while not card.isdigit() and card <= 0:
-        try:
-             card = int(input("Number: "))
-          
+    while not card.isdigit() or int(card) <= 0:
+         card = int(input("Number: "))
+
 
     if validate(card) == "INVALID":
           print("INVALID")
@@ -39,7 +38,7 @@ def validate(number):
      digit_odd = 0
      luhn_sum = 0
 
-     for int(i) in number:
+     for i in number:
 
           if i % 2 == 0:
                luhn_sum += (i) * 2
