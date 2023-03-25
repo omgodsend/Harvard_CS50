@@ -24,16 +24,16 @@ def checkcard(card_num)
     card_type = ""
     card_num_str = str(card_num)
 
-    if len(card_num_str) == 15 and card[0] == "3" and card[1] in ["4", "7"]:
+    if len(card_num_str) == 15 and card_num_str.startswith("34") or card_num_str.startswith("37"):
          card_type = "AMEX"
-    elif len(card) == 16 and card[0] == "5" and card[1] in ["1", "2", "3", "4", "5"]:
+    elif len(card_num_str) == 16 and card_num_str.startswith("5") and card[1] in ["1", "2", "3", "4", "5"]:
          card_type = "MASTERCARD"
-    elif (len(card) == 13 or len(card) == 16) and card[0] == "4":
+    elif (len(card_num_str) == 13 or len(card_num_str) == 16) and card_num_str.startswith("5"):
          card_type = "VISA"
     else:
         card_type = "INVALID"
 
-    print(card_type)
+    return card_type
 
 def validate(number):
 
