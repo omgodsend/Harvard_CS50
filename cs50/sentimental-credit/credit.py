@@ -14,7 +14,7 @@ def main():
          print("INVALID")
          sys.exit(1)
 
-    if validate(card) == False
+    if validate(card) == "INVALID"
           print("INVALID")
           sys.exit(2)
 
@@ -51,12 +51,9 @@ def validate(number):
      final = odd_sum + luhn_sum
 
      if final % 10 == 0:
-          number = str(number)
-          return True
+          return "Valid"
      else:
-          return False
-
-
+          return "INVALID"
 
 
 main()
