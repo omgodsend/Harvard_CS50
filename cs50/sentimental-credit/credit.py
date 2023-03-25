@@ -38,9 +38,11 @@ def validate(number):
           digit_int = int(digit)
 
           if i % 2 == 0:
-               digit_int *= 2
+               times_two = digit_int *= 2
+          else:
+               digit_odd = digit_int
 
-          luhn_sum += digit_int
+          luhn_sum += times_two
 
 
 
