@@ -3,11 +3,11 @@ import sys
 
 # python credit.py
 def main():
-    card = get_int("Number: ")
+    card = input("Number: ")
 
-    while card <= 0:
-         card = get_int("Number: ")
-
+    while not card.isdigit():
+        card = input("Number: ")
+        
     card = str(card)
 
     if len(card) not in [13, 15, 16]:
