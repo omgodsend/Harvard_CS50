@@ -34,11 +34,12 @@ def main():
     print(card_type)
 
 def validate(number):
+     reversed_number = number[::-1]
 
      digit_odd = 0
      luhn_sum = 0
 
-     for i in number:
+     for i in reversed_number:
 
           if int(i) % 2 == 0:
                luhn_sum += int(i) * 2
