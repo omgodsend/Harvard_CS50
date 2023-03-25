@@ -17,7 +17,7 @@ def main():
           print("INVALID")
           sys.exit(2)
 
-def checkcard(card_num)
+def checkcard(card_num):
     type = ""
     card_num_str = str(card_num)
 
