@@ -9,11 +9,9 @@ def main():
         if card > 0:
             break
 
-    print(f"Received card number: {card}")
-
     if validate(card) == 0:
         card_type = checkcard(card)
-        print(f"Detected card type: {card_type}")
+        print(card_type)
     else:
         print("INVALID")
         sys.exit(2)
@@ -31,8 +29,6 @@ def checkcard(card_num):
     else:
         type = "INVALID"
 
-    print(f"Detected card type: {type}")
-
     return type
 
 def validate(number):
@@ -49,9 +45,6 @@ def validate(number):
     for i in even_digits:
         luhnsum += sum(digits_of(i * 2))
 
-    print(f"Calculated Luhn sum: {luhnsum}")
-
     return luhnsum % 10
-
 
 main()
