@@ -59,11 +59,4 @@ def validate(number):
 
 
 
-
-
-
-
-
-
-
 main()
