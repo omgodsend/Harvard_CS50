@@ -12,8 +12,11 @@ def main():
          if card > 0:
               break
 
-    if validate(card) not == 0:
-          print("INVALID")
+    if validate(card) == 0:
+
+
+
+    else: print("INVALID")
           sys.exit(2)
 
     if len(card) not in [13, 15, 16]:
