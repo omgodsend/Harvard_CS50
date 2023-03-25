@@ -8,7 +8,7 @@ def main():
     while not card.isdigit():
         card = input("Number: ")
 
-     if validate(card) == "INVALID":
+    if validate(card) == "INVALID":
           print("INVALID")
           sys.exit(2)
 
