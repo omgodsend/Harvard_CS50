@@ -14,7 +14,9 @@ def main():
          print("INVALID")
          sys.exit(1)
 
-    validate(card)
+    if validate(card) == False
+          print("INVALID")
+          sys.exit(2)
 
     card_type = ""
 
@@ -31,6 +33,7 @@ def main():
 
 def validate(number):
 
+     odd_sum = 0
      luhn_sum = 0
 
      for i, digit in enumerate(number):
@@ -43,6 +46,14 @@ def validate(number):
                digit_odd = digit_int
 
           luhn_sum += times_two
+          odd_sum += digit_odd
+
+     final = odd_sum + luhn_sum
+
+     if final % 10 == 0:
+          return True
+     else:
+          return False
 
 
 
