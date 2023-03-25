@@ -10,11 +10,11 @@ def main():
     while int(card) <= 0:
          card = input("Number: ")
 
-    card = str(card)
-
     if validate(card) == "INVALID":
           print("INVALID")
           sys.exit(2)
+
+     card = str(card)
 
     if len(card) not in [13, 15, 16]:
          print("INVALID")
@@ -34,7 +34,7 @@ def main():
     print(card_type)
 
 def validate(number):
-     reversed_number = number[::-1]
+     reversed_number = int(str(number)[::-1])
 
      counter = 1
      digit_odd = 0
