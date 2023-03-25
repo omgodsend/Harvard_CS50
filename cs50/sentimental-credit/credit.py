@@ -3,7 +3,6 @@ import sys
 
 # python credit.py
 def main():
-    card = input("Number: ")
 
     while not card.isdigit():
         card = input("Number: ")
@@ -36,12 +35,12 @@ def validate(number):
      digit_odd = 0
      luhn_sum = 0
 
-     for i in number:
+     for int(i) in number:
 
           if i % 2 == 0:
-               luhn_sum += i * 2
+               luhn_sum += (i) * 2
           else:
-               digit_odd += i
+               digit_odd += (i)
 
      final = digit_odd + luhn_sum
 
