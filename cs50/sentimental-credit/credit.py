@@ -13,27 +13,24 @@ def main():
     if validate(card) == 0:
          card_type = checkcard(card)
          print(card_type)
-    else: print("INVALID")
+    else:
+          print("INVALID")
           sys.exit(2)
 
-    if len(card) not in [13, 15, 16]:
-         print("INVALID")
-         sys.exit(1)
-
 def checkcard(card_num)
-    card_type = ""
+    type = ""
     card_num_str = str(card_num)
 
     if len(card_num_str) == 15 and card_num_str.startswith("34") or card_num_str.startswith("37"):
-         card_type = "AMEX"
+         type = "AMEX"
     elif len(card_num_str) == 16 and card_num_str.startswith("5") and card[1] in ["1", "2", "3", "4", "5"]:
-         card_type = "MASTERCARD"
+         type = "MASTERCARD"
     elif (len(card_num_str) == 13 or len(card_num_str) == 16) and card_num_str.startswith("5"):
-         card_type = "VISA"
+         type = "VISA"
     else:
-        card_type = "INVALID"
+        type = "INVALID"
 
-    return card_type
+    return type
 
 def validate(number):
 
