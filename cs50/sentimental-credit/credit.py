@@ -16,8 +16,6 @@ def main():
           print("INVALID")
           sys.exit(2)
 
-    card = str(card)
-
     if len(card) not in [13, 15, 16]:
          print("INVALID")
          sys.exit(1)
@@ -36,27 +34,21 @@ def main():
     print(card_type)
 
 def validate(number):
-     reversed_number = int(str(number)[::-1])
 
-     counter = 1
-     digit_odd = 0
-     luhn_sum = 0
+     def digits_of(n):
+          return [int(i) for i in str(n)]
 
-     for i in str(reversed_number):
-          digit_int = int(i)
+     digits = digits_of(number)
+     odd_digits = digits[-1::-2]
+     even_digits = digits[-1:-2]
 
-          if counter % 2 == 0:
-               luhn_sum += digit_int * 2
-          else:
-               digit_odd += digit_int
-     counter += 1
+     luhnsum = 0
 
-     final = digit_odd + luhn_sum
+     luhnsum += sum(odd_digits)
+     for i in even_digits:
+          luhnsum += sum(digits_of(i*2))
 
-     if final % 10 == 0:
-          return "VALID"
-     else:
-          return "INVALID"
+     return checksum % 10
 
 
 main()
