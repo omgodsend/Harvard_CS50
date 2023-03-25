@@ -36,6 +36,7 @@ def validate(number):
      digit_odd = 0
      odd_sum = 0
      luhn_sum = 0
+     times_two = 0
 
      for i, digit in enumerate(number):
     #Convert digit to integer
