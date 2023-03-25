@@ -14,6 +14,8 @@ def main():
          print("INVALID")
          sys.exit(1)
 
+    validate(card)
+
     card_type = ""
 
     if len(card) == 15 and card[0] == "3" and card[1] in ["4", "7"]:
@@ -28,7 +30,14 @@ def main():
     print(card_type)
 
 def validate(number):
-     return
+
+     for i, digit in enumerate(number):
+    #Convert digit to integer
+          digit_int = int(digit)
+          
+     if i % 2 == 0:
+        digit_int *= 2
+
 
 
 
