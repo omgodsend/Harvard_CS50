@@ -33,6 +33,7 @@ def main():
 
 def validate(number):
 
+     digit_odd = 0
      odd_sum = 0
      luhn_sum = 0
 
@@ -51,9 +52,9 @@ def validate(number):
      final = odd_sum + luhn_sum
 
      if final % 10 == 0:
-          return "Valid"
+          return VALID
      else:
-          return "INVALID"
+          return INVALID
 
 
 main()
