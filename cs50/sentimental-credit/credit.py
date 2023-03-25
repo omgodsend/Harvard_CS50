@@ -10,11 +10,13 @@ def main():
     while int(card) <= 0:
          card = input("Number: ")
 
+    card = str(card)
+
     if validate(card) == "INVALID":
           print("INVALID")
           sys.exit(2)
 
-    card = str(card)
+
 
     if len(card) not in [13, 15, 16]:
          print("INVALID")
@@ -39,7 +41,7 @@ def validate(number):
      luhn_sum = 0
 
      for i in number:
-          
+
           if i % 2 == 0:
                luhn_sum += i * 2
           else:
