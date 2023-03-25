@@ -1,5 +1,6 @@
 from cs50 import get_int
 import sys
+import re
 
 # python credit.py
 def main():
