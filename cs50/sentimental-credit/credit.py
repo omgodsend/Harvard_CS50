@@ -22,7 +22,7 @@ def checkcard(card_num):
 
     if len(card_num_str) == 15 and card_num_str.startswith("34") or card_num_str.startswith("37"):
          type = "AMEX"
-    elif len(card_num_str) == 16 and card_num_str.startswith("5") and card[1] in ["1", "2", "3", "4", "5"]:
+    elif len(card_num_str) == 16 and card_num_str.startswith("5") and card_num_str[1] in ["1", "2", "3", "4", "5"]:
          type = "MASTERCARD"
     elif (len(card_num_str) == 13 or len(card_num_str) == 16) and card_num_str.startswith("4"):
          type = "VISA"
