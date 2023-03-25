@@ -12,7 +12,7 @@ def main():
          if card > 0:
               break
 
-    if validate(card) == "INVALID":
+    if validate(card) not == 0:
           print("INVALID")
           sys.exit(2)
 
