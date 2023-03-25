@@ -31,12 +31,16 @@ def main():
 
 def validate(number):
 
+     luhn_sum = 0
+
      for i, digit in enumerate(number):
     #Convert digit to integer
           digit_int = int(digit)
-          
-     if i % 2 == 0:
-        digit_int *= 2
+
+          if i % 2 == 0:
+               digit_int *= 2
+
+          luhn_sum += digit_int
 
 
 
