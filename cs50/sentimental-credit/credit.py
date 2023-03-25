@@ -36,15 +36,17 @@ def main():
 def validate(number):
      reversed_number = number[::-1]
 
+     counter = 1
      digit_odd = 0
      luhn_sum = 0
 
      for i in reversed_number:
 
-          if int(i) % 2 == 0:
+          if counter % 2 == 0:
                luhn_sum += int(i) * 2
           else:
                digit_odd += int(i)
+     counter += 1
 
      final = digit_odd + luhn_sum
 
