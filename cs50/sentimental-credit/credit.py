@@ -48,7 +48,7 @@ def validate(number):
      for i in even_digits:
           luhnsum += sum(digits_of(i*2))
 
-     return checksum % 10
+     return luhnsum % 10
 
 
 main()
