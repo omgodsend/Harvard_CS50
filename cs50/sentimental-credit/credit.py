@@ -42,10 +42,10 @@ def validate(number):
 
      for i in number:
 
-          if i % 2 == 0:
-               luhn_sum += i * 2
+          if int(i) % 2 == 0:
+               luhn_sum += int(i) * 2
           else:
-               digit_odd += i
+               digit_odd += int(i)
 
      final = digit_odd + luhn_sum
 
