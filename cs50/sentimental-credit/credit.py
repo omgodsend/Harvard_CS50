@@ -14,7 +14,7 @@ def main():
          print("INVALID")
          sys.exit(1)
 
-    if validate(card) == "INVALID"
+    if validate(card) == "INVALID":
           print("INVALID")
           sys.exit(2)
 
