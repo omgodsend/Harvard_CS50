@@ -7,8 +7,10 @@ def main():
 
     card = get_int("Number: ")
 
-    while len(card) == 0 or int(card) <= 0:
-         card = input("Number: ")
+    while True:
+         card = get_int("Number: ")
+         if card > 0:
+              break
 
     if validate(card) == "INVALID":
           print("INVALID")
