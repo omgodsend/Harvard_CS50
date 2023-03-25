@@ -7,10 +7,9 @@ def main():
     card = input("Number: ")
 
     while not card.isdigit() or int(card) <= 0:
-         card = int(input("Number: "))
+         card = input("Number: ")
 
-
-    if validate(card) == "INVALID":
+    if validate(int(card)) == "INVALID":
           print("INVALID")
           sys.exit(2)
 
@@ -41,9 +40,9 @@ def validate(number):
      for i in number:
 
           if i % 2 == 0:
-               luhn_sum += (i) * 2
+               luhn_sum += i * 2
           else:
-               digit_odd += (i)
+               digit_odd += i
 
      final = digit_odd + luhn_sum
 
