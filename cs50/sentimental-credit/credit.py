@@ -1,13 +1,13 @@
-from cs50 import get_string
+from cs50 import get_int
 import sys
 import re
 
 # python credit.py
 def main():
 
-    card = input("Number: ")
+    card = get_int("Number: ")
 
-    while not card.isdigit() or int(card) <= 0:
+    while int(card) <= 0:
          card = input("Number: ")
 
     if validate(int(card)) == "INVALID":
