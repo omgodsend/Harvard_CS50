@@ -40,7 +40,7 @@ def validate(number):
      digit_odd = 0
      luhn_sum = 0
 
-     for i in enumerate(str(reversed_number)):
+     for i in str(reversed_number):
           digit_int = int(i)
 
           if counter % 2 == 0:
