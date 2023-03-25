@@ -51,9 +51,11 @@ def validate(number):
      final = odd_sum + luhn_sum
 
      if final % 10 == 0:
+          number = str(number)
           return True
      else:
           return False
+
 
 
 
