@@ -1,7 +1,6 @@
 from cs50 import get_int
 import sys
 
-# python credit.py
 def main():
 
     while True:
