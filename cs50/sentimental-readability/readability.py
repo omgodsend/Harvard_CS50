@@ -15,6 +15,10 @@ def count_letters(text):
     letters = len(text)
     return letters
 
-def count_words(text)
-    
+def count_words(text):
+
+    word_count = 0
+
+    for "" in text:
+        word_count += 1
 
