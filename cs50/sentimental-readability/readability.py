@@ -1,4 +1,5 @@
 from cs50 import get_string
+import re
 
 def main():
 
@@ -17,9 +18,7 @@ def count_letters(text):
 
 def count_words(text):
 
-    word_count = 0
-
-    for i in range(0, len(text)-1):
-        if(text[i] == ' ' and text[i+1].isalpha() and (i > 0)):
-        word_count += 1
+   word_re = re.compile(r'\b\w+\b')
+   word_count = len(word_re.findall(text))
+   return word_count
 
