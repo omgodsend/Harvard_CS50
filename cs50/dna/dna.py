@@ -6,18 +6,21 @@ def main():
 
     # TODO: Check for command-line usage
     if len(sys.argv) != 3:
-        print("Missing database or text sequence")
+        print("Usage: python dna.py data.csv sequence.txt")
         sys.exit(1)
 
     # TODO: Read database file into a variable
-    name
+    database = []
     with open(sys.argv[1]) as f:
         reader = csv.DictReader(f)
+        for row in reader
+            database.append(row)
 
     # TODO: Read DNA sequence file into a variable
 
-        for STR in reader:
-            
+    with open(sys.argv[2]) as f:
+        dna_seq = f.read()
+
     # TODO: Find longest match of each STR in DNA sequence
 
     # TODO: Check database for matching profiles
