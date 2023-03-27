@@ -34,7 +34,8 @@ def main():
     for person in database:
         match = 0
         for i in subsequences:
-            if int(person[i]) == result[i]
+            if int(person[i]) == result[i]:
+                match += 1
 
 
 
