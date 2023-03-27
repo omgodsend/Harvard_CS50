@@ -9,11 +9,10 @@ def main():
     words = count_words(all)
     sent = count_sentences(all)
 
-
-    index = round(0.0588 * L - 0.296 * S - 15.8)
-
     L = (letters/words) * 100.0
     S = (sent/words) * 100.0
+
+    index = round(0.0588 * L - 0.296 * S - 15.8)
 
     if (index > 16):
         print("Grade 16+\n")
@@ -49,7 +48,7 @@ def count_sentences(text):
 
         if text[i] in ending:
             num_sent += 1
-
+    print(num_sent)
     return num_sent
 
 
