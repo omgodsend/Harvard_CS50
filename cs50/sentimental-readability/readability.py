@@ -20,5 +20,6 @@ def count_words(text):
     word_count = 0
 
     for i in range(0, len(text)-1):
+        if(sentence[i] == ' ' and sentence[i+1].isalpha() and (i > 0)):
         word_count += 1
 
