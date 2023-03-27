@@ -5,13 +5,18 @@ def main():
 
     all = get_string("Text: ")
 
-    ##index = 0.0588 * L - 0.296 * S - 15.8
-
-
-
     letters = count_letters(all)
     words = count_words(all)
     sent = count_sentences(all)
+
+
+    index = 0.0588 * L - 0.296 * S - 15.8
+
+    float L = ((letters/words) * 100)
+    float S = ((sent/words) * 100)
+
+
+
 
 def count_letters(text):
 
