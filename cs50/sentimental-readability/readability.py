@@ -19,7 +19,7 @@ def main():
     elif (index < 1):
         print("Before Grade 1")
     else:
-        print("Grade %i\n", index)
+        print(f"Grade {index}")
 
 def count_letters(text):
 
