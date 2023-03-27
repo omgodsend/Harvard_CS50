@@ -22,13 +22,20 @@ def count_words(text):
 
    word_re = re.compile(r'\b\w+\b')
    word_count = len(word_re.findall(text))
+   print(word_count)
    return word_count
 
 def count_sentences(text):
 
     ending = ['.', '!', '?']
     num_sent = 0
-    
+
+    for i in range(len(text)):
+
+        if text[i] in ending:
+            num_sent += 1
+    print(num_sent)
+    return num_sent
 
 
 
