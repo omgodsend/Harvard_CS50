@@ -10,13 +10,17 @@ def main():
     sent = count_sentences(all)
 
 
-    index = 0.0588 * L - 0.296 * S - 15.8
+    index = round(0.0588 * L - 0.296 * S - 15.8)
 
-    float L = ((letters/words) * 100)
-    float S = ((sent/words) * 100)
+    L = (letters/words) * 100.0
+    S = (sent/words) * 100.0
 
-
-
+    if (index > 16):
+        print("Grade 16+\n")
+    elif (index < 1):
+        print("Before Grade 1")
+    else:
+        print("Grade %i\n", index)
 
 def count_letters(text):
 
