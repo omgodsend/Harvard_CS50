@@ -6,7 +6,7 @@ def main():
 
     all = get_string("Text: ")
 
-    index = 0.0588 * L - 0.296 * S - 15.8
+    ##index = 0.0588 * L - 0.296 * S - 15.8
 
 
 
@@ -29,7 +29,7 @@ def count_sentences(text):
 
     sentences= nltk.sent_tokenize(text)
     length= len(sentences)
-
+    print(length)
 
 
 
