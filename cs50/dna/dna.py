@@ -22,7 +22,7 @@ def main():
         dna_seq = f.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    
+
     for i in database[0]
         longest_match(dna_seq, database[1:i])
 
