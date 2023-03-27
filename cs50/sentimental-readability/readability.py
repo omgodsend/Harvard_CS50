@@ -13,7 +13,16 @@ def main():
     words = count_words(all)
     sent = count_sentences(all)
 
-z
+def count_letters(text):
+
+    letters = 0
+
+    for char in text:
+        if char.isalpha():
+            letters += 1
+    print(letters)
+    return letters
+
 
 def count_words(text):
 
