@@ -26,8 +26,8 @@ def main():
     subsequences = list(database[0].keys())[1:]
 
     result = {}
-    for subsequence in subsequences:
-        longest_match(dna_seq, subsequences[i])
+    for i in subsequences:
+        result[i] = longest_match(dna_seq, subsequences)
 
 
     ##for i in database[0]
