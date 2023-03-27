@@ -1,6 +1,5 @@
 from cs50 import get_string
 import re
-import nltk
 
 def main():
 
@@ -27,9 +26,9 @@ def count_words(text):
 
 def count_sentences(text):
 
-    sentences= nltk.sent_tokenize(text)
-    length= len(sentences)
-    print(length)
+    ending = ['.', '!', '?']
+    num_sent = 0
+    
 
 
 
