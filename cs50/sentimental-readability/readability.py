@@ -28,15 +28,14 @@ def count_letters(text):
     for char in text:
         if char.isalpha():
             letters += 1
-    print(letters)
+    ##print(letters)
     return letters
-
 
 def count_words(text):
 
    word_re = re.compile(r'\s')
-   word_count = len(word_re.findall(text))
-   print(word_count)
+   word_count = len(word_re.findall(text)) + 1
+   ##print(word_count)
    return word_count
 
 def count_sentences(text):
@@ -48,7 +47,7 @@ def count_sentences(text):
 
         if text[i] in ending:
             num_sent += 1
-    print(num_sent)
+    ##print(num_sent)
     return num_sent
 
 
