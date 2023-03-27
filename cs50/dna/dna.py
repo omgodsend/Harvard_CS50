@@ -17,7 +17,7 @@ def main():
     # TODO: Read DNA sequence file into a variable
 
         for STR in reader:
-            name["name"] = team["rating"]
+            name["name"] = reader["rating"]
             teams.append(team)
     # TODO: Find longest match of each STR in DNA sequence
 
