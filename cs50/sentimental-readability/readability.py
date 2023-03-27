@@ -34,7 +34,7 @@ def count_letters(text):
 
 def count_words(text):
 
-   word_re = re.compile(r'\b\w+\b')
+   word_re = re.compile(r'\s')
    word_count = len(word_re.findall(text))
    print(word_count)
    return word_count
