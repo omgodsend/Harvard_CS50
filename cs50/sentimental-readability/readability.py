@@ -13,10 +13,7 @@ def main():
     words = count_words(all)
     sent = count_sentences(all)
 
-def count_letters(text):
-
-    letters = len(text)
-    return letters
+z
 
 def count_words(text):
 
@@ -34,7 +31,7 @@ def count_sentences(text):
 
         if text[i] in ending:
             num_sent += 1
-    print(num_sent)
+
     return num_sent
 
 
