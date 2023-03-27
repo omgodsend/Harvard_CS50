@@ -22,7 +22,8 @@ def main():
         dna_seq = f.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    longest_match(dna_seq, (for i in database[0][1:i])
+    longest_match(dna_seq, (for i in database[0][1:i]))
+
     # TODO: Check database for matching profiles
 
     return
