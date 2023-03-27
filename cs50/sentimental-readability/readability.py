@@ -19,6 +19,6 @@ def count_words(text):
 
     word_count = 0
 
-    for "" in text:
+    for i in range(0, len(text)-1):
         word_count += 1
 
