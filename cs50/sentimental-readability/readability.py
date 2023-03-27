@@ -12,5 +12,9 @@ def main():
 
 def count_letters(text):
 
-    for i in text
-        
+    letters = len(text)
+    return letters
+
+def count_words(text)
+    
+
