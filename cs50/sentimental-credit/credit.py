@@ -33,7 +33,7 @@ def checkcard(card_num):
 def validate(number):
     def digits_of(n):
         return [int(i) for i in str(n)]
-
+f
     digits = digits_of(number)
     odd_digits = digits[-1::-2]
     even_digits = digits[-2::-2]
