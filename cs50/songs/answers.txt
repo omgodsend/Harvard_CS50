@@ -1,0 +1,6 @@
+question 1:
+We could take the average of each of those values of energy, valence and dancability of those top 100 and get the value final based on those 100.
+
+question 2:
+One limitation of this approach is that it assumes that the listener's mood can be adequately described by just two moods based on the audio features of their top songs. However, human emotions are complex and can vary depending on various factors beyond just the audio features of the songs they listen to.
+Another limitation is that the approach only considers the top 100 songs from the past year, which may not be a representative sample of the listener's overall musical taste and mood. The listener may have other favorite songs that are not included in the top 100, or they may have had a different mood during a particular period of the year that is not reflected in their top songs.
