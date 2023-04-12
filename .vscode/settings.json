@@ -17,5 +17,6 @@
     },
     "workbench.colorCustomizations": {
     "[GitHub Dark]": {}
-    }
+    },
+    "editor.tabCompletion": "onlySnippets"
 }
