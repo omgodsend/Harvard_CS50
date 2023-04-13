@@ -11,7 +11,7 @@ body{
 }
 
 nav{
-    background: #699FC9;
+    background: #5BAAE6;
     height: 80px;
     width: 100%;
 }
@@ -40,9 +40,9 @@ nav ul li a{
     text-decoration: inherit;
     font-size: 17px;
     padding: 7px 13px;
-    border-radius: 3px;
+    border-radius: 15px;
     text-transform: uppercase;
 }
 a.active,a:hover{
-    background: #36678C
+    background: #2585CE
 }
