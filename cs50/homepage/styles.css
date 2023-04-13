@@ -62,8 +62,12 @@ a.active,a:hover{
     display: none;
 }
 
-@media (min-width: 858px){
-
+@media (max-width: 35em){
+    .primary-navigation{
+        position:fixed;
+        inset: 0 0 0 30%;
+        background: steelblue;
+    }
     nav ul li a{
         font-size: 16px;
     }
@@ -72,11 +76,7 @@ a.active,a:hover{
     }
 }
 
-@media (max-width: 858px) {
-    .checkbtn {
-      display: block;
-    }
-  }
+
 
 @media (max-width: 858px){
     .checkbtn{
