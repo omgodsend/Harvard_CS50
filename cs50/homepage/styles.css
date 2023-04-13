@@ -87,8 +87,6 @@ a.active,a:hover{
     }
     nav ul li{
         display: block;
-        margin: 50px 0;
-        line-height: 30px;
     }
     nav ul li a{
         font-size: 20px;
@@ -96,10 +94,6 @@ a.active,a:hover{
     a:hover,a.active{
         background: none;
         color: #28579D;
-        border: 1px solid black;
-        outline-style: solid;
-        outline-color: red;
-        outline-width: thin;
     }
     #check:checked ~ ul{
         left: 0;
