@@ -91,7 +91,7 @@ a.active,a:hover{
     nav ul li a{
         font-size: 20px;
     }
-    a.hover,a.active{
+    a:hover,a.active{
         background: none;
         color: #122A4F;
     }
