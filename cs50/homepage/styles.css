@@ -58,6 +58,11 @@ a.active,a:hover{
     cursor: pointer;
 }
 
+.flex{
+    display: flex;
+    gap: var(--gap,2rem);
+}
+
 #check{
     display: none;
 }
@@ -68,7 +73,7 @@ a.active,a:hover{
         inset: 0 0 0 30%;
         flex-direction: column;
         padding: min(30vh, 10rem) 2em;
-        background: steelblue;
+        background: hsl(0 0% 100%);
     }
     nav ul li a{
         font-size: 16px;
