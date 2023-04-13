@@ -11,7 +11,7 @@
         "stdio.h": "c"
     },
     "workbench.preferredDarkColorTheme": "GitHub Dark Default",
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Monokai",
     "editor.semanticTokenColorCustomizations": {
     "[GitHub Dark]": {}
     },
