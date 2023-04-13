@@ -39,8 +39,10 @@ nav ul li a{
     color: inherit;
     text-decoration: inherit;
     font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
     text-transform: uppercase;
 }
 a.active,a:hover{
-    background:
+    background: #36678C
 }
