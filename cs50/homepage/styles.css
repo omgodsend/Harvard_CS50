@@ -18,7 +18,7 @@ nav{
     width: 100%;
 }
 label.logo{
-    color: black;
+    color: #253C5F;
     font-size: 17px;
     line-height: 65px;
     padding: 0 50px;
@@ -38,7 +38,7 @@ nav ul li{
 
 nav ul li a{
     background-color: transparent;
-    color: inherit;
+    color: #253C5F;
     text-decoration: inherit;
     font-size: 15px;
     padding: 7px 13px;
@@ -50,7 +50,7 @@ a.active,a:hover{
 }
 .checkbtn{
     font-size: 30px;
-    color: white;
+    color: #253C5F;
     float: right;
     line-height: 65px;
     margin-right: 40px;
