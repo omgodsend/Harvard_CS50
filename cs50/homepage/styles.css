@@ -70,6 +70,9 @@ a.active,a:hover{
     nav ul li a{
         font-size: 16px;
     }
+    .checkbtn{
+        display: none;
+    }
 }
 
 @media (max-width: 858px){
