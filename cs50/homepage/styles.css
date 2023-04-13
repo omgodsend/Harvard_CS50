@@ -72,7 +72,7 @@ a.active,a:hover{
     }
 }
 
-@media (min-width: 350px) {
+@media (max-width: 858px) {
     .checkbtn {
       display: block;
     }
