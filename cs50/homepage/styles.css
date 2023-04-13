@@ -93,7 +93,8 @@ a.active,a:hover{
     }
     a:hover,a.active{
         background: none;
-        color: white;
+        color: #FFEE6E;
+        border-color: black;
     }
     #check:checked ~ ul{
         left: 0;
