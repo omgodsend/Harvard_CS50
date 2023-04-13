@@ -21,7 +21,7 @@ label.logo{
     color: black;
     font-size: 17px;
     line-height: 65px;
-    padding: 0 20px;
+    padding: 0 50px;
     font-weight: bold;
 }
 
@@ -40,7 +40,7 @@ nav ul li a{
     background-color: transparent;
     color: inherit;
     text-decoration: inherit;
-    font-size: 17px;
+    font-size: 15px;
     padding: 7px 13px;
     border-radius: 15px;
     text-transform: uppercase;
