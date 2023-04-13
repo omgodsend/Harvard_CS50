@@ -46,7 +46,8 @@ nav ul li a{
     text-transform: uppercase;
 }
 a.active,a:hover{
-    background: #122A4F
+    background: #122A4F;
+    color: white;
 }
 .checkbtn{
     font-size: 30px;
