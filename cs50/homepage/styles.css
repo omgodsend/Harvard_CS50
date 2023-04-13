@@ -83,4 +83,7 @@ a.active,a:hover{
         left: 0;
         text-align: center;
     }
+    nav ul li{
+        display: block;
+    }
 }
