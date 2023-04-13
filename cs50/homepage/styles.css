@@ -94,7 +94,10 @@ a.active,a:hover{
     a:hover,a.active{
         background: none;
         color: #FFEE6E;
-        border-color: black;
+        border: 1px solid black;
+        outline-style: solid;
+        outline-color: red;
+        outline-width: thin;
     }
     #check:checked ~ ul{
         left: 0;
