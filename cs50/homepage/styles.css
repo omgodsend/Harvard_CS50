@@ -35,7 +35,9 @@ nav ul li{
 }
 
 nav ul li a{
-    color: white;
+    background-color: transparent;
+    color: inherit;
+    text-decoration: inherit;
     font-size: 17px;
     text-transform: uppercase;
 }
