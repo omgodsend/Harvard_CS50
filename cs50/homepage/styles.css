@@ -73,7 +73,26 @@ label.logo{
     font-weight: bold;
 }
 
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
 
+nav ul li{
+    display: inline-block;
+    line-height: 65px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    background-color: transparent;
+    color: #122A4F;
+    text-decoration: inherit;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 15px;
+    text-transform: uppercase;
+}
 a.active,a:hover{
     background: #122A4F;
     color: white;
