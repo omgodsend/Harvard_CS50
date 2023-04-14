@@ -79,7 +79,9 @@ img{
     justify-content: center;
     align-items: center;
     float: left;
-    margin-right: 1rem;
+    margin-right: 20px;
+    height: 200px;
+    overflow: hidden;
 }
 
 /* nav bar*/
