@@ -6,13 +6,12 @@
     box-sizing: border-box;
 }
 
-main{
-    font-size: 5px;
+
+h1 {
+    font-size: 10px;
+    text-align: center;
 }
 
-body{
-    font-size: 5px;
-}
 
 /* nav bar*/
 nav{
