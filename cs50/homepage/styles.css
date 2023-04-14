@@ -14,7 +14,8 @@ body{
 h1 {
     font-size: 24px; /* Set the desired font size for the h1 element */
     text-align: center;
-    display: inline-bloc
+    display: inline-block;
+    transition
 }
 
 main{
