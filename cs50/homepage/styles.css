@@ -24,9 +24,9 @@ h1 {
     display: inline-block;
     background-color: #000;
     width: .8em;
-    height: 2px;
+    height: 4px;
     position: relative;
-    margin-top: .92em;
+    margin-top: 2rem;
     opacity: 1;
     animation: blink 2s linear infinite;
 }
