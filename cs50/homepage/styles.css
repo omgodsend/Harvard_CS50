@@ -84,15 +84,12 @@ img{
 .image-title-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .text-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    align-items: flex-start;
     margin-top: 10rem;
     margin-left: auto;
     margin-right: auto;
@@ -136,6 +133,9 @@ nav ul li{
     display: inline-block;
     line-height: 65px;
     margin: 0 5px;
+}
+.about-me-container {
+    margin-left: 2rem;
 }
 
 nav ul li a{
