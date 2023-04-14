@@ -7,15 +7,16 @@
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 10;
-    font-style: normal;
+    font-size: 1px;
 }
 /* nav bar*/
 nav{
     background: #e2e8f0;
     height: 65px;
     width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 10;
+    font-style: normal;
 }
 
 label.logo{
@@ -103,7 +104,5 @@ a.active,a:hover{
 }
 /* #endregion */
 
-main{
-    font-size: 1;
-}
+
 
