@@ -63,22 +63,9 @@ img{
     object-position: 10000% 20%;
     border-radius: 50%;
     border: 5px solid black;
-
 }
-#about-me {
-    column-count: 5;
-    column-gap: 0px;
-  }
 
-#about-me img {
-    float: left;
-    margin-right: 20px;
-    height: auto;
-    width: 40%;
-  }
-#about-me p {
-    overflow: auto;
-}
+
 .profile-image-container {
     width: 33.33%;
     position: absolute;
@@ -88,10 +75,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    float: left;
-    margin-right: 20px;
-    height: 200px;
-    overflow: hidden;
+
 }
 
 /* nav bar*/
