@@ -12,6 +12,13 @@ h1 {
     text-align: center;
 }
 
+main{
+    font-size: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
 /* nav bar*/
 nav{
