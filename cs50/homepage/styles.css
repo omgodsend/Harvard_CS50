@@ -135,13 +135,13 @@ a.active,a:hover{
     display: none;
 }
 
-@media (min-width: 858px){
+@media (min-width: 768px){
     .checkbtn{
         display:none;
     }
 }
 
-@media (max-width: 858px){
+@media (max-width: 768px){
     .checkbtn{
         display: block;
     }
