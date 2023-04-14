@@ -65,7 +65,17 @@ img{
     border: 5px solid black;
 
 }
+#about-me {
+    column-count: 5;
+    column-gap: 0px;
+  }
 
+#about-me img {
+    float: left;
+    margin-right: 20px;
+    height: auto;
+    width: 40%;
+  }
 #about-me p {
     overflow: auto;
 }
