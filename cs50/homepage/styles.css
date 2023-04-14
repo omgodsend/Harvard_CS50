@@ -156,7 +156,7 @@ a.active,a:hover{
     }
     label.logo{
         font-size: 25px;
-        padding-left: 50px;
+        text-align: center;
     }
     nav ul li{
         display: block;
