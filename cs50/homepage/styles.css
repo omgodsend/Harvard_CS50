@@ -14,19 +14,18 @@ body{
 h1 {
     font-size: 24px;
     text-align: center;
-    display: inline-block;
 }
 .text {
     vertical-align: top;
 }
 
-span{
+.cursor{
     display: inline-block;
     background-color: #000;
     width: .8em;
     height: 2px;
     position: relative;
-    margin-top: 0em;
+    margin-top: .92em;
     opacity: 1;
     animation: blink 2s linear infinite;
 }
