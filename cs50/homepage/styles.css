@@ -55,6 +55,14 @@ section {
     margin-bottom: 2rem;
     text-align: center;
 }
+img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
 /* nav bar*/
 nav{
     background: #e2e8f0;
