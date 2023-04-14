@@ -63,6 +63,12 @@ img{
     object-position: 10000% 20%;
     border-radius: 50%;
     border: 5px solid black;
+    float: left;
+    margin-right: 1rem;
+}
+
+#about-me p {
+    margin-left: 150px;
 }
 .profile-image-container {
     width: 33.33%;
