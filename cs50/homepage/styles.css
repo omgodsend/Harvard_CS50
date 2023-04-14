@@ -16,6 +16,9 @@ h1 {
     text-align: center;
     display: inline-block;
 }
+.text {
+    vertical-align: top;
+}
 
 span{
     display: inline-block;
@@ -23,7 +26,7 @@ span{
     width: .8em;
     height: 2px;
     position: relative;
-    margin-top: 3em;
+    margin-top: 5em;
     opacity: 1;
     animation: blink 2s linear infinite;
 }
