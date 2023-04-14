@@ -6,9 +6,14 @@
     box-sizing: border-box;
 }
 
-body{
-    font-size: 1px;
+main{
+    font-size: 0px;
 }
+
+:root {
+    --bs-body-font-size: 16px; /* set the font size to 16 pixels */
+  }
+
 /* nav bar*/
 nav{
     background: #e2e8f0;
