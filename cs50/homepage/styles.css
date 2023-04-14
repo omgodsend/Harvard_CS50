@@ -154,9 +154,12 @@ a.active,a:hover{
         text-align: center;
         transition: all .5s;
     }
+    nav{
+        text-align:center
+    }
     label.logo{
         font-size: 25px;
-        text-align: center;
+        width: 100%
     }
     nav ul li{
         display: block;
