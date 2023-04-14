@@ -51,16 +51,17 @@ h1 {
 }
 
 main{
-    min-height: calc(100vh - 65px);
     padding: 1rem;
     box-sizing: border-box;
     margin-top: 65px;
 }
+
 section {
     margin-bottom: 10rem;
     margin-top: 10rem;
     text-align: center;
 }
+
 img{
     width: 150px;
     height: 150px;
@@ -76,15 +77,9 @@ img{
     margin-top: 10rem;
     margin-left: auto;
     margin-right: auto;
+    justify-content: center;
 }
-.name-title {
-    margin-left: 1rem;
 
-    align-items: center;
-}
-.sections-container {
-    margin-left: 1rem;
-}
 
 
 /* nav bar*/
