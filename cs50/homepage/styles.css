@@ -17,6 +17,9 @@ h1 {
     display: inline-block;
     transition
 }
+span{
+    transition: opacity: 0.5s ease 0s; opacity: 0;
+}
 
 main{
     font-size: 5px;
