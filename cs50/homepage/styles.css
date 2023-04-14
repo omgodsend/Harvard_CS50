@@ -52,7 +52,8 @@ section {
 
 .image-title-container {
     position: relative;
-    transform: translateY(21rem); /* adjust the value to your preference */
+    margin-left: 1.5rem;
+    transform: translateY(26rem); /* adjust the value to your preference */
 }
 
 img{
@@ -73,7 +74,9 @@ img{
     justify-content: center;
 }
 
-
+#abtmehdr{
+    margin-bottom: 2.5rem;
+}
 
 /* nav bar*/
 nav{
