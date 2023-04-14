@@ -13,7 +13,7 @@ body{
 
 h1 {
     font-size: 24px;
-    text-align: center;
+    text-align: top;
 }
 .text {
     vertical-align: top;
@@ -56,6 +56,9 @@ nav{
     font-weight: 10;
     font-style: normal;
     font-size: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 label.logo{
