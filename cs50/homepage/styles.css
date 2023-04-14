@@ -17,7 +17,6 @@ h1 {
     text-align: center;
     font-weight: bold;
     letter-spacing: 4px;
-    margin-top: 10rem;
 }
 
 .text {
@@ -65,19 +64,23 @@ img{
     width: 150px;
     height: 150px;
     object-fit: cover;
-    object-position: 10000% 20%;
+    object-position: 100% 20%;
     border-radius: 50%;
     border: 5px solid black;
 }
 
 
 .profile-image-container {
-    width: 33.33%;
-    transform: translateY(100%);
+    width: 150px;
+    height: 150px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    float: left;
-    margin-right: 1rem;
+}
+.text-container {
+    max-width: calc(100% - 150px - 1rem); /* Subtracting the width of the image and the gap */
+    text-align: center;
+    margin-top: 10rem;
 }
 
 /* nav bar*/
