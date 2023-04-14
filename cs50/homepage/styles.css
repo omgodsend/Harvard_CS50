@@ -16,21 +16,23 @@ h1 {
     text-align: center;
     display: inline-block;
 }
-span{
-    span{
-        display: inline-block;
-        background-color: #000;
-        width: 2px;
-        height: 1em;
-        margin-left: 2px;
-        opacity: 1;
-        animation: blink 1s steps(2, start) infinite;
-    }
 
-    @keyframes blink {
-        50% {
-            opacity: 0;
-        }
+span{
+    display: inline-block;
+    background-color: #000;
+    width: 2px;
+    height: 1em;
+    margin-left: 2px;
+    opacity: 1;
+    animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
     }
 }
 
