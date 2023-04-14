@@ -49,8 +49,13 @@ main{
     justify-content: center;
     align-items: center;
     min-height: calc(100vh - 65px);
+    padding: 1rem;
+    box-sizing: border-box;
+    margin-top: 65px;
 }
-
+section {
+    margin-bottom: 2rem;
+}
 /* nav bar*/
 nav{
     background: #e2e8f0;
