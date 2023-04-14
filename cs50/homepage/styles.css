@@ -79,7 +79,6 @@ img{
     align-items: center;
 }
 .text-container {
-    max-width: calc(100% - 150px - 1rem); /* Subtracting the width of the image and the gap */
     text-align: center;
     margin-top: 10rem;
     margin-left: auto;
