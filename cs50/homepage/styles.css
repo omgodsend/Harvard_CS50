@@ -71,22 +71,6 @@ img{
 }
 
 
-.profile-image-container {
-    width: 150px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.profile-image-container-left {
-    margin-bottom: 1rem;
-}
-.image-title-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
 .text-container {
     display: flex;
     align-items: flex-start;
