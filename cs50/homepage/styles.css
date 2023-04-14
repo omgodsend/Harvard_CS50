@@ -19,10 +19,6 @@ h1 {
     letter-spacing: 4px;
 }
 
-.text {
-    vertical-align: top;
-}
-
 .cursor{
     display: inline-block;
     background-color: #000;
@@ -55,7 +51,7 @@ section {
     text-align: center;
 }
 .about-me-container {
-    margin-left: 30rem; /* adjust the value to your preference */
+    margin-left: 20rem; /* adjust the value to your preference */
 }
 .image-title-container {
     position: relative;
