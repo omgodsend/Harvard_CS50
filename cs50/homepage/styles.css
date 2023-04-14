@@ -63,12 +63,11 @@ img{
     object-position: 10000% 20%;
     border-radius: 50%;
     border: 5px solid black;
-    float: left;
-    margin-right: 1rem;
+
 }
 
 #about-me p {
-    margin-left: 150px;
+    overflow: auto;
 }
 .profile-image-container {
     width: 33.33%;
@@ -79,6 +78,8 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    float: left;
+    margin-right: 1rem;
 }
 
 /* nav bar*/
