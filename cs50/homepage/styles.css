@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "My Custom Font";
+    src: url("path/to/my/custom/font.ttf") format("truetype"); /* replace with the path to your font file */
+  }
 
 body{
     font-size: 16px;
