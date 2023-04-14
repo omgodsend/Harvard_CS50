@@ -111,8 +111,9 @@ nav ul li{
     margin: 0 5px;
 }
 .about-me-container {
-    margin-left: 10rem;
+    margin-left: 12rem;
     line-height: 2.5;
+    margin-right: 10px;
 }
 
 nav ul li a{
