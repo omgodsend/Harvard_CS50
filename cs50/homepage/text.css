@@ -20,3 +20,52 @@
     display: flex;
     gap: var(--gap,2rem);
 }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav div {
+    margin-right: 10px;
+  }
+
+  nav div a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  /* Button styles */
+  button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  button svg {
+    height: 1em;
+    width: 1em;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 65px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    background-color: transparent;
+    color: #122A4F;
+    text-decoration: inherit;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 15px;
+    text-transform: uppercase;
+}
