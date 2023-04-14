@@ -28,6 +28,7 @@ h1 {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
+    width: 100%;
 }
 .cursor{
     display: inline-block;
@@ -81,6 +82,8 @@ img{
     max-width: calc(100% - 150px - 1rem); /* Subtracting the width of the image and the gap */
     text-align: center;
     margin-top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* nav bar*/
