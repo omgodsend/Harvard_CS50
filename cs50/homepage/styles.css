@@ -6,13 +6,10 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: "My Custom Font";
-    src: url("path/to/my/custom/font.ttf") format("truetype"); /* replace with the path to your font file */
-  }
 
 body{
     font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 h1 {
@@ -22,6 +19,7 @@ h1 {
     letter-spacing: 1px;
     margin-top: -100%;
 }
+
 .text {
     vertical-align: top;
 }
