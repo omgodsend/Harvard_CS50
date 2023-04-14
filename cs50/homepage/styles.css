@@ -16,8 +16,8 @@ h1 {
     font-size: 3em;
     text-align: center;
     font-weight: bold;
-    letter-spacing: 1px;
-    margin-top: 1rem;
+    letter-spacing: 4px;
+    margin-top: 10rem;
 }
 
 .text {
@@ -53,6 +53,7 @@ main{
 }
 section {
     margin-bottom: 10rem;
+    margin-top: 10rem;
     text-align: center;
 }
 img{
