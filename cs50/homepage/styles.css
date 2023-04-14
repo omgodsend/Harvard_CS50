@@ -78,9 +78,14 @@ img{
     justify-content: center;
     align-items: center;
 }
+.profile-image-container-left {
+    margin-bottom: 1rem;
+}
+
 .text-container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     text-align: center;
     margin-top: 10rem;
     margin-left: auto;
