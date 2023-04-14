@@ -159,7 +159,10 @@ a.active,a:hover{
     }
     label.logo{
         font-size: 25px;
-        width: 100%
+        display: block;
+        margin: 0 auto;
+        line-height: 65px;
+
     }
     nav ul li{
         display: block;
