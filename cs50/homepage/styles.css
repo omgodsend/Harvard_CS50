@@ -55,6 +55,9 @@ section {
     margin-left: 1.5rem;
     transform: translateY(26rem);
 }
+.name.title{
+    margin-left: 5rem;
+}
 
 img{
     width: 150px;
