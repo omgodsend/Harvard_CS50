@@ -9,14 +9,7 @@
         <title>My Webpage</title>
 
             <script>
-                document.addEventListener('DOMcontentLoaded', function(){
-                    document.querySelector('#btotop').addEventListener('click', function(){
-                        window.scrollTo({
-                            top:0,
-                            behavior: 'smooth'
-                        });
-                    });
-                });
+                
 
             </script>
     </head>
@@ -98,7 +91,7 @@
                             </div>
                         </section>
 
-                    <button id="btotop">Back to Top</button>
+                    <button onclick= "window.scrollTo({ top: 0, behavior: 'smooth' })">Back to Top</button>
 
 
 
