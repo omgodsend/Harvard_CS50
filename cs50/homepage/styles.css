@@ -53,7 +53,7 @@ section {
 .image-title-container {
     position: relative;
     margin-left: 1.5rem;
-    transform: translateY(26rem); /* adjust the value to your preference */
+    transform: translateY(26rem);
 }
 
 img{
