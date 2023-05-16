@@ -76,6 +76,7 @@ img{
 
 #abtmehdr{
     margin-bottom: 2.5rem;
+    margin-left: -3rem;
 }
 
 /* nav bar*/
@@ -124,6 +125,7 @@ nav ul li a{
     padding: 7px 13px;
     border-radius: 15px;
     text-transform: uppercase;
+
 }
 a.active,a:hover{
     background: #122A4F;
