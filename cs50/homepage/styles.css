@@ -89,8 +89,8 @@ img{
 
 }
 
-.mb-3{
-    input-btn-focus-width:         0rem;
+.custom-input {
+    width: 1000px;
 }
 
 .bodies{
