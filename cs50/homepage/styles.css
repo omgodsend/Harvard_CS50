@@ -87,7 +87,11 @@ img{
     align-items: center;
     text-align: center;
 
-  }
+}
+
+.mb-3{
+input-btn-padding-y: -100rem;
+}
 
 .bodies{
     margin-left: -2rem;
