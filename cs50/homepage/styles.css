@@ -90,7 +90,7 @@ img{
 }
 
 .mb-3{
-input-btn-padding-y: -100rem;
+    input-btn-focus-width:         0rem;
 }
 
 .bodies{
