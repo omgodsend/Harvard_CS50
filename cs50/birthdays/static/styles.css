@@ -71,6 +71,10 @@ table {
     width: 100%;
 }
 
+name::placeholder{
+
+}
+
 table th,
 table td {
     padding: 0.75rem;
