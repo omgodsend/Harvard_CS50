@@ -27,6 +27,7 @@ def index():
     if request.method == "POST":
 
         bday = db.execute("SELECT * FROM bday")
+        return render_template("index.html", bday=bday)
         request.form.get("")
         # TODO: Add the user's entry into the database
 
