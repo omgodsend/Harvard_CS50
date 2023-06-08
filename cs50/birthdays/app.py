@@ -26,7 +26,7 @@ def after_request(response):
 def index():
     if request.method == "POST":
 
-        bday = db.execute()
+        bday = db.execute("SELECT * FROM bday")
         request.form.get("")
         # TODO: Add the user's entry into the database
 
