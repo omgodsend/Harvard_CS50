@@ -30,7 +30,7 @@ def index():
         birthday = request.form.get("input")
 
 
-        return redirect("/")
+        return redirect("/") 
         return render_template("index.html")
         # TODO: Add the user's entry into the database
 
