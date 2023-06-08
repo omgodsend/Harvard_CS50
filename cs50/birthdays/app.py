@@ -26,7 +26,7 @@ def after_request(response):
 def index():
     if request.method == "POST":
 
-        name = request.form.get("name")
+        session["name"] = request.form.get("name")
         birthday = request.form.get("birthday")
         bday = db.execute("SELECT * FROM bday")
 
