@@ -27,7 +27,7 @@ def index():
     if request.method == "POST":
 
         bday = db.execute("SELECT * FROM bday")
-        request.form.get("input")
+        birthday = request.form.get("input")
 
 
         return redirect("/")
