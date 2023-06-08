@@ -26,6 +26,8 @@ def after_request(response):
 def index():
     if request.method == "POST":
 
+        bday = db.execute()
+        request.form.get("")
         # TODO: Add the user's entry into the database
 
         return redirect("/")
