@@ -71,8 +71,8 @@ table {
     width: 100%;
 }
 
-name::placeholder{
-
+input::placeholder{
+    font-style: italic;
 }
 
 table th,
