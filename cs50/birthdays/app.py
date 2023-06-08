@@ -27,11 +27,14 @@ def index():
     if request.method == "POST":
 
         bday = db.execute("SELECT * FROM bday")
+        request.form.get("input")
+
         return render_template("index.html", bday=bday)
-        request.form.get("")
+        return redirect("/")
+
         # TODO: Add the user's entry into the database
 
-        return redirect("/")
+
 
     else:
 
