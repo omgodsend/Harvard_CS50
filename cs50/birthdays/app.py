@@ -29,9 +29,9 @@ def index():
         bday = db.execute("SELECT * FROM bday")
         request.form.get("input")
 
-        return render_template("index.html", bday=bday)
-        return redirect("/")
 
+        return redirect("/")
+        return render_template("index.html")
         # TODO: Add the user's entry into the database
 
 
