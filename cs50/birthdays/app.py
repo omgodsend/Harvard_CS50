@@ -26,14 +26,16 @@ def after_request(response):
 def index():
     if request.method == "POST":
 
+        name = request.form.get("name")
+        birthday = request.form.get("birthday")
         bday = db.execute("SELECT * FROM bday")
-        birthday = request.form.get("input")
+
 
 
 
         return render_template("index.html")
         return redirect("/")
-    
+
         # TODO: Add the user's entry into the database
 
 
