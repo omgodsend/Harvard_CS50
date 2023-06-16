@@ -126,6 +126,7 @@ def register():
 
         if len(rows) == 1:
             return apology("username already exists")
+        
 
     else:
         return render_template("register.html")
