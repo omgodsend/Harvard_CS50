@@ -126,7 +126,8 @@ def register():
 
         if len(rows) == 1:
             return apology("username already exists")
-        
+
+        db.execute("INSERT INTO users VALUES = ?", request.form.get("username"))
 
     else:
         return render_template("register.html")
