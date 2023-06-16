@@ -119,7 +119,8 @@ def register():
             return apology("must provide password", 403)
 
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
-        if len(rows) =1:
+
+        if len(rows) == 1:
             return apology("username already exists")
 
 
