@@ -113,9 +113,10 @@ def register():
 
     if request.method == "POST":
 
-    
-    return apology("TODO")
+        return apology("TODO")
 
+    else:
+        return render_template("register.html")
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
