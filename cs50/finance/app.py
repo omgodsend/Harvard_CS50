@@ -119,7 +119,7 @@ def register():
         elif not request.form.get("password"):
             return apology("must create a password", 403)
 
-        if not request.form.get("password") == request.form.get("confirmation"):
+        elif not request.form.get("password") == request.form.get("confirmation"):
             return apology("Passords do not match", 403)
 
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
