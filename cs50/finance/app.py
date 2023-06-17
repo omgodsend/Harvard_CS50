@@ -108,7 +108,6 @@ def quote():
         stock = lookup(request.form.get("symbol"))
         return render_template("quoted.html", stock=stock)
 
-
     else:
         return render_template("quote.html")
 
