@@ -5,8 +5,11 @@
 {% endblock %}
 
 {% block main %}
+    <h1>Stock Quote</h1>
+    <p></p>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Stock Symbol</label>
-        <input type="text" class="form-control-sm" id="exampleFormControlInput1" placeholder="name@example.com">
+        <input name=symbol type="text" class="form-control-sm" id="exampleFormControlInput1" placeholder="NTFLX">
+        <button class="btn btn-primary" type="submit">Search</button>
     </div>
 {% endblock %}
