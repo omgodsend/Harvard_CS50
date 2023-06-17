@@ -6,7 +6,12 @@
 
 {% block main %}
     <div>
-        <h2>{{ stock.name }}</h2>
-        <p>Price: {{ stock.price }}</p>
+        <h1>{{ stock.name }}</h1>
+        <p></p>
+        <h3>Price:</h3> ${{ stock.price }}
     </div>
+    <p></p>
+    <form action="/quote" method="get">
+        <button class="btn btn-primary" type="submit">Quote Another</button>
+    </form>
 {% endblock %}
