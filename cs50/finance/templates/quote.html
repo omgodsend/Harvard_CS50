@@ -8,22 +8,23 @@
     <h1>Stock Quote</h1>
     <p></p>
     <div class="mb-3">
-        
-        <label for="exampleFormControlInput1" class="form-label">Stock Symbol</label>
-        <input method="post" name=symbol class="form-control-sm" list="datalistOptions" id="exampleDataList" placeholder="TSLA">
-        <datalist id="datalistOptions">
-            <option value="NFLX">
-            <option value="AAPL">
-            <option value="AMZN">
-            <option value="MSFT">
-            <option value="GOOGL">
-            <option value="FB">
-            <option value="TSLA">
-            <option value="JPM">
-            <option value="JNJ">
-            <option value="NVDA">
-            <option value="V">
-        </datalist>
-        <button class="btn btn-primary" type="submit">Search</button>
+        <form action="/quote" method="post">
+            <label for="exampleFormControlInput1" class="form-label">Stock Symbol</label>
+            <input name=symbol class="form-control-sm" list="datalistOptions" id="exampleDataList" placeholder="TSLA">
+            <datalist id="datalistOptions">
+                <option value="NFLX">
+                <option value="AAPL">
+                <option value="AMZN">
+                <option value="MSFT">
+                <option value="GOOGL">
+                <option value="FB">
+                <option value="TSLA">
+                <option value="JPM">
+                <option value="JNJ">
+                <option value="NVDA">
+                <option value="V">
+            </datalist>
+            <button class="btn btn-primary" type="submit">Search</button>
+        </form>
     </div>
 {% endblock %}
