@@ -8,8 +8,9 @@
     <div>
         <h1>{{ stock.name }}</h1>
         <p></p>
-        <h3>Price:</h3> ${{ stock.price }}
-    </div>
+        <div class="price-container">
+            <p>Price: ${{ stock.price }}</p>
+        </div>
     <p></p>
     <form action="/quote" method="get">
         <button class="btn btn-primary" type="submit">Quote Another</button>
