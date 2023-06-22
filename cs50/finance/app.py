@@ -55,6 +55,11 @@ def buy():
         if not stock:
             return apology("Stock not found")
 
+        shares = request.form.get("shares")
+
+        if shares > 1:
+            return apology("Must be greater than 0")
+
         return render_template("buy.html", stock=stock)
 
     else:
