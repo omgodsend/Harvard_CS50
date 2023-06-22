@@ -60,9 +60,22 @@ def buy():
         if int(shares) < 1:
             return apology("Must be greater than 0")
 
+        user_id = session["user_id"]
+
+        user = db.execute("SELECT * FROM users WHERE id = ?", user_id)[0]
+
+        username = user["username"]
+        cash = user["cash"]
+
         total_cost = stock["price"] * int(shares)
 
-        if total_cost > 
+        if total_cost > cash:
+            return apology("Insufficient funds")
+
+        new_cash = cash - total_cost
+
+        
+
 
         db.execute("CREATE TABLE purchases (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,)
 
