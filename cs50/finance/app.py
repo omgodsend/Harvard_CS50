@@ -58,7 +58,7 @@ def buy():
         shares = request.form.get("shares")
 
         if int(shares) < 1:
-            return apology("Must be greater than 0")
+            return apology("Shares be greater than 0")
 
         user_id = session["user_id"]
 
