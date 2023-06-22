@@ -43,7 +43,13 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    
+    if request.method == "POST":
+
+        stock = lookup(request.form.get("symbol"))
+        return render_template("buy.html", stock=stock)
+
+    else:
+        return render_template("buy.html")
     return apology("")
 
 
