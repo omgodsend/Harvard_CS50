@@ -52,10 +52,10 @@ def buy():
 
         stock = lookup(symbol)
 
-        if stock == None:
+        if not stock:
             return apology("Stock not found")
 
-        """"return render_template("buy.html", stock=stock)"""
+        return render_template("buy.html", stock=stock)
 
     else:
         return render_template("buy.html")
