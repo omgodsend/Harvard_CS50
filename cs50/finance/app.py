@@ -46,11 +46,15 @@ def buy():
     if request.method == "POST":
 
         stock = lookup(request.form.get("symbol"))
+
+        if stock == None:
+            return apology("Form blank or Stock not found")
+
         return render_template("buy.html", stock=stock)
 
     else:
         return render_template("buy.html")
-    return apology("")
+
 
 
 @app.route("/history")
