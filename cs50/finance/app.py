@@ -77,13 +77,11 @@ def buy():
         # Update the user's cash balance in the database
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
 
-
-        db.execute("CREATE TABLE purchases (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,)
+        db.execute(
+            "INSERT INTO purchases (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
+            user_id, symbol, stock["price"], int(shares))
 
         return redirect("/")
-
-
-        return render_template("buy.html")
 
     else:
         return render_template("buy.html")
