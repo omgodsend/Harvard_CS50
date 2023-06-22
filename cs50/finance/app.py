@@ -43,7 +43,8 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    return apology("TODO")
+    
+    return apology("")
 
 
 @app.route("/history")
