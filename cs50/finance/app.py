@@ -78,8 +78,8 @@ def buy():
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
 
         db.execute(
-            "INSERT INTO purchases (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
-            user_id, symbol, stock["price"], int(shares))
+            "INSERT INTO purchases (user_id, symbol, price, shares) VALUES (?, ?, ?, ?, ?)",
+            user_id, username, symbol, stock["price"], int(shares))
 
         return redirect("/")
 
