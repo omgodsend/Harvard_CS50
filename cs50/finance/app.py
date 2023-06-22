@@ -57,7 +57,7 @@ def buy():
 
         shares = request.form.get("shares")
 
-        if shares < int(1):
+        if int(shares) < 1:
             return apology("Must be greater than 0")
 
         return redirect("/")
