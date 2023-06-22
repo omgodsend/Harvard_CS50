@@ -57,9 +57,10 @@ def buy():
 
         shares = request.form.get("shares")
 
-        if shares < 1:
+        if shares < int(1):
             return apology("Must be greater than 0")
 
+        return redirect("/")
         return render_template("buy.html")
 
     else:
