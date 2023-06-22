@@ -74,7 +74,8 @@ def buy():
 
         new_cash = cash - total_cost
 
-        
+        # Update the user's cash balance in the database
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
 
 
         db.execute("CREATE TABLE purchases (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,)
