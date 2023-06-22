@@ -60,7 +60,19 @@ def buy():
         if int(shares) < 1:
             return apology("Must be greater than 0")
 
+        db.execute("CREATE TABLE purchases (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    user_id INTEGER NOT NULL,
+    symbol TEXT NOT NULL,
+    price NUMERIC NOT NULL,
+    shares INTEGER NOT NULL,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users (id)
+);
+CREATE INDEX symbol_index ON purchases (symbol);)")
+
         return redirect("/")
+
+
         return render_template("buy.html")
 
     else:
