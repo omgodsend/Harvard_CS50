@@ -175,6 +175,10 @@ def register():
 
         db.execute("INSERT INTO users (username, hash) VALUES (?,?)", request.form.get("username"), generate_password_hash(request.form.get("password")))
 
+        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+
+        session["user_id"] = rows[0]["id"]
+
         return redirect("/")
 
     else:
