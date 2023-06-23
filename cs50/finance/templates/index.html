@@ -5,13 +5,28 @@
 {% endblock %}
 
 {% block main %}
-    <table border="1">
+<table class="table table-striped">
+    <thead>
         <tr>
-            <td>Symbol</td>
-            <td>Name</td>
-            <td>Shares</td>
-            <td>Price</td>
-            <td>Total</td>
+            <th class="text-start">Symbol</th>
+            <th class="text-start">Name</th>
+            <th class="text-end">Shares</th>
+            <th class="text-end">Price</th>
+            <th class="text-end">TOTAL</th>
         </tr>
-    </table>
+    </thead>
+   <tbody>
+
+    </tbody>
+    <tfoot>
+        <tr>
+            <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
+            <td class="border-0 text-end">$10,000.00</td>
+        </tr>
+        <tr>
+            <td class="border-0 fw-bold text-end" colspan="4">TOTAL</td>
+            <td class="border-0 w-bold text-end">$10,000.00</td>
+        </tr>
+    </tfoot>
+</table>
 {% endblock %}
