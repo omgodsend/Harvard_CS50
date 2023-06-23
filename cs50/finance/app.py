@@ -64,7 +64,6 @@ def buy():
 
         user = db.execute("SELECT * FROM users WHERE id = ?", user_id)[0]
 
-        username = user["username"]
         cash = user["cash"]
 
         total_cost = stock["price"] * int(shares)
