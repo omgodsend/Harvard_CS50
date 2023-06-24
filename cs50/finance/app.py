@@ -48,7 +48,7 @@ def index():
         shares = purchase["shares"]
         total = purchase["total"]
 
-    return render_template("index.html", symbol=symbol, cash=cash, total_value=total_value)
+return render_template("index.html", symbol=symbol, cash=cash, total_value=total_value)
 
 
 
