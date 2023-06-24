@@ -50,8 +50,6 @@ def index():
 
         purchase["total"]
 
-
-            <td class="text-end">{{ purchase["total"]|usd }}</td>
     return render_template("index.html", symbol=symbol, cash=cash, total_value=total_value)
 
 
