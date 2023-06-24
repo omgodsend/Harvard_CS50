@@ -18,7 +18,7 @@
     <tbody>
         {% for purchase in purchases %}
         <tr>
-            <td class="text-start">{{ purchase["symbol"] }}</td>
+            <td >class="text-start"{{ purchase["symbol"] }}</td>
             <td class="text-start">{{ purchase["name"] }}</td>
             <td class="text-end">{{ purchase["shares"] }}</td>
             <td class="text-end">{{ purchase["price"]|usd }}</td>
