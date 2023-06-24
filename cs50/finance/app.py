@@ -47,8 +47,8 @@ def index():
         stock = lookup(symbol)
 
         purchase["name"] = stock["name"]
-        
-        total = purchase["total"]
+
+        purchase["total"]
 
 
             <td class="text-end">{{ purchase["total"]|usd }}</td>
