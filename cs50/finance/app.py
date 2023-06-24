@@ -42,16 +42,13 @@ def index():
     total_value = cash
 
     for purchase in purchases:
-
         symbol = purchase["symbol"]
         stock = lookup(symbol)
-
         purchase["name"] = stock["name"]
+        purchase["total"] = stock["price"] * purchase["shares"]
+        total_value += purchase["total"]
 
-        purchase["total"]
-
-    return render_template("index.html", symbol=symbol, cash=cash, total_value=total_value)
-
+    return render_template("index.html", purchases=purchases, cash=cash, total_value=total_value)
 
 
 @app.route("/buy", methods=["GET", "POST"])
