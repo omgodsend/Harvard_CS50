@@ -42,13 +42,16 @@ def index():
     total_value = cash
 
     for purchase in purchases:
-        symbol = purchase["symbol"]
-        name = purchase["name"]
         price = purchase["price"]
         shares = purchase["shares"]
         total = purchase["total"]
 
-return render_template("index.html", symbol=symbol, cash=cash, total_value=total_value)
+            <td class="text-start">{{ purchase["symbol"] }}</td>
+            <td class="text-start">{{ purchase["name"] }}</td>
+            <td class="text-end">{{ purchase["shares"] }}</td>
+            <td class="text-end">{{ purchase["price"]|usd }}</td>
+            <td class="text-end">{{ purchase["total"]|usd }}</td>
+    return render_template("index.html", symbol=symbol, cash=cash, total_value=total_value)
 
 
 
