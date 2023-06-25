@@ -221,8 +221,14 @@ def sell():
 
         purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
 
-        symbols = [purchase["symbol"] for purchase in purchases]
+        for purchase in purchases:
+            symbols = purchase["symbol"]
+
+        return render_template("sell.html")
+    else:
+        purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
+
+        for purchase in purchases:
+            symbols = purchase["symbol"]
 
         return render_template("sell.html", symbols=symbols, purchases=purchases)
-    else:
-        return render_template("sell.html")
