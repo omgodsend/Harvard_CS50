@@ -210,6 +210,12 @@ def sell():
 
         try:
             shares = int(request.form.get("shares"))
+        except:
+            return apology("shares must be a positive integer", 400)
+
+        if shares <= 0:
+            return apology("can't sell less than or 0 shares", 400)
+
 
         purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
 
