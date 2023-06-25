@@ -205,8 +205,8 @@ def sell():
         purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
 
         for purchase in purchases:
-            symbol = purchases["symbol"]
+            symbol = purchase["symbol"]
 
-        return render_template("sell.html", symbol=symbol, purchases=purchases)
+        return render_template("sell.html", symbol=symbol, purchase=purchase)
     else:
         return render_template("sell.html")
