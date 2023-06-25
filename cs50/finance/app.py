@@ -92,6 +92,7 @@ def buy():
             "INSERT INTO purchases (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
             user_id, symbol, stock["price"], int(shares))
 
+        flash("Bought!")
         return redirect("/")
 
     else:
@@ -191,6 +192,7 @@ def register():
 
         session["user_id"] = rows[0]["id"]
 
+        flash("Registered!")
         return redirect("/")
 
     else:
