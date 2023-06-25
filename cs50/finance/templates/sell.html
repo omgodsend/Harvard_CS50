@@ -8,8 +8,8 @@
     <select class="form-select-sm" aria-label="Default select example">
         <option selected disabled>Symbol</option>
 
-        {% for every stock in stocks %}
-        <option value="1">One</option>
+        {% for every purhcase in purchases %}
+        <option value="1">{purchase["symbol"]}</option>
         {% endfor %}
 
     </select>
