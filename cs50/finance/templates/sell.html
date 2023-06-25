@@ -5,17 +5,22 @@
 {% endblock %}
 
 {% block main %}
+<h1>Sell Stock</h1>
     <select class="form-select-sm" aria-label="Default select example">
         <option selected disabled>Symbol</option>
 
-        {% for every purchase in purchases %}
+        {% for purchase in purchases %}
         <option value="1">{{ purchase["symbol"] }}</option>
         {% endfor %}
 
     </select>
 
+    <p></p>
+
     <form action="/buy" method="post">
         <input type="number" min="1" class="form-control-sm" id="exampleFormControlInput1" name="shares" placeholder="1">
+    <p></p>
+        <button class="btn btn-primary" type="submit">Sell</button>
     </form>
 
 {% endblock %}
