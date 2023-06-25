@@ -36,6 +36,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+    global variable
     purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
     cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
@@ -201,7 +202,7 @@ def register():
 def sell():
     """Sell shares of stock"""
     if request.method == "POST":
-        stock = 
+        stock =
 
         """return apology("")"""
     else:
