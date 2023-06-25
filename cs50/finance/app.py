@@ -204,7 +204,13 @@ def sell():
     """Sell shares of stock"""
     if request.method == "POST":
         quote = lookup(request.form.get("symbol"))
-        
+
+        if quote == None:
+            return apology("invalid symbol",400)
+
+        try:
+            shares = int(request.form.get("shares"))
+
         purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
 
         symbols = [purchase["symbol"] for purchase in purchases]
