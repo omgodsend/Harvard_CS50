@@ -202,12 +202,12 @@ def sell():
     """Sell shares of stock"""
     if request.method == "POST":
 
-        purchases = index(purchases)
+        purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
+
 
         for purchase in purchases:
             symbol = index(symbol)
 
-        """return apology("")"""
         return render_template("sell.html", symbol=symbol, purchases=purchases)
     else:
         return render_template("sell.html")
