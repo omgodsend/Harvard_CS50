@@ -201,5 +201,5 @@ def register():
 def sell():
     """Sell shares of stock"""
 
-        """return apology("")"""
+    """return apology("")"""
     return render_template("sell.html")
