@@ -206,7 +206,7 @@ def sell():
 
 
         for purchase in purchases:
-            symbol = index(symbol)
+            symbol = purchases["symbol"]
 
         return render_template("sell.html", symbol=symbol, purchases=purchases)
     else:
