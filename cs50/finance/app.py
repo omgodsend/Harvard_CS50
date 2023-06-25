@@ -208,6 +208,6 @@ def sell():
             symbol = index(symbol)
 
         """return apology("")"""
-        return render_template("sell.html", symbol=symbol)
+        return render_template("sell.html", symbol=symbol, purchases=purchases)
     else:
         return render_template("sell.html")
