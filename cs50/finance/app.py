@@ -203,8 +203,11 @@ def sell():
     if request.method == "POST":
 
         purchases = index(purchases)
-        stock = index(stock)
+
+        for purchase in purchases:
+            symbol = index(symbol)
 
         """return apology("")"""
+        return render_template("sell.html", symbol=symbol)
     else:
         return render_template("sell.html")
