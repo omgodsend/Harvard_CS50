@@ -9,7 +9,7 @@
         <option selected disabled>Symbol</option>
 
         {% for every purchase in purchases %}
-        <option value="1">{purchase["symbol"]}</option>
+        <option value="1">{{ purchase["symbol"] }}</option>
         {% endfor %}
 
     </select>
