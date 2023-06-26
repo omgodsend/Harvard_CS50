@@ -218,7 +218,6 @@ def sell():
 
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
-
         purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
 
         return render_template("sell.html")
