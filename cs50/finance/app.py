@@ -226,9 +226,7 @@ def sell():
 
         return render_template("sell.html")
     else:
-        purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
 
-        for purchase in purchases:
-            symbols = purchase["symbol"]
+        stocks = db.execute("SELECT symbol FROM purchases where user_id = ? GROUP BY symbol HAVING total_shares > 0", session["user_id"])
 
         return render_template("sell.html", symbols=symbols, purchases=purchases)
