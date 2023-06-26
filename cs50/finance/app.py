@@ -214,11 +214,11 @@ def sell():
             return apology("can't sell less than or 0 shares", 400)
 
         # Check the actual stock symbol being posted
-        stock = db.execute("SELECT SUM(shares) FROM purchases where user_id = ? AND symbol = symbol", session["user_id"], symbol=request.form.get("symbol"))
+        stock = db.execute("SELECT SUM(shares) FROM purchases where user_id = ? AND symbol = ?", session["user_id"], request.form.get("symbol"))
 
-        if len(stock) != 1 or len(stock) <= 0 or stock < shares:
-            return apology("you can't sell less than 0 or more shares than you own")
-
+        #if len(stock) != 1 or len(stock) <= 0 or stock < shares:
+            #return apology("you can't sell less than 0 or more shares than you own")
+        print(stock)
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
         purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
