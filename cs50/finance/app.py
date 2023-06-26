@@ -208,10 +208,7 @@ def sell():
         if quote == None:
             return apology("invalid symbol",400)
 
-        try:
-            shares = int(request.form.get("shares"))
-        except:
-            return apology("shares must be a positive integer", 400)
+        shares = int(request.form.get("shares"))
 
         if shares <= 0:
             return apology("can't sell less than or 0 shares", 400)
