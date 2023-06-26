@@ -218,11 +218,14 @@ def sell():
 
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
-        stocks = db.execute("SELECT symbol FROM purchases where user_id = ? GROUP BY symbol HAVING total_shares > 0", session["user_id"])
+
+        purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
 
         return render_template("sell.html")
     else:
 
-        stocks = db.execute("SELECT symbol FROM purchases where user_id = ? GROUP BY symbol HAVING total_shares > 0", session["user_id"])
+        purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
+
+        stocks = db.execute("SELECT symbol FROM purchases where user_id = ? GROUP BY symbol HAVING shares > 0", session["user_id"])
 
         return render_template("sell.html", stocks=stocks, purchases=purchases)
