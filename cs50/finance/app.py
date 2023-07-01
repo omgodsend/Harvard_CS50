@@ -235,7 +235,6 @@ def sell():
 
         return redirect("/")
 
-
     else:
 
         #purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
