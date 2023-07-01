@@ -204,15 +204,15 @@ def sell():
     """Sell shares of stock"""
     if request.method == "POST":
 
-        symbol =request.form.get("symbol")
+        symbol = request.form.get("symbol")
 
         shares_req = int(request.form.get("shares"))
 
         if not symbol:
-            return apology("Invalid symbol", 400)
+            return apology("Check symbol", 400)
 
         stock = lookup(symbol)
-        if stock is None
+        if stock is None:
             return apology("Invalid symbol", 400)
 
         if shares_req <= 0:
@@ -230,8 +230,7 @@ def sell():
 
         total_cost = int(shares_req) * stock["price"]
 
-        new_cash = cash + total_cost
-
+        new_cash = int(cash) + int(total_cost)
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
 
         db.execute("DELETE FROM purchases (shares) VALUES (?)", int(shares))
