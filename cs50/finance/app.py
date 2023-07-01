@@ -231,11 +231,11 @@ def sell():
 
         db.execute("DELETE FROM purchases (shares) VALUES (?)", int(shares))
 
+        flash("Sold!")
+        
+        return redirect("/")
 
 
-
-
-        return render_template("sell.html")
     else:
 
         #purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
