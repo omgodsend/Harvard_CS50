@@ -227,12 +227,12 @@ def sell():
 
         new_cash = cash + total_cost
 
-        db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
 
         db.execute("DELETE FROM purchases (shares) VALUES (?)", int(shares))
 
         flash("Sold!")
-        
+
         return redirect("/")
 
 
