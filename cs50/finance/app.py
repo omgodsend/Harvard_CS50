@@ -225,7 +225,9 @@ def sell():
 
         total_cost = int(shares_req) * stock["price"]
 
-        
+        new_cash = db.execute("DELETE )
+
+
 
 
         return render_template("sell.html")
