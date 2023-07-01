@@ -203,12 +203,16 @@ def register():
 def sell():
     """Sell shares of stock"""
     if request.method == "POST":
-        stock = lookup(request.form.get("symbol"))
 
-        if stock == None:
-            return apology("invalid symbol",400)
+        symbol =request.form.get("symbol")
 
         shares_req = int(request.form.get("shares"))
+
+        if not symbol:
+            return apology("invalid symbol", 400)
+
+        stock = lookup(symbol)
+        if stock is N
 
         if shares_req <= 0:
             return apology("can't sell 0 or < 0 shares", 400)
