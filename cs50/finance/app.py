@@ -223,7 +223,8 @@ def sell():
 
         purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
 
-        
+        total_cost = int(shares)
+
 
         return render_template("sell.html")
     else:
