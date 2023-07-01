@@ -203,9 +203,9 @@ def register():
 def sell():
     """Sell shares of stock"""
     if request.method == "POST":
-        quote = lookup(request.form.get("symbol"))
+        stock = lookup(request.form.get("symbol"))
 
-        if quote == None:
+        if stock == None:
             return apology("invalid symbol",400)
 
         shares_req = int(request.form.get("shares"))
@@ -223,7 +223,9 @@ def sell():
 
         purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
 
-        total_cost = int(shares)
+        total_cost = int(shares_req) * stock["price"]
+
+        
 
 
         return render_template("sell.html")
