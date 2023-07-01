@@ -225,7 +225,9 @@ def sell():
 
         total_cost = int(shares_req) * stock["price"]
 
-        new_cash = db.execute("DELETE )
+        new_cash = cash + total_cost
+
+        
 
 
 
