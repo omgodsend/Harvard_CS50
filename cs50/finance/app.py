@@ -229,8 +229,7 @@ def sell():
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
 
-        db.execute("INSERT INTO purchases (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
-            user_id, symbol, stock["price"], int(shares))
+        db.execute("DELETE FROM purchases (shares) VALUES (?)", int(shares))
 
 
 
