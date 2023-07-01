@@ -209,10 +209,11 @@ def sell():
         shares_req = int(request.form.get("shares"))
 
         if not symbol:
-            return apology("invalid symbol", 400)
+            return apology("Invalid symbol", 400)
 
         stock = lookup(symbol)
-        if stock is N
+        if stock is None
+            return apology("Invalid symbol", 400)
 
         if shares_req <= 0:
             return apology("can't sell 0 or < 0 shares", 400)
