@@ -235,7 +235,6 @@ def sell():
 
 
 
-
         return render_template("sell.html")
     else:
 
