@@ -208,17 +208,17 @@ def sell():
         if quote == None:
             return apology("invalid symbol",400)
 
-        shares = int(request.form.get("shares"))
+        shares_req = int(request.form.get("shares"))
 
-        if shares <= 0:
+        if shares_req <= 0:
             return apology("can't sell 0 or < 0 shares", 400)
 
         # Check the actual stock symbol being posted
-        stock = db.execute("SELECT SUM(shares) FROM purchases where user_id = ? AND symbol = ?", session["user_id"], request.form.get("symbol"))
+        shares = db.execute("SELECT SUM(shares) FROM purchases where user_id = ? AND symbol = ?", session["user_id"], request.form.get("symbol"))
 
-        #if len(stock) != 1 or len(stock) <= 0 or stock < shares:
-            #return apology("you can't sell less than 0 or more shares than you own")
-        print(stock)
+        if len(shares) <= 0 or len(shares) < shares_req:
+            return apology("you can't sell more shares than you own or less than 0")
+
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
         purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
@@ -226,8 +226,8 @@ def sell():
         return render_template("sell.html")
     else:
 
-        """purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])"""
+        #purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
 
-        stocks = db.execute("SELECT symbol FROM purchases where user_id = ? GROUP BY symbol HAVING shares > 0", session["user_id"])
+        shares = db.execute("SELECT symbol FROM purchases where user_id = ? GROUP BY symbol HAVING shares > 0", session["user_id"])
 
-        return render_template("sell.html", stocks=stocks)
+        return render_template("sell.html", shares=shares)
