@@ -226,7 +226,16 @@ def sell():
 
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
-        purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
+        remaining_shares = shares - shares_req
+
+        if remaining_shares == 0:
+            # If no remaining shares, delete the row from the purchases table
+            db.execute("DELETE FROM purchases WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
+        else:
+            # Update the shares in the purchases table with the remaining_shares value
+            db.execute("UPDATE purchases SET shares = ? WHERE user_id = ? AND symbol = ?", remaining_shares, session["user_id"], symbol)
+
+        ##purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
 
         total_cost = int(shares_req) * stock["price"]
 
