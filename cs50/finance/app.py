@@ -221,7 +221,7 @@ def sell():
         # Check the actual stock symbol being posted
         shares = db.execute("SELECT SUM(shares) FROM purchases where user_id = ? AND symbol = ?", session["user_id"], request.form.get("symbol"))[0]["SUM(shares)"]
 
-        if len(shares) <= 0 or len(shares) < shares_req:
+        if shares <= 0 or shares < shares_req:
             return apology("you can't sell more shares than you own or less than 0")
 
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
