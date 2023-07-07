@@ -235,8 +235,6 @@ def sell():
             # Update the shares in the purchases table with the remaining_shares value
             db.execute("UPDATE purchases SET shares = ? WHERE user_id = ? AND symbol = ?", remaining_shares, session["user_id"], symbol)
 
-        ##purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
-
         total_cost = int(shares_req) * stock["price"]
 
         new_cash = cash + total_cost
@@ -250,8 +248,6 @@ def sell():
         return redirect("/")
 
     else:
-
-        #purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
 
         shares = db.execute("SELECT symbol FROM purchases where user_id = ? GROUP BY symbol HAVING shares > 0", session["user_id"])
 
