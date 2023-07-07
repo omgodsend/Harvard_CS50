@@ -230,7 +230,8 @@ def sell():
 
         total_cost = int(shares_req) * stock["price"]
 
-        new_cash = int(cash) + int(total_cost)
+        new_cash = cash + total_cost
+
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
 
         db.execute("DELETE FROM purchases (shares) VALUES (?)", int(shares))
