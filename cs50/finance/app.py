@@ -243,7 +243,7 @@ def sell():
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
 
-        db.execute("UPDATE purchases WHERE user_id = ? AND symbol = ? AND shares = ?", session["user_id"], symbol, shares_req)
+        db.execute("UPDATE purchases SET shares = ? WHERE user_id = ? AND symbol = ?", remaining_shares, session["user_id"], symbol)
 
         flash("Sold!")
 
