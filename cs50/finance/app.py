@@ -224,7 +224,7 @@ def sell():
         if len(shares) <= 0 or len(shares) < shares_req:
             return apology("you can't sell more shares than you own or less than 0")
 
-        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
 
         purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
 
