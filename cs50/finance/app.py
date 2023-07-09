@@ -106,10 +106,12 @@ def history():
     """Show history of transactions"""
     purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
 
-    for purchase in purchases:
+    """for purchase in purchases:
         symbol = purchase["symbol"]
         stock = lookup(symbol)
-        purchase["price"] = stock["price"]
+        purchase["price"] = stock["price"]"""
+    shares_adj = 0
+    for purchase in purchases
 
     return render_template("history.html", purchases=purchases)
 
