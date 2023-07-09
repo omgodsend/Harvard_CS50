@@ -112,10 +112,6 @@ def history():
 
     """for purchase in purchases:
 
-
-
-
-
     return render_template("history.html", purchases=purchases)"""
 
 
