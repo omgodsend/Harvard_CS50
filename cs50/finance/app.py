@@ -108,9 +108,9 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-   """purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
+    purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
 
-    for purchase in purchases:
+    """for purchase in purchases:
 
 
 
