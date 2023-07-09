@@ -15,7 +15,7 @@
         </tr>
     </thead>
     <tbody>
-        
+
         {% for purchase in purchases %}
         <tr>
             <td class="text-start">{{ purchase["symbol"] }}</td>
@@ -24,3 +24,5 @@
             <td class="text-end">{{ purchase["price"]|usd }}</td>
         </tr>
         {% endfor %}
+        
+{% endblock %}
