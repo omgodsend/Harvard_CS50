@@ -109,8 +109,7 @@ def history():
     for purchase in purchases:
         symbol = purchase["symbol"]
         stock = lookup(symbol)
-        purchase["name"] = stock["name"]
-        purchase["total"] = stock["price"] * purchase["shares"]
+        purchase["price"] = stock["price"]
 
     return render_template("history.html", purchases=purchases)
 
