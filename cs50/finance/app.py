@@ -111,9 +111,8 @@ def history():
         stock = lookup(symbol)
         purchase["name"] = stock["name"]
         purchase["total"] = stock["price"] * purchase["shares"]
-        total_value += purchase["total"]
 
-    return render_template("index.html", purchases=purchases)
+    return render_template("history.html", purchases=purchases)
 
 
 @app.route("/login", methods=["GET", "POST"])
