@@ -110,8 +110,8 @@ def history():
         symbol = purchase["symbol"]
         stock = lookup(symbol)
         purchase["price"] = stock["price"]"""
-    shares_adj = 0
-    for purchase in purchases
+
+    
 
     return render_template("history.html", purchases=purchases)
 
