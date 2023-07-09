@@ -104,8 +104,16 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    
-    return apology("TODO")
+    purchases = db.execute("SELECT * FROM purchases WHERE user_id = ?", session["user_id"])
+
+    for purchase in purchases:
+        symbol = purchase["symbol"]
+        stock = lookup(symbol)
+        purchase["name"] = stock["name"]
+        purchase["total"] = stock["price"] * purchase["shares"]
+        total_value += purchase["total"]
+
+    return render_template("index.html", purchases=purchases)
 
 
 @app.route("/login", methods=["GET", "POST"])
