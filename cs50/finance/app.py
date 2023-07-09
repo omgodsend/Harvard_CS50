@@ -85,12 +85,14 @@ def buy():
 
         new_cash = cash - total_cost
 
+        shares_sold = 0
+
         # Update the user's cash balance in the database
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
 
         db.execute(
-            "INSERT INTO purchases (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
-            user_id, symbol, stock["price"], int(shares))
+            "INSERT INTO purchases (user_id, symbol, price, shares, shares_sold) VALUES (?, ?, ?, ?, ?)",
+            user_id, symbol, stock["price"], int(shares), int(shares_sold))
 
         flash("Bought!")
         return redirect("/")
@@ -111,7 +113,7 @@ def history():
         stock = lookup(symbol)
         purchase["price"] = stock["price"]"""
 
-    
+
 
     return render_template("history.html", purchases=purchases)
 
