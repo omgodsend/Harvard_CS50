@@ -87,12 +87,14 @@ def buy():
 
         shares_sold = 0
 
+        timestamp = 
+
         # Update the user's cash balance in the database
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
 
         db.execute(
-            "INSERT INTO purchases (user_id, symbol, price, shares, shares_sold) VALUES (?, ?, ?, ?, ?)",
-            user_id, symbol, stock["price"], int(shares), int(shares_sold))
+            "INSERT INTO purchases (user_id, symbol, price, shares, shares_sold, timestamp) VALUES (?, ?, ?, ?, ?, ?)",
+            user_id, symbol, stock["price"], int(shares), int(shares_sold), timestamp)
 
         flash("Bought!")
         return redirect("/")
