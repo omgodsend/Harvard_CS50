@@ -44,8 +44,10 @@ def index():
 
     for purchase in purchases:
         symbol = purchase["symbol"]
-        purchase["name"] = lookup(symbol)["name"]
-        purchase["total"] = purchase["price"] * purchase["total_shares"]
+        stock = lookup(symbol)
+        purchase["name"] = stock["name"]
+        purchase["price"] = stock["price"]
+        purchase["total"] = stock["price"] * purchase["total_shares"]
         total_value += purchase["total"]
 
     return render_template("index.html", purchases=purchases, cash=cash, total_value=total_value)
