@@ -255,7 +255,7 @@ def sell():
 
         db.execute(
             "UPDATE purchases SET shares_sold = ?, timestamp = ? WHERE user_id = ? AND symbol = ?",
-            shares_req, sell_time, user_id, symbol)
+            shares_req, sell_time, session["user_id"], symbol)
 
         flash("Sold!")
 
