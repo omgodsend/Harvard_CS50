@@ -93,8 +93,8 @@ def buy():
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
 
         db.execute(
-            "INSERT INTO purchases (user_id, symbol, price, shares_bought, timestamp) VALUES (?, ?, ?, ?, ?)",
-            user_id, symbol, stock["price"], int(shares), buy_time)
+            "INSERT INTO purchases (user_id, symbol, price, shares, shares_bought, timestamp) VALUES (?, ?, ?, ?, ?, ?)",
+            user_id, symbol, stock["price"], int(shares), int(shares), buy_time)
 
         flash("Bought!")
         return redirect("/")
@@ -249,6 +249,10 @@ def sell():
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
 
         db.execute("UPDATE purchases SET shares = ? WHERE user_id = ? AND symbol = ?", remaining_shares, session["user_id"], symbol)
+
+        db.execute(
+            "INSERT INTO purchases (user_id, symbol, price, shares_sold, timestamp) VALUES (?, ?, ?, ?, ?)",
+            user_id, symbol, stock["price"], int(shares), buy_time)
 
         flash("Sold!")
 
