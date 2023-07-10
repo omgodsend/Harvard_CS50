@@ -251,7 +251,7 @@ def sell():
         db.execute("UPDATE purchases SET shares = ? WHERE user_id = ? AND symbol = ?", remaining_shares, session["user_id"], symbol)
 
         db.execute(
-            "INSERT INTO purchases (user_id, symbol, price, shares_sold, timestamp) VALUES (?, ?, ?, ?, ?)",
+            "UPDATE purchases SET shares_sold = ? SET timestamp = ? WHERE WHERE user_id = ? AND symbol = ?",
             user_id, symbol, stock["price"], int(shares), buy_time)
 
         flash("Sold!")
