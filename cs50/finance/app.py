@@ -47,6 +47,7 @@ def index():
         stock = lookup(symbol)
         purchase["name"] = stock["name"]
         purchase["price"] = stock["price"]
+        purchase["shares"] = purchase["total_shares"]
         purchase["total"] = stock["price"] * purchase["shares"]
         total_value += purchase["total"]
 
