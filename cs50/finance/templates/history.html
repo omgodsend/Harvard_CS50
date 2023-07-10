@@ -16,12 +16,12 @@
     </thead>
     <tbody>
 
-        {% for row in rows %}
+        {% for purchase in rows %}
         <tr>
-            <td class="text-start">{{ row["symbol"] }}</td>
-            <td class="text-start">{{ row["shares"] }}</td>
-            <td class="text-end">{{ row["price"] }}</td>
-            <td class="text-end">{{ row["timestamp"] }}</td>
+            <td class="text-start">{{ purchase["symbol"] }}</td>
+            <td class="text-start">{{ purchase["shares"] }}</td>
+            <td class="text-end">{{ purchase["price"] }}</td>
+            <td class="text-end">{{ purchase["timestamp"] }}</td>
         </tr>
         {% endfor %}
 </table>
