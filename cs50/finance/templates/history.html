@@ -19,7 +19,7 @@
         {% for purchase in rows %}
         <tr>
             <td class="text-start">{{ purchase["symbol"] }}</td>
-            <td class="text-start">{{ purchase["shares"] }}</td>
+            <td class="text-start">{{ purchase["shares"] if purchase["shares_bought"] > 0 else -purchase["shares"]  }}</td>
             <td class="text-end">{{ purchase["price"] }}</td>
             <td class="text-end">{{ purchase["timestamp"] }}</td>
         </tr>
