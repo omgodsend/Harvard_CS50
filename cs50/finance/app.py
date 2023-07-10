@@ -249,7 +249,8 @@ def sell():
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
 
-        db.execute("UPDATE purchases SET shares_sold = ?, timestamp = ? WHERE user_id = ? AND symbol = ?", shares_req, sell_time, session["user_id"], symbol)
+        db.execute("INSERT INTO purchases (user_id, symbol, price, shares, shares_bought, shares_sold, timestamp) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                   session["user_id"], symbol, stock["price"], shares_req, 0, shares_req, sell_time)
 
         flash("Sold!")
 
