@@ -246,13 +246,15 @@ def sell():
 
         new_cash = cash + total_cost
 
+        sell_time = datetime.datetime.now()
+
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
 
         db.execute("UPDATE purchases SET shares = ? WHERE user_id = ? AND symbol = ?", remaining_shares, session["user_id"], symbol)
 
         db.execute(
-            "UPDATE purchases SET shares_sold = ? SET timestamp = ? WHERE WHERE user_id = ? AND symbol = ?",
-            user_id, symbol, stock["price"], int(shares), buy_time)
+            "UPDATE purchases SET shares_sold = ?, timestamp = ? WHERE user_id = ? AND symbol = ?",
+            shares_req, sell_time, user_id, symbol)
 
         flash("Sold!")
 
