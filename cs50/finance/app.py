@@ -87,7 +87,7 @@ def buy():
 
         shares_sold = 0
 
-        buy_time = datetime.datetime.now()
+        buy_time = datetime.now()
 
         # Update the user's cash balance in the database
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
