@@ -187,7 +187,7 @@ def register():
             return apology("must create a password", 403)
 
         elif not request.form.get("password") == request.form.get("confirmation"):
-            return apology("Passords do not match", 403)
+            return apology("Passwords do not match", 403)
 
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
@@ -211,7 +211,20 @@ def account():
     """Display user's account"""
 
     if request.method == "POST":
-        return apology()
+
+        if not request.form.get("old_pass"):
+            return apology("Must enter old Password", 403)
+
+        elif not request.form.get("new_pass"):
+            return apology("Must create a new password", 403)
+
+        elif not request.form.get("old_pass") == db.execute
+
+        elif not request.form.get("new_password") == request.form.get("confirmation"):
+            return apology("New Passwords do not match", 403)
+
+        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+
 
     else:
         name = db.execute("SELECT username FROM users WHERE id = ?", session["user_id"])
