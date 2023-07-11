@@ -212,21 +212,25 @@ def account():
 
     if request.method == "POST":
 
-        if not request.form.get("old_pass"):
+        old_password = request.form.get("old_pass")
+        new_password = request.form.get("new_pass")
+        confirmation = request.form.get("confirmation")
+
+        if not old_password:
             return apology("Must enter old Password", 400)
 
-        elif not request.form.get("new_pass"):
+        elif not new_password:
             return apology("Must create a new password", 400)
 
-        elif not request.form.get("old_pass") == db.execute("SELECT hash FROM users WHERE id = ?", session["user_id"])[0]["hash"]:
+        elif old_password != db.execute("SELECT hash FROM users WHERE id = ?", session["user_id"])[0]["hash"]:
             return apology("Old Password incorrect", 403)
 
-        elif not request.form.get("new_password") == request.form.get("confirmation"):
-            return apology("New Passwords do not match", 403)
+        elif new_password != confirmation:
+            return apology("New Passwords do not match", 403)  # 403 Forbidden
 
-        elif request.form.get("new_password") == request.form.get("confirmation") == db.execute("SELECT hash FROM users WHERE id = ?", session["user_id"])[0]["hash"]:
+        elif new_password == old_password:
             return apology("New password cannot be the same as old password", 403)
-
+        
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
 
