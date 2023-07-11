@@ -222,7 +222,7 @@ def account():
         elif not new_password:
             return apology("Must create a new password", 400)
 
-        elif old_password != db.execute("SELECT hash FROM users WHERE id = ?", session["user_id"])[0]["hash"]:
+        if not check_password_hash(user["hash"], old_password):
             return apology("Old Password incorrect", 403)
 
         elif new_password != confirmation:
