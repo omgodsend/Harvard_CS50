@@ -225,7 +225,8 @@ def account():
             return apology("New Passwords do not match", 403)
 
         elif request.form.get("new_password") == request.form.get("confirmation") == db.execute("SELECT hash FROM users WHERE id = ?", session["user_id"])[0]["hash"]:            return apology("New password cannot be the same as old password", 403)
-
+            return apology("New password cannot be the same as old password", 403)
+    
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
 
