@@ -218,14 +218,13 @@ def account():
         elif not request.form.get("new_pass"):
             return apology("Must create a new password", 403)
 
-        elif not request.form.get("old_pass") == db.execute("SELECT hash FROM users WHERE id = ?", session["user_id"]):
+        elif not request.form.get("old_pass") == db.execute("SELECT hash FROM users WHERE id = ?", session["user_id"])[0]["hash"]:
             return apology("Old Password incorrect", 403)
 
         elif not request.form.get("new_password") == request.form.get("confirmation"):
             return apology("New Passwords do not match", 403)
 
-        elif request.form.get("new_password") or request.form.get("confirmation") == db.execute("SELECT hash FROM users WHERE id = ?", session["user_id"]):
-            return apology("New password cannot be the same as old password", 403)
+        elif request.form.get("new_password") == request.form.get("confirmation") == db.execute("SELECT hash FROM users WHERE id = ?", session["user_id"])[0]["hash"]:            return apology("New password cannot be the same as old password", 403)
 
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
