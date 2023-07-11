@@ -214,7 +214,7 @@ def account():
         return apology()
 
     else:
-        name = db.execute("SELECT username FROM users WHERE user_id = ?", session["user_id"])
+        name = db.execute("SELECT username FROM users WHERE id = ?", session["user_id"])
         return render_template("account.html", name=name)
 
 
