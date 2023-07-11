@@ -206,6 +206,19 @@ def register():
     else:
         return render_template("register.html")
 
+@app.route("/account", methods=["GET", "POST"])
+def account():
+    """Display user's account"""
+
+    if request.method == "POST":
+        return apology()
+
+    else:
+        return render_template("account.html")
+
+
+
+
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
