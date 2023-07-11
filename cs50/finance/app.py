@@ -216,16 +216,16 @@ def account():
             return apology("Must enter old Password", 403)
 
         elif not request.form.get("new_pass"):
-            return apology("Must create a new password", 403)
+            return apology("Must create a new password", 405)
 
         elif not request.form.get("old_pass") == db.execute("SELECT hash FROM users WHERE id = ?", session["user_id"])[0]["hash"]:
-            return apology("Old Password incorrect", 403)
+            return apology("Old Password incorrect", 406)
 
         elif not request.form.get("new_password") == request.form.get("confirmation"):
-            return apology("New Passwords do not match", 403)
+            return apology("New Passwords do not match", 407)
 
         elif request.form.get("new_password") == request.form.get("confirmation") == db.execute("SELECT hash FROM users WHERE id = ?", session["user_id"])[0]["hash"]:
-            return apology("New password cannot be the same as old password", 403)
+            return apology("New password cannot be the same as old password", 408)
 
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
