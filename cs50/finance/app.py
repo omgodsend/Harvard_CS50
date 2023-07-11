@@ -214,7 +214,8 @@ def account():
         return apology()
 
     else:
-        return render_template("account.html")
+        name = session["user_id"]
+        return render_template("account.html", name=name)
 
 
 
