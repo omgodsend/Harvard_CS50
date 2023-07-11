@@ -226,11 +226,11 @@ def account():
             return apology("Old Password incorrect", 403)
 
         elif new_password != confirmation:
-            return apology("New Passwords do not match", 403)  # 403 Forbidden
+            return apology("New Passwords do not match", 403)
 
         elif new_password == old_password:
             return apology("New password cannot be the same as old password", 403)
-        
+
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
 
