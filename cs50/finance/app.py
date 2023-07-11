@@ -219,7 +219,7 @@ def account():
             return apology("Must create a new password", 403)
 
         elif not request.form.get("old_pass") == db.execute("SELECT hash FROM users WHERE id = ?", session["user_id"]):
-            return apology("Old Password incorrect")
+            return apology("Old Password incorrect", 403)
 
         elif not request.form.get("new_password") == request.form.get("confirmation"):
             return apology("New Passwords do not match", 403)
