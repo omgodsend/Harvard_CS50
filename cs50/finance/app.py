@@ -231,6 +231,7 @@ def account():
         elif new_password == old_password:
             return apology("New password cannot be the same as old password", 403)
 
+        flash("Success")
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
 
