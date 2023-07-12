@@ -22,10 +22,12 @@
         <button class="btn btn-primary" type="submit">Change</button>
     </form>
     {% if flash_messages %}
-    <div class="alert alert-primary mb-0 text-center" role="alert">
-        {% for message in flash_messages %}
-            {{ message }}
-        {% endfor %}
+    <div class="alert alert-primary" role="alert">
+        <ul>
+            {% for message in flash_messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
     </div>
     {% endif %}
 
