@@ -186,6 +186,9 @@ def quote():
 
         stock = lookup(request.form.get("symbol"))
 
+        if not stock:
+            return apology("Check symbol and try again", 403)
+        
         return render_template("quoted.html", stock=stock)
 
 
