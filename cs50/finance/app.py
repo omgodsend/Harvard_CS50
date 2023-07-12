@@ -271,12 +271,10 @@ def sell():
 
         try:
             shares_req = int(shares_req)
+            if shares_req <= 0:
+                return apology("Can't sell 0 or less than 0 shares", 400)
         except ValueError:
             return apology("Shares must be a positive integer", 400)
-
-        if shares_req <= 0:
-            return apology("Can't sell 0 or less than 0 shares", 400)
-
 
         stock = lookup(symbol)
         if stock is None:
