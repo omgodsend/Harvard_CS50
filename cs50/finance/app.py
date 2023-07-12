@@ -99,9 +99,9 @@ def buy():
         existing_purchase = db.execute("SELECT * FROM purchases WHERE user_id = ? AND symbol = ?", user_id, symbol)
 
         if existing_purchase:
-            new_shares = shares + s
+            new_shares = int(shares) + int(current_shares)
             # Update the existing row
-            db.execute("UPDATE purchases SET price = ?, shares = ? WHERE user_id = ? AND symbol = ?", stock["price"], int(shares), user_id, symbol)
+            db.execute("UPDATE purchases SET price = ?, shares = ? WHERE user_id = ? AND symbol = ?", stock["price"], int(new_shares), user_id, symbol)
         else:
             # Insert a new row
             db.execute("INSERT INTO purchases (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)", user_id, symbol, stock["price"], int(shares))
