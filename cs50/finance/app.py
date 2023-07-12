@@ -238,7 +238,7 @@ def account():
 
         flash("Password changed Successfully")
 
-        return redirect(url_for("password_success"))
+        return redirect("/password_success")
 
     else:
         name = db.execute("SELECT username FROM users WHERE id = ?", session["user_id"])
