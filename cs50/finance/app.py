@@ -72,6 +72,10 @@ def buy():
 
         shares = request.form.get("shares")
 
+        try:
+            int(shares)
+        except ValueError:
+            return apology("please enter a positive number", 400)
         if not shares:
             return apology("Please enter shares amount", 400)
 
