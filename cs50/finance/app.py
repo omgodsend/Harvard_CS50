@@ -234,7 +234,7 @@ def account():
         elif new_password == old_password:
             return apology("New password cannot be the same as old password", 403)
 
-        db.execute("INSERT INTO users (username, hash) VALUES (?,?)", request.form.get("username"), generate_password_hash(new_password))
+        db.execute("UPDATE users SET hash = ? WHERE user_id = ?", generate_password_hash(new_password), session["user_id"])
 
 
 
