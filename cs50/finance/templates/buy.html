@@ -10,7 +10,7 @@
     <div class="mb-3">
         <form action="/buy" method="post">
             <label for="exampleFormControlInput1" class="form-label">Stock Symbol</label>
-            <input name=symbol class="form-control-sm" list="datalistOptions" id="exampleDataList" placeholder="TSLA">
+            <input name=symbol class="form-control-sm" list="datalistOptions" id="exampleDataList" placeholder="Ex: TSLA">
             <datalist id="datalistOptions">
                 <option value="NFLX">
                 <option value="AAPL">
@@ -26,7 +26,7 @@
             </datalist>
             <div>
                 <label for="exampleFormControlInput1" class="form-label">Shares</label>
-                <input type="number" min="1" class="form-control-sm" id="exampleFormControlInput1" name="shares" placeholder="1">
+                <input type="number" min="1" class="form-control-sm" id="exampleFormControlInput1" name="shares" placeholder="Ex: 1">
             </div>
             <button class="btn btn-primary" type="submit">BUY NOW</button>
         </form>

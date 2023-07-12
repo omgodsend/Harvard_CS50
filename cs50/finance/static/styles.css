@@ -22,7 +22,7 @@ nav .navbar-brand .green
     color: #2e944b;
 }
 
-.italic:placeholder-shown {
+input:placeholder-shown {
     font-style: italic;
  }
 

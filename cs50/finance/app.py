@@ -266,7 +266,7 @@ def sell():
 
         shares_req = int(request.form.get("shares"))
 
-        if not symbol:
+        if not symbol or shares_req:
             return apology("Check symbol", 400)
 
         stock = lookup(symbol)
