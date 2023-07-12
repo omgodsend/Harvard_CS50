@@ -75,12 +75,12 @@ def buy():
         try:
             int(shares)
         except ValueError:
-            return apology("please enter a positive number", 400)
+            return apology("please enter a positive, whole number", 400)
         if not shares:
             return apology("Please enter shares amount", 400)
 
         if int(shares) < 1:
-            return apology("Shares be greater than 0")
+            return apology("Shares must be greater than 0")
 
         user_id = session["user_id"]
 
