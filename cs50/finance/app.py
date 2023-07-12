@@ -237,14 +237,17 @@ def account():
         db.execute("UPDATE users SET hash = ? WHERE id = ?", generate_password_hash(new_password), session["user_id"])
 
         flash("Password changed Successfully")
-        return redirect("/login")
+
+        return redirect(url_for("password_success"))
 
     else:
         name = db.execute("SELECT username FROM users WHERE id = ?", session["user_id"])
-        flash_messages = get_flashed_messages()  # Get flashed messages before redirect
-        return render_template("account.html", name=name, flash_messages=flash_messages)
+        return render_template("account.html", name=name)
 
-
+@app.route("/password_success")
+def password_success():
+    flash_messages = get_flashed_messages()
+    return render_template("password_success.html", flash_messages=flash_messages)
 
 
 @app.route("/sell", methods=["GET", "POST"])
