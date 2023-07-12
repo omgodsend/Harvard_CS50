@@ -280,8 +280,9 @@ def sell():
         if stock is None:
             return apology("Invalid symbol", 400)
 
-        # Check the actual stock symbol being posted
-        shares = db.execute("SELECT SUM(shares) FROM purchases where user_id = ? AND symbol = ?", session["user_id"], request.form.get("symbol"))[0]["SUM(shares)"]
+        shares_result = db.execute("SELECT SUM(shares) FROM purchases where user_id = ? AND symbol = ?", session["user_id"], symbol)[0]["SUM(shares)"]
+        
+        shares = 0 if shares_result is None else shares_result
 
         if shares < shares_req:
             return apology("you can't sell more shares than you own")
