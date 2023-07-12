@@ -234,9 +234,10 @@ def account():
         elif new_password == old_password:
             return apology("New password cannot be the same as old password", 403)
 
-        db.execute("UPDATE users SET hash = ? WHERE user_id = ?", generate_password_hash(new_password), session["user_id"])
+        db.execute("UPDATE users SET hash = ? WHERE id = ?", generate_password_hash(new_password), session["user_id"])
 
-
+        flash("Password changed Successfully")
+        return redirect("/login")
 
     else:
         name = db.execute("SELECT username FROM users WHERE id = ?", session["user_id"])
