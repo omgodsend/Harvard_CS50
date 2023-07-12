@@ -94,7 +94,7 @@ def buy():
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
 
         db.execute(
-            "INSERT INTO purchases (user_id, symbol, price, shares, shares_bought, shares_sold, timestamp) VALUES (?, ?, ?, ?, ?, ?, ?)",
+            "INSERT INTO history (user_id, symbol, price, shares, shares_bought, shares_sold, timestamp) VALUES (?, ?, ?, ?, ?, ?, ?)",
             user_id, symbol, stock["price"], int(shares), int(shares), 0, buy_time)
 
         flash("Bought!")
@@ -110,7 +110,7 @@ def buy():
 def history():
     """Show history of transactions"""
 
-    rows = db.execute("SELECT * FROM purchases WHERE user_id = ? ORDER BY timestamp DESC", session["user_id"])
+    rows = db.execute("SELECT * FROM history WHERE user_id = ? ORDER BY timestamp DESC", session["user_id"])
 
     return render_template("history.html", rows=rows)
 
@@ -304,7 +304,7 @@ def sell():
 
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, session["user_id"])
 
-        db.execute("INSERT INTO purchases (user_id, symbol, price, shares, shares_bought, shares_sold, timestamp) VALUES (?, ?, ?, ?, ?, ?, ?)",
+        db.execute("INSERT INTO history (user_id, symbol, price, shares, shares_bought, shares_sold, timestamp) VALUES (?, ?, ?, ?, ?, ?, ?)",
                    session["user_id"], symbol, stock["price"], shares_req, 0, shares_req, sell_time)
 
         flash("Sold!")
