@@ -94,8 +94,8 @@ def buy():
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
 
         db.execute(
-            "UPDATE purchases (symbol, price, shares, shares_bought, shares_sold, timestamp) VALUES (?, ?, ?, ?, ?, ?, ?) where user_id = ?",
-             symbol, stock["price"], int(shares), int(shares), 0, buy_time, user_id)
+            "UPDATE purchases SET symbol = ?, price = ?, shares = ?, WHERE user_id = ?",
+            symbol, stock["price"], int(shares), user_id)
 
         db.execute(
             "INSERT INTO history (user_id, symbol, price, shares, shares_bought, shares_sold, timestamp) VALUES (?, ?, ?, ?, ?, ?, ?)",
