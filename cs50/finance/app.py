@@ -266,8 +266,11 @@ def sell():
 
         shares_req = int(request.form.get("shares"))
 
-        if not symbol or not shares_req:
+        if not symbol or not request.form.get("shares"):
             return apology("Check symbol", 400)
+
+        if not shares_req.isdigit():
+            return apology("Shares must be a positive integer", 400)
 
         stock = lookup(symbol)
         if stock is None:
