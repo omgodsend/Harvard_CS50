@@ -93,9 +93,16 @@ def buy():
         # Update the user's cash balance in the database
         db.execute("UPDATE users SET cash = ? WHERE id = ?", new_cash, user_id)
 
-        db.execute(
-            "UPDATE purchases SET price = ?, shares = ? WHERE user_id = ? AND symbol = ?",
-             stock["price"], int(shares), user_id, symbol)
+                # Check if the user has previously purchased the stock
+        existing_purchase = db.execute("SELECT * FROM purchases WHERE user_id = ? AND symbol = ?", user_id, symbol)
+
+        if existing_purchase:
+            # Update the existing row
+            db.execute("UPDATE purchases SET price = ?, shares = ? WHERE user_id = ? AND symbol = ?", stock["price"], int(shares), user_id, symbol)
+        else:
+            # Insert a new row
+            db.execute("INSERT INTO purchases (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)", user_id, symbol, stock["price"], int(shares))
+
 
         db.execute(
             "INSERT INTO history (user_id, symbol, price, shares, shares_bought, shares_sold, timestamp) VALUES (?, ?, ?, ?, ?, ?, ?)",
