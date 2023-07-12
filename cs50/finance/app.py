@@ -294,10 +294,10 @@ def sell():
         remaining_shares = shares - shares_req
 
         if remaining_shares > 0:
-            db.execute("UPDATE purchases SET shares = ? WHERE user_id = ? AND symbol = ?", remaining_shares, session["user_id"], symbol)
+            db.execute("UPDATE purchases SET shares = ? WHERE id = ? AND symbol = ?", remaining_shares, session["user_id"], symbol)
         else:
             # Update the shares in the purchases table with the remaining_shares value
-            db.execute("DELETE FROM purchases WHERE symbol = ? AND user_id = ?", session["user_id"], symbol)
+            db.execute("DELETE FROM purchases WHERE symbol = ? AND id = ?", session["user_id"], symbol)
 
         total_cost = int(shares_req) * stock["price"]
 
