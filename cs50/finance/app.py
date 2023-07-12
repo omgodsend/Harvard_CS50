@@ -101,7 +101,7 @@ def buy():
             db.execute("UPDATE purchases SET price = ?, shares = ? WHERE user_id = ? AND symbol = ?", stock["price"], int(shares), user_id, symbol)
         else:
             # Insert a new row
-            db.execute("INSERT INTO purchases (user_id, symbol, price, shares, shares_sold) VALUES (?, ?, ?, ?, ?)", user_id, symbol, stock["price"], int(shares), 0)
+            db.execute("INSERT INTO purchases (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)", user_id, symbol, stock["price"], int(shares))
 
 
         db.execute(
