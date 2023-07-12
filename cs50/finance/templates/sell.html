@@ -5,24 +5,22 @@
 {% endblock %}
 
 {% block main %}
-<h1>Sell Stock</h1>
-<form action="sell" method="post" >
-    <select  class="form-select-sm" aria-label="Default select example" name="symbol">
-        <option selected disabled>Symbol</option>
+    <h1>Sell Stock</h1>
+    <form action="sell" method="post" >
+        <select  class="form-select-sm" aria-label="Default select example" name="symbol">
+            <option selected disabled>Symbol</option>
 
-        {% for share in shares %}
-        <option>{{ share['symbol'] }}</option>
-        {% endfor %}
+            {% for share in shares %}
+            <option>{{ share['symbol'] }}</option>
+            {% endfor %}
 
-    </select>
+        </select>
 
-    <p></p>
+        <p></p>
 
-    <form >
-        <input type="number" min="1" class="form-control-sm" id="exampleFormControlInput1" placeholder="Ex: 1" name="shares">
-    <p></p>
-        <button class="btn btn-primary" type="submit">Sell</button>
+            <input type="number" min="1" class="form-control-sm" id="exampleFormControlInput1" placeholder="Ex: 1" name="shares">
+        <p></p>
+            <button class="btn btn-primary" type="submit">Sell</button>
     </form>
-</form>
 
 {% endblock %}
