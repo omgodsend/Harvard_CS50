@@ -63,14 +63,17 @@ def buy():
         symbol = request.form.get("symbol")
 
         if not symbol:
-            return apology("Please enter stock symbol")
+            return apology("Please enter stock symbol", 403)
 
         stock = lookup(symbol)
 
         if not stock:
-            return apology("Stock not found")
+            return apology("Stock not found", 403)
 
         shares = request.form.get("shares")
+
+        if not shares:
+            return apology("Please enter shares amount", 403)
 
         if int(shares) < 1:
             return apology("Shares be greater than 0")
@@ -188,7 +191,7 @@ def quote():
 
         if not stock:
             return apology("Check symbol and try again", 403)
-        
+
         return render_template("quoted.html", stock=stock)
 
 
