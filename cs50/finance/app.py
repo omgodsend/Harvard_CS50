@@ -207,6 +207,7 @@ def register():
         return render_template("register.html")
 
 @app.route("/account", methods=["GET", "POST"])
+@login_required
 def account():
     """Display user's account"""
 
@@ -224,7 +225,7 @@ def account():
 
         user = db.execute("SELECT hash FROM users WHERE id = ?", session["user_id"])
 
-        if not check_password_hash(user, old_password):
+        if not check_password_hash(user[0]["hash"], old_password):
             return apology("Old Password incorrect", 403)
 
         elif new_password != confirmation:
@@ -233,8 +234,8 @@ def account():
         elif new_password == old_password:
             return apology("New password cannot be the same as old password", 403)
 
-        flash("Success")
-        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        db.execute("INSERT INTO users (username, hash) VALUES (?,?)", request.form.get("username"), generate_password_hash(new_password))
+
 
 
     else:
