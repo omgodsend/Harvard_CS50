@@ -241,7 +241,8 @@ def account():
 
     else:
         name = db.execute("SELECT username FROM users WHERE id = ?", session["user_id"])
-        return render_template("account.html", name=name)
+        flash_messages = get_flashed_messages()  # Get flashed messages before redirect
+        return render_template("account.html", name=name, flash_messages=flash_messages)
 
 
 
