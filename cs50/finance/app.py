@@ -63,17 +63,17 @@ def buy():
         symbol = request.form.get("symbol")
 
         if not symbol:
-            return apology("Please enter stock symbol", 403)
+            return apology("Please enter stock symbol", 400)
 
         stock = lookup(symbol)
 
         if not stock:
-            return apology("Stock not found", 403)
+            return apology("Stock not found", 400)
 
         shares = request.form.get("shares")
 
         if not shares:
-            return apology("Please enter shares amount", 403)
+            return apology("Please enter shares amount", 400)
 
         if int(shares) < 1:
             return apology("Shares be greater than 0")
@@ -185,12 +185,12 @@ def quote():
     if request.method == "POST":
 
         if not request.form.get("symbol"):
-            return apology("Must enter stock symbol", 403)
+            return apology("Must enter stock symbol", 400)
 
         stock = lookup(request.form.get("symbol"))
 
         if not stock:
-            return apology("Check symbol and try again", 403)
+            return apology("Check symbol and try again", 400)
 
         return render_template("quoted.html", stock=stock)
 
@@ -206,13 +206,13 @@ def register():
     if request.method == "POST":
 
         if not request.form.get("username"):
-            return apology("must create a username", 403)
+            return apology("must create a username", 400)
 
         elif not request.form.get("password"):
-            return apology("must create a password", 403)
+            return apology("must create a password", 400)
 
         elif not request.form.get("password") == request.form.get("confirmation"):
-            return apology("Passwords do not match", 403)
+            return apology("Passwords do not match", 400)
 
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
