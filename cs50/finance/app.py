@@ -291,7 +291,7 @@ def sell():
 
         if remaining_shares == 0:
             # If no remaining shares, delete the row from the purchases table
-            db.execute("DELETE FROM purchases WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
+            db.execute("DELETE FROM purchases WHERE symbol = ? AND user_id = ?", session["user_id"], symbol)
         else:
             # Update the shares in the purchases table with the remaining_shares value
             db.execute("UPDATE purchases SET shares = ? WHERE user_id = ? AND symbol = ?", remaining_shares, session["user_id"], symbol)
