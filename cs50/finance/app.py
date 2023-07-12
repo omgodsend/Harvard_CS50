@@ -264,21 +264,20 @@ def sell():
 
         symbol = request.form.get("symbol")
 
-        shares_req = request.form.get("shares")
+        shares_req = int(request.form.get("shares"))
 
-        if not symbol or not shares_req:
-            return apology("Check symbol and shares", 400)
+        if not symbol or not request.form.get("shares"):
+            return apology("Check symbol", 400)
 
-        try:
-            shares_req = int(shares_req)
-            if shares_req <= 0:
-                return apology("Shares must be a positive integer", 400)
-        except ValueError:
-            return apology("Shares must be a valid number", 400)
+        if not shares_req.isdigit():
+            return apology("Shares must be a positive integer", 400)
 
         stock = lookup(symbol)
         if stock is None:
             return apology("Invalid symbol", 400)
+
+        if shares_req <= 0:
+            return apology("can't sell 0 or < 0 shares", 400)
 
         # Check the actual stock symbol being posted
         shares = db.execute("SELECT SUM(shares) FROM purchases where user_id = ? AND symbol = ?", session["user_id"], request.form.get("symbol"))[0]["SUM(shares)"]
